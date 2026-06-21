@@ -1,0 +1,116 @@
+// Real IDF curriculum data, mirrored from the Faraday 2.0 base
+// (IDF Domain Registry, IDF Sub-Domain Registry, IDF Theme Registry).
+// This is the single source the catalog generator derives courses from.
+// Descriptions are real; product attributes are derived in generate-catalog.mjs.
+
+// Cluster mapping is the spec §5.3 single source of truth (by Domain id).
+export const CLUSTER_BY_DOMAIN = {
+  D1: "Physical Stack", D2: "Physical Stack", D7: "Physical Stack", D10: "Physical Stack", D20: "Physical Stack",
+  D4: "Commercial & Capital", D6: "Commercial & Capital", D15: "Commercial & Capital", D19: "Commercial & Capital", D21: "Commercial & Capital",
+  D3: "Market & Policy", D13: "Market & Policy", D14: "Market & Policy", D18: "Market & Policy", D22: "Market & Policy",
+  D8: "Operations & Resilience", D9: "Operations & Resilience", D17: "Operations & Resilience", D23: "Operations & Resilience",
+  D5: "Cross-Stack", D11: "Cross-Stack", D12: "Cross-Stack", D16: "Cross-Stack",
+};
+
+// 23 Domains = Schools. shortName drives card badges + the spec §5.3 School filter labels.
+// fullName + thesis are the real registry values (surfaced in the Schools table + Primer cards).
+export const DOMAINS = [
+  { id: "D1", shortName: "Chips & Density", fullName: "Chips & Density", type: "Core", thesis: "GPU generations are the upstream cause of every downstream consequence in the data center economy — rack density is the primary forcing function for every infrastructure decision that follows." },
+  { id: "D2", shortName: "Power Architecture", fullName: "Power Architecture", type: "Core", thesis: "Power architecture is undergoing the most significant structural change since AC electrification — the 800V DC transition will reshape the entire data center build stack." },
+  { id: "D3", shortName: "Grid & Regulatory", fullName: "Grid & Regulatory", type: "Core", thesis: "Entitled, powered land is the scarcest asset in the data center supply chain — grid queues, moratoriums, and utility constraints define the development opportunity map." },
+  { id: "D4", shortName: "M&A & Capital Markets", fullName: "M&A & Capital Markets", type: "Core", thesis: "$580B+ deployed globally in 2025, $660–750B guided for 2026 — capital velocity and deal structure are intelligence products in themselves." },
+  { id: "D5", shortName: "Hyperscaler Activity", fullName: "Hyperscaler Activity", type: "Core", thesis: "The Big 5 set the demand curve — their capex guidance, campus announcements, and technology decisions cascade through every domain in the IDF." },
+  { id: "D6", shortName: "New Entrants", fullName: "New Entrants", type: "Core", thesis: "The AI infrastructure gold rush is attracting capital to new categories — neoclouds, inference operators, edge developers, and sovereign AI programs are reshaping the competitive map." },
+  { id: "D7", shortName: "Cooling & Water", fullName: "Cooling & Water Technology", type: "Core", thesis: "Rack density escalation is making air cooling economically untenable — the transition to liquid cooling is the biggest capex opportunity in data center infrastructure right now." },
+  { id: "D8", shortName: "People & Signals", fullName: "People & Signals", type: "Core", thesis: "Executive moves, conference conversations, and LinkedIn posts are leading indicators — the people layer is often where market shifts are visible before they appear in filings." },
+  { id: "D9", shortName: "Orchestration", fullName: "Orchestration Intelligence & Control Plane", type: "Core", thesis: "As GPU clusters scale to NVL72 and beyond, orchestration and control plane decisions increasingly affect facility design, capex allocation, and sustained power draw." },
+  { id: "D10", shortName: "Construction", fullName: "Construction", type: "Passion", thesis: "Data center delivery is now constrained by construction capacity, commissioning throughput, and long-lead supply chains — build execution itself is a strategic differentiator." },
+  { id: "D11", shortName: "Sustainability", fullName: "Sustainability", type: "Passion", thesis: "Sustainability constraints are becoming first-order drivers of siting, permitting, power procurement, and customer adoption — shaping which projects get built and which get blocked." },
+  { id: "D12", shortName: "Networking & Interconnect", fullName: "Networking & Interconnect", type: "Passion", thesis: "Fiber, IX exchanges, and subsea cable investment are reliable leading indicators of hyperscaler campus expansion — preceding facility announcements by 6–18 months." },
+  { id: "D13", shortName: "Community Relations", fullName: "Community Relations", type: "Passion", thesis: "Community opposition is a first-order siting risk — data centers are winning on the grid but increasingly losing at the planning commission." },
+  { id: "D14", shortName: "Real Estate & Site Selection", fullName: "Real Estate & Site Selection", type: "Passion", thesis: "Entitled, powered land is the scarcest and most competitively sought asset in the AI infrastructure supply chain." },
+  { id: "D15", shortName: "Sovereign AI & Geopolitics", fullName: "Sovereign AI & Geopolitics", type: "Passion", thesis: "AI chip export controls and sovereign AI mandates are reshaping the global compute map faster than any market force." },
+  { id: "D16", shortName: "Cyber & Physical Security", fullName: "Cyber & Physical Security and Resilience", type: "Developing", thesis: "Physical and cyber security for AI infrastructure is a distinct risk surface that enterprise security frameworks do not address." },
+  { id: "D17", shortName: "Workforce & Labor Markets", fullName: "Workforce & Labor Markets", type: "Passion", thesis: "The data center industry is building at unprecedented scale but does not have the trades workforce to commission it — labor is now a hard constraint on delivery timelines." },
+  { id: "D18", shortName: "Community Opposition & Regulatory Risk", fullName: "Community Opposition & Regulatory Risk", type: "Passion", thesis: "Community opposition has evolved from an occasional entitlement risk into a structural supply constraint — the gap between announced CAPEX and delivered megawatts is the signal this domain tracks." },
+  { id: "D19", shortName: "Tax, Incentives & Fiscal Policy", fullName: "Tax, Incentives & Fiscal Policy", type: "Developing", thesis: "Fiscal policy is the second power grid — invisible infrastructure that determines where capex actually lands." },
+  { id: "D20", shortName: "Facility IT & OT", fullName: "Facility IT & Operational Technology", type: "Developing", thesis: "The facility's nervous system is a separate intelligence surface from its compute workload." },
+  { id: "D21", shortName: "Insurance & Risk Markets", fullName: "Insurance & Risk Markets", type: "Developing", thesis: "Insurability is emerging as the next siting constraint after power and water." },
+  { id: "D22", shortName: "Industry Media & Analyst Coverage", fullName: "Industry Media & Analyst Coverage", type: "Established", thesis: "Who covers the story shapes what the market believes about the story." },
+  { id: "D23", shortName: "Outage Intelligence & Emergency Response", fullName: "Outage Intelligence & Emergency Response", type: "Developing", thesis: "Failure is the cheapest intelligence — somebody else's outage is tomorrow's architecture decision." },
+];
+
+// 7 cross-domain Themes = Learning Paths.
+export const THEMES = [
+  { id: "T-001", name: "The Power Reckoning", tagline: "The grid wasn't built for this.", lifecycle: "Active", primaryDomain: "D2", thesis: "Every gigawatt of announced hyperscaler capacity is racing against transformer lead times, interconnection queues, utility rate cases, and community opposition. The gap between announced and delivered megawatts is the defining constraint of the 2025–2028 cycle." },
+  { id: "T-002", name: "The Rack Revolution", tagline: "The rack is being rebuilt from the ground up — and taking the facility with it.", lifecycle: "Active", primaryDomain: "D1", thesis: "Liquid cooling, the 800V DC transition, and modular prefabrication are converging at the rack level to make the AI data center architecturally unrecognizable within a single hardware generation." },
+  { id: "T-003", name: "The Consent Crisis", tagline: "Communities are the new permitting authority.", lifecycle: "Active", primaryDomain: "D18", thesis: "Communities are saying no to data centers at a rate the industry didn't anticipate. Community acceptance is now a first-order constraint on where AI infrastructure can be built — alongside power and land." },
+  { id: "T-004", name: "The Capital Concentration", tagline: "Fewer hands. More capital. Higher stakes.", lifecycle: "Active", primaryDomain: "D4", thesis: "A handful of hyperscalers, sovereign wealth funds, and mega-PE platforms now control the majority of AI infrastructure capital allocation globally — with underappreciated implications for competition, pricing, and access." },
+  { id: "T-005", name: "The Inference Economy", tagline: "Training built the factories. Inference fills them.", lifecycle: "Active", primaryDomain: "D9", thesis: "AI training built the data centers; inference will define their economics. Cost-per-token, tokens-per-watt, and disaggregated inference architecture are the new metrics for infrastructure investment." },
+  { id: "T-006", name: "The Sovereign AI Race", tagline: "Compute is the new strategic reserve.", lifecycle: "Active", primaryDomain: "D15", thesis: "Nation-states are treating AI compute as sovereign infrastructure — in the same category as energy reserves and financial systems. The geopolitical overlay is becoming as important as the technical architecture." },
+  { id: "T-007", name: "The New Energy Stack", tagline: "The grid is no longer the default.", lifecycle: "Active", primaryDomain: "D2", thesis: "Behind-the-meter generation, nuclear offtakes, long-duration storage, and gas peakers are replacing the assumption of grid-sourced power. The data center is becoming an energy system that happens to run compute." },
+];
+
+// 59 Sub-Domains = the course grain. desc is a real, card-length (<=160) summary of the registry text.
+// candidate: true => carry "Candidate" maturity. themes: parsed from the registry's "Linked Themes".
+export const SUBDOMAINS = [
+  { id: "D1.1", name: "GPU Architecture & Roadmap", desc: "NVIDIA's generational cadence (H100 → Blackwell → Rubin) and competing silicon, read through infrastructure impact: power, density, and thermal envelope.", themes: ["T-002", "T-005"] },
+  { id: "D1.2", name: "Rack Density & Power Density Progression", desc: "The density roadmap from 10kW to 120kW+ racks, OCP Open Rack Wide, and why density is the forcing function for cooling selection.", themes: ["T-001", "T-002"] },
+  { id: "D1.3", name: "Competing Silicon & Alternative Accelerators", desc: "AMD, TPU, Trainium and custom ASICs — rack power, memory architecture, and deployment economics vs the NVIDIA baseline.", themes: ["T-005"] },
+  { id: "D2.1", name: "800V DC Power Distribution", desc: "The 415V AC to 800V DC transition: the physics, the economics, the NFPA code gap, and the OCP 800V DC standards.", themes: ["T-001", "T-007"] },
+  { id: "D2.2", name: "Behind-the-Meter Generation (BYOP/BYOG)", desc: "When operators build their own power — SMR offtakes, gas peakers, solar+storage — and the permitting that follows.", themes: ["T-001", "T-007"] },
+  { id: "D2.3", name: "UPS, Storage & Power Conditioning", desc: "UPS architecture from VRLA to lithium-ion to flywheel, plus BESS for grid stabilization and demand response.", themes: ["T-007"] },
+  { id: "D2.4", name: "DC Power Delivery at the Rack", desc: "Rack-level 800V DC: bus bars, hot-swap power shelves, GPU-native converters, and the end of the per-rack UPS.", themes: ["T-002", "T-001"] },
+  { id: "D3.1", name: "Interconnection Queue & Grid Access", desc: "ISO/RTO interconnection queues as the primary constraint on campus timelines, plus the FERC Order 2023 reforms.", themes: ["T-001", "T-003"] },
+  { id: "D3.2", name: "State Moratorium & Legislative Landscape", desc: "The 2025–26 legislative wave: moratorium bills, incentive rollbacks, and water-disclosure mandates, tracked to passage.", themes: ["T-001", "T-003"] },
+  { id: "D3.3", name: "Utility Rate Cases & PUC Proceedings", desc: "Large-load rate classification, cost-shift disputes, and the PUC outcomes that set AI infrastructure economics.", themes: ["T-001", "T-003", "T-007"] },
+  { id: "D4.1", name: "PE & Infrastructure Fund Activity", desc: "Blackstone, KKR, Brookfield and peers — deal structures, return expectations, and hold-period dynamics in DC platforms.", themes: ["T-004"] },
+  { id: "D4.2", name: "DC REIT Performance & Valuation", desc: "Equinix, Digital Realty and peers: earnings, NAV, leasing spreads, and the read-across to private deal pricing.", themes: ["T-004"] },
+  { id: "D4.3", name: "Sovereign Wealth & Institutional Capital", desc: "ADIA, PIF, GIC and peers — commitment sizes, co-investment structures, and the geopolitics behind the capital.", themes: ["T-004", "T-006"] },
+  { id: "D4.4", name: "Integrated Infrastructure Vendor M&A", desc: "Eaton, Vertiv and Schneider acquisitions across thermal, power electronics, and modular delivery — convergence visible in deals first.", themes: ["T-002", "T-004"] },
+  { id: "D5.1", name: "Big 5 Capex & Campus Announcements", desc: "Quarterly capex from AWS, Azure, Google, Meta and Oracle, plus campus announcements and the announced-vs-delivered MW delta.", themes: ["T-001", "T-004"] },
+  { id: "D5.2", name: "Hyperscaler Custom Silicon", desc: "Trainium, TPU, MTIA and Maia — internal substitution rates and what chip independence means for GPU infrastructure.", themes: ["T-005"] },
+  { id: "D6.1", name: "Neocloud Infrastructure", desc: "CoreWeave, Nebius, Lambda, Crusoe and peers — funding, capacity commitments, and positioning vs the Big 5 cloud.", themes: ["T-004", "T-005"] },
+  { id: "D6.2", name: "Sovereign AI Programs & National Compute", desc: "Humain, G42, India's AI Mission and EU Gigafactories — who builds and operates state-backed compute.", themes: ["T-006"] },
+  { id: "D7.1", name: "Direct-to-Chip Liquid Cooling (DLC)", desc: "Cold-plate and direct-to-chip systems — deployment economics, GPU compatibility, and CDU market share dynamics.", themes: ["T-002"] },
+  { id: "D7.2", name: "Immersion Cooling", desc: "Single- and two-phase immersion — TCO vs DLC, fluid chemistry and safety, and the use-case boundary as density rises.", themes: ["T-002"] },
+  { id: "D7.3", name: "Water Use & Waterless Cooling Strategies", desc: "WUE metrics, evaporative alternatives, closed-loop adiabatic, and waterless cooling under rising water scrutiny.", themes: ["T-002", "T-003"] },
+  { id: "D8.1", name: "Executive Movement & C-Suite Intelligence", desc: "C-suite and VP moves across operators, hyperscalers and platforms as a leading indicator of strategic pivots.", themes: ["T-004"] },
+  { id: "D8.2", name: "Conference Intelligence & Speaking Circuit", desc: "DCD Connect, GTC and OCP Summit — speaker lineups and panel topics as real-time signals of where consensus is forming.", themes: [] },
+  { id: "D9.1", name: "AI Factory Orchestration & DCIM", desc: "NVIDIA DSX, NVL72/144 cluster management, and how orchestration decisions drive sustained power and cooling.", themes: ["T-005"] },
+  { id: "D9.2", name: "GPU Utilization & Compute Scheduling Economics", desc: "run:ai scheduling and multi-tenancy — why GPU utilization is the line between a profitable and unprofitable AI business.", themes: ["T-005"] },
+  { id: "D10.1", name: "Long-Lead Equipment & Supply Chain", desc: "Transformer, switchgear, generator and chiller lead times — the procurement bottleneck now decided years in advance.", themes: ["T-001"] },
+  { id: "D10.2", name: "GC/EPC Capacity & Construction Execution", desc: "GC/EPC capacity, commissioning throughput, and why reliable delivery now commands a leasing premium.", themes: ["T-001"] },
+  { id: "D10.3", name: "Modular & Prefabricated Data Center Delivery", desc: "The shift from stick-built to factory-prefab MEP — the construction enabler for the 800V DC and DLC transitions.", themes: ["T-002", "T-001"] },
+  { id: "D11.1", name: "Clean Energy Procurement (PPA/REC/CFE)", desc: "PPAs, RECs and 24/7 carbon-free matching — procurement as both a sustainability obligation and a long-term cost hedge.", themes: ["T-007"] },
+  { id: "D11.2", name: "Carbon Accounting & Scope 1-3 Reporting", desc: "GHG Protocol Scope 1–3 reporting, embodied carbon, and the convergence of ESG mandates with regulatory disclosure.", themes: ["T-003"] },
+  { id: "D14.1", name: "Site Selection Criteria & Market Scoring", desc: "The multi-factor siting process — power, zoning, water, fiber, climate — and the shift to power-driven decisions.", themes: ["T-001", "T-003"] },
+  { id: "D15.1", name: "Chip Export Controls & BIS Regime", desc: "BIS rule changes, Entity List additions and CFIUS reviews — the fastest-moving geopolitical variable in AI infrastructure.", themes: ["T-006"] },
+  { id: "D16.1", name: "Enterprise IT Cybersecurity & Cloud Security", desc: "Identity, network segmentation, cloud workload protection and zero-trust at DC operators and hyperscalers.", themes: ["T-006"], candidate: true },
+  { id: "D16.2", name: "OT / ICS / SCADA Cybersecurity", desc: "BMS, DCIM and cooling SCADA as a cyber surface — CISA ICS advisories and OT network segmentation.", themes: ["T-001", "T-006"], candidate: true },
+  { id: "D16.3", name: "Physical Security & Access Control", desc: "Biometrics, video analytics, intrusion detection and drone defense — the facility envelope as its own threat surface.", themes: ["T-001"], candidate: true },
+  { id: "D16.4", name: "State-Sponsored & Advanced Persistent Threats", desc: "APT tracking, state-actor campaigns against DC infrastructure, and geopolitical threat modeling.", themes: ["T-006"], candidate: true },
+  { id: "D16.5", name: "Software Supply Chain & Vendor Risk", desc: "SolarWinds-class attacks, SBOM requirements and third-party risk — the fastest-growing vector for operators.", themes: ["T-006"], candidate: true },
+  { id: "D16.6", name: "Security Operations & Incident Response", desc: "SOC operations, tabletop exercises, and the operational discipline that turns alerts into action.", themes: ["T-006"], candidate: true },
+  { id: "D18.1", name: "Project Opposition Register", desc: "Project-level tracking — developer, location, MW, opposition groups and dollar value at risk — Faraday's core D18 asset.", themes: ["T-003"] },
+  { id: "D18.2", name: "Jurisdiction Posture Intelligence (JPS)", desc: "The proprietary 0–100 Jurisdiction Posture Score across five dimensions — turning opposition tracking into predictive siting.", themes: ["T-003"] },
+  { id: "D19.1", name: "State & Local Tax Incentives", desc: "Property tax abatements, sales-tax exemptions, PILOTs and TIF districts — a primary site-selection input.", themes: ["T-003", "T-004"] },
+  { id: "D19.2", name: "Federal Tax Policy", desc: "IRA clean-energy credits, CHIPS Act 48D, Section 174 and bonus depreciation as the structural backdrop.", themes: ["T-004"] },
+  { id: "D19.3", name: "International Tax & Transfer Pricing", desc: "Ireland, Singapore and UAE regimes plus OECD Pillar Two — governing where international capacity lands.", themes: ["T-006", "T-004"] },
+  { id: "D19.4", name: "Tax Incentive Backlash & Clawback", desc: "Incentive tallies, clawback legislation, and the shift from automatic to contested data center tax breaks.", themes: ["T-003"] },
+  { id: "D19.5", name: "Tax-Driven Deal Structuring", desc: "REIT tax treatment, like-kind exchanges and tax-efficient capital stacks as a material component of deal pricing.", themes: ["T-004"] },
+  { id: "D20.1", name: "Building Management Systems & HVAC Control", desc: "Desigo, Metasys and EcoStruxure — BMS as the facility layer running HVAC, power monitoring and environmental control.", themes: ["T-001", "T-002"] },
+  { id: "D20.2", name: "Facility DCIM & Digital Twin", desc: "Nlyte, Sunbird, EcoStruxure DC and Omniverse — power, thermal and capacity management at room and cabinet level.", themes: ["T-001", "T-002"] },
+  { id: "D21.1", name: "Data Center Property & Casualty Insurance", desc: "Large-format property, business interruption and equipment breakdown — insurability as a sourcing constraint.", themes: ["T-001"] },
+  { id: "D21.2", name: "Cyber Insurance & Tech E&O", desc: "Standalone cyber coverage, ransomware exclusions and the state-actor exclusion debate.", themes: ["T-004", "T-006"] },
+  { id: "D21.3", name: "Climate & Parametric Risk Products", desc: "Weather parametric triggers and insurability-zone mapping — how capital prices climate-driven siting risk.", themes: ["T-003"] },
+  { id: "D21.4", name: "Lender Insurance Requirements & Risk Transfer", desc: "Builders risk, surety bonds and lender-mandated coverage as a gating item for debt closes.", themes: ["T-001", "T-004"] },
+  { id: "D22.1", name: "U.S. Media Coverage", desc: "DCD, Data Center Knowledge, Bisnow and the business press — the lens that builds the DC story for capital and policy.", themes: [] },
+  { id: "D22.2", name: "EU Media Coverage", desc: "DCD Europe and regional trade press — EU coverage has become structurally more regulatory than the US.", themes: [] },
+  { id: "D22.3", name: "APAC / LATAM / MENA Media Coverage", desc: "Regional press across APAC, LATAM, MENA and Africa as the buildout globalizes.", themes: [] },
+  { id: "D22.4", name: "Industry Analysts", desc: "Gartner, IDC, Synergy, Dell'Oro and CRE analysts — reports and rankings that shape buying and valuations.", themes: [] },
+  { id: "D23.1", name: "Major Outage Postmortems", desc: "Hyperscaler outage RCAs and root-cause patterns — where architectural mistakes become public before standard practice.", themes: ["T-001", "T-005"] },
+  { id: "D23.2", name: "Grid Events & Physical Disasters", desc: "Extreme weather, grid failures and wildfire evacuations affecting campuses, from ERCOT winter storms onward.", themes: ["T-001", "T-003"] },
+  { id: "D23.3", name: "Cyber Incidents Targeting DC Infrastructure", desc: "Ransomware, supply-chain attacks and state-actor targeting — the operational consequence of cyber threats.", themes: ["T-006"] },
+  { id: "D23.4", name: "Business Continuity & Disaster Recovery Practice", desc: "DR site strategy, multi-region failover and runbook evolution as a baseline for AI-class workloads.", themes: ["T-001"] },
+];

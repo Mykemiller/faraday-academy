@@ -1,0 +1,3551 @@
+[
+  {
+    "id": "FA-D1-101",
+    "title": "Chips & Density in 45 Minutes",
+    "description": "GPU generations are the upstream cause of every downstream consequence in the data center economy — rack density is the primary forcing function for every infr…",
+    "school": {
+      "id": "D1",
+      "name": "Chips & Density",
+      "cluster": "Physical Stack"
+    },
+    "level": "101",
+    "programType": "Primer",
+    "personas": [
+      "Executive",
+      "Engineer",
+      "Operator"
+    ],
+    "durationMinutes": 45,
+    "priceUSD": 0,
+    "maturity": "Established",
+    "themes": [],
+    "url": "https://faraday-intelligence.ai/academy/c/chips-and-density-in-45-minutes",
+    "slug": "chips-and-density-in-45-minutes",
+    "isFree": true,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-06-15T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D1-1",
+    "title": "GPU Architecture & Roadmap",
+    "description": "NVIDIA's generational cadence (H100 → Blackwell → Rubin) and competing silicon, read through infrastructure impact: power, density, and thermal envelope.",
+    "school": {
+      "id": "D1",
+      "name": "Chips & Density",
+      "cluster": "Physical Stack"
+    },
+    "level": "201",
+    "programType": "Course",
+    "personas": [
+      "Engineer",
+      "Operator",
+      "Executive"
+    ],
+    "durationMinutes": 75,
+    "priceUSD": 9.99,
+    "maturity": "Established",
+    "themes": [
+      "T-002",
+      "T-005"
+    ],
+    "url": null,
+    "slug": "gpu-architecture-and-roadmap",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-06-14T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D1-2",
+    "title": "Rack Density & Power Density Progression",
+    "description": "The density roadmap from 10kW to 120kW+ racks, OCP Open Rack Wide, and why density is the forcing function for cooling selection.",
+    "school": {
+      "id": "D1",
+      "name": "Chips & Density",
+      "cluster": "Physical Stack"
+    },
+    "level": "301",
+    "programType": "Course",
+    "personas": [
+      "Engineer",
+      "Operator",
+      "Executive"
+    ],
+    "durationMinutes": 120,
+    "priceUSD": 9.99,
+    "maturity": "Established",
+    "themes": [
+      "T-001",
+      "T-002"
+    ],
+    "url": null,
+    "slug": "rack-density-and-power-density-progression",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-06-13T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D1-3",
+    "title": "Competing Silicon & Alternative Accelerators",
+    "description": "AMD, TPU, Trainium and custom ASICs — rack power, memory architecture, and deployment economics vs the NVIDIA baseline.",
+    "school": {
+      "id": "D1",
+      "name": "Chips & Density",
+      "cluster": "Physical Stack"
+    },
+    "level": "201",
+    "programType": "Course",
+    "personas": [
+      "Engineer",
+      "Operator",
+      "Executive"
+    ],
+    "durationMinutes": 75,
+    "priceUSD": 9.99,
+    "maturity": "Established",
+    "themes": [
+      "T-005"
+    ],
+    "url": null,
+    "slug": "competing-silicon-and-alternative-accelerators",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-06-12T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D1-CERT",
+    "title": "Faraday Chips & Density Practitioner",
+    "description": "A live-brief credential: prove you can read real Chips & Density signals under deadline — not recite fixed content.",
+    "school": {
+      "id": "D1",
+      "name": "Chips & Density",
+      "cluster": "Physical Stack"
+    },
+    "level": "401",
+    "programType": "Certification",
+    "personas": [
+      "Engineer",
+      "Operator",
+      "Executive",
+      "Investor",
+      "Consultant"
+    ],
+    "durationMinutes": 180,
+    "priceUSD": 99,
+    "maturity": "Developing",
+    "themes": [],
+    "url": null,
+    "slug": "faraday-chips-and-density-practitioner-certification",
+    "isFree": false,
+    "isCertification": true,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-06-11T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D2-101",
+    "title": "Power Architecture in 45 Minutes",
+    "description": "Power architecture is undergoing the most significant structural change since AC electrification — the 800V DC transition will reshape the entire data center b…",
+    "school": {
+      "id": "D2",
+      "name": "Power Architecture",
+      "cluster": "Physical Stack"
+    },
+    "level": "101",
+    "programType": "Primer",
+    "personas": [
+      "Executive",
+      "Engineer",
+      "Operator"
+    ],
+    "durationMinutes": 45,
+    "priceUSD": 0,
+    "maturity": "Established",
+    "themes": [],
+    "url": "https://faraday-intelligence.ai/academy/c/power-architecture-in-45-minutes",
+    "slug": "power-architecture-in-45-minutes",
+    "isFree": true,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-06-10T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D2-1",
+    "title": "800V DC Power Distribution",
+    "description": "The 415V AC to 800V DC transition: the physics, the economics, the NFPA code gap, and the OCP 800V DC standards.",
+    "school": {
+      "id": "D2",
+      "name": "Power Architecture",
+      "cluster": "Physical Stack"
+    },
+    "level": "201",
+    "programType": "Course",
+    "personas": [
+      "Engineer",
+      "Operator",
+      "Executive"
+    ],
+    "durationMinutes": 75,
+    "priceUSD": 9.99,
+    "maturity": "Established",
+    "themes": [
+      "T-001",
+      "T-007"
+    ],
+    "url": null,
+    "slug": "800v-dc-power-distribution",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-06-09T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D2-2",
+    "title": "Behind-the-Meter Generation (BYOP/BYOG)",
+    "description": "When operators build their own power — SMR offtakes, gas peakers, solar+storage — and the permitting that follows.",
+    "school": {
+      "id": "D2",
+      "name": "Power Architecture",
+      "cluster": "Physical Stack"
+    },
+    "level": "301",
+    "programType": "Course",
+    "personas": [
+      "Engineer",
+      "Operator",
+      "Executive"
+    ],
+    "durationMinutes": 120,
+    "priceUSD": 9.99,
+    "maturity": "Established",
+    "themes": [
+      "T-001",
+      "T-007"
+    ],
+    "url": null,
+    "slug": "behind-the-meter-generation-byop-byog",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-06-08T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D2-3",
+    "title": "UPS, Storage & Power Conditioning",
+    "description": "UPS architecture from VRLA to lithium-ion to flywheel, plus BESS for grid stabilization and demand response.",
+    "school": {
+      "id": "D2",
+      "name": "Power Architecture",
+      "cluster": "Physical Stack"
+    },
+    "level": "201",
+    "programType": "Course",
+    "personas": [
+      "Engineer",
+      "Operator",
+      "Executive"
+    ],
+    "durationMinutes": 75,
+    "priceUSD": 9.99,
+    "maturity": "Established",
+    "themes": [
+      "T-007"
+    ],
+    "url": null,
+    "slug": "ups-storage-and-power-conditioning",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-06-07T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D2-4",
+    "title": "DC Power Delivery at the Rack",
+    "description": "Rack-level 800V DC: bus bars, hot-swap power shelves, GPU-native converters, and the end of the per-rack UPS.",
+    "school": {
+      "id": "D2",
+      "name": "Power Architecture",
+      "cluster": "Physical Stack"
+    },
+    "level": "301",
+    "programType": "Course",
+    "personas": [
+      "Engineer",
+      "Operator",
+      "Executive"
+    ],
+    "durationMinutes": 120,
+    "priceUSD": 9.99,
+    "maturity": "Established",
+    "themes": [
+      "T-002",
+      "T-001"
+    ],
+    "url": null,
+    "slug": "dc-power-delivery-at-the-rack",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-06-06T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D2-CERT",
+    "title": "Faraday Power Architecture Practitioner",
+    "description": "A live-brief credential: prove you can read real Power Architecture signals under deadline — not recite fixed content.",
+    "school": {
+      "id": "D2",
+      "name": "Power Architecture",
+      "cluster": "Physical Stack"
+    },
+    "level": "401",
+    "programType": "Certification",
+    "personas": [
+      "Engineer",
+      "Operator",
+      "Executive",
+      "Investor",
+      "Consultant"
+    ],
+    "durationMinutes": 180,
+    "priceUSD": 99,
+    "maturity": "Developing",
+    "themes": [],
+    "url": null,
+    "slug": "faraday-power-architecture-practitioner-certification",
+    "isFree": false,
+    "isCertification": true,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-06-05T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D3-101",
+    "title": "Grid & Regulatory in 45 Minutes",
+    "description": "Entitled, powered land is the scarcest asset in the data center supply chain — grid queues, moratoriums, and utility constraints define the development opportu…",
+    "school": {
+      "id": "D3",
+      "name": "Grid & Regulatory",
+      "cluster": "Market & Policy"
+    },
+    "level": "101",
+    "programType": "Primer",
+    "personas": [
+      "Executive",
+      "Policy",
+      "Operator",
+      "Consultant"
+    ],
+    "durationMinutes": 45,
+    "priceUSD": 0,
+    "maturity": "Established",
+    "themes": [],
+    "url": "https://faraday-intelligence.ai/academy/c/grid-and-regulatory-in-45-minutes",
+    "slug": "grid-and-regulatory-in-45-minutes",
+    "isFree": true,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-06-04T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D3-1",
+    "title": "Interconnection Queue & Grid Access",
+    "description": "ISO/RTO interconnection queues as the primary constraint on campus timelines, plus the FERC Order 2023 reforms.",
+    "school": {
+      "id": "D3",
+      "name": "Grid & Regulatory",
+      "cluster": "Market & Policy"
+    },
+    "level": "201",
+    "programType": "Course",
+    "personas": [
+      "Policy",
+      "Operator",
+      "Consultant"
+    ],
+    "durationMinutes": 75,
+    "priceUSD": 9.99,
+    "maturity": "Established",
+    "themes": [
+      "T-001",
+      "T-003"
+    ],
+    "url": null,
+    "slug": "interconnection-queue-and-grid-access",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-06-03T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D3-2",
+    "title": "State Moratorium & Legislative Landscape",
+    "description": "The 2025–26 legislative wave: moratorium bills, incentive rollbacks, and water-disclosure mandates, tracked to passage.",
+    "school": {
+      "id": "D3",
+      "name": "Grid & Regulatory",
+      "cluster": "Market & Policy"
+    },
+    "level": "301",
+    "programType": "Course",
+    "personas": [
+      "Policy",
+      "Operator",
+      "Consultant"
+    ],
+    "durationMinutes": 120,
+    "priceUSD": 9.99,
+    "maturity": "Established",
+    "themes": [
+      "T-001",
+      "T-003"
+    ],
+    "url": null,
+    "slug": "state-moratorium-and-legislative-landscape",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-06-02T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D3-3",
+    "title": "Utility Rate Cases & PUC Proceedings",
+    "description": "Large-load rate classification, cost-shift disputes, and the PUC outcomes that set AI infrastructure economics.",
+    "school": {
+      "id": "D3",
+      "name": "Grid & Regulatory",
+      "cluster": "Market & Policy"
+    },
+    "level": "201",
+    "programType": "Course",
+    "personas": [
+      "Policy",
+      "Operator",
+      "Consultant"
+    ],
+    "durationMinutes": 75,
+    "priceUSD": 9.99,
+    "maturity": "Established",
+    "themes": [
+      "T-001",
+      "T-003",
+      "T-007"
+    ],
+    "url": null,
+    "slug": "utility-rate-cases-and-puc-proceedings",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-06-01T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D3-CERT",
+    "title": "Faraday Grid & Regulatory Practitioner",
+    "description": "A live-brief credential: prove you can read real Grid & Regulatory signals under deadline — not recite fixed content.",
+    "school": {
+      "id": "D3",
+      "name": "Grid & Regulatory",
+      "cluster": "Market & Policy"
+    },
+    "level": "401",
+    "programType": "Certification",
+    "personas": [
+      "Policy",
+      "Operator",
+      "Consultant",
+      "Investor"
+    ],
+    "durationMinutes": 180,
+    "priceUSD": 99,
+    "maturity": "Developing",
+    "themes": [],
+    "url": null,
+    "slug": "faraday-grid-and-regulatory-practitioner-certification",
+    "isFree": false,
+    "isCertification": true,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-31T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D4-101",
+    "title": "M&A & Capital Markets in 45 Minutes",
+    "description": "$580B+ deployed globally in 2025, $660–750B guided for 2026 — capital velocity and deal structure are intelligence products in themselves.",
+    "school": {
+      "id": "D4",
+      "name": "M&A & Capital Markets",
+      "cluster": "Commercial & Capital"
+    },
+    "level": "101",
+    "programType": "Primer",
+    "personas": [
+      "Executive",
+      "Investor",
+      "Consultant"
+    ],
+    "durationMinutes": 45,
+    "priceUSD": 0,
+    "maturity": "Established",
+    "themes": [],
+    "url": "https://faraday-intelligence.ai/academy/c/manda-and-capital-markets-in-45-minutes",
+    "slug": "manda-and-capital-markets-in-45-minutes",
+    "isFree": true,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-30T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D4-1",
+    "title": "PE & Infrastructure Fund Activity",
+    "description": "Blackstone, KKR, Brookfield and peers — deal structures, return expectations, and hold-period dynamics in DC platforms.",
+    "school": {
+      "id": "D4",
+      "name": "M&A & Capital Markets",
+      "cluster": "Commercial & Capital"
+    },
+    "level": "201",
+    "programType": "Course",
+    "personas": [
+      "Investor",
+      "Executive",
+      "Consultant"
+    ],
+    "durationMinutes": 75,
+    "priceUSD": 9.99,
+    "maturity": "Established",
+    "themes": [
+      "T-004"
+    ],
+    "url": null,
+    "slug": "pe-and-infrastructure-fund-activity",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-29T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D4-2",
+    "title": "DC REIT Performance & Valuation",
+    "description": "Equinix, Digital Realty and peers: earnings, NAV, leasing spreads, and the read-across to private deal pricing.",
+    "school": {
+      "id": "D4",
+      "name": "M&A & Capital Markets",
+      "cluster": "Commercial & Capital"
+    },
+    "level": "301",
+    "programType": "Course",
+    "personas": [
+      "Investor",
+      "Executive",
+      "Consultant"
+    ],
+    "durationMinutes": 120,
+    "priceUSD": 9.99,
+    "maturity": "Established",
+    "themes": [
+      "T-004"
+    ],
+    "url": null,
+    "slug": "dc-reit-performance-and-valuation",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-28T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D4-3",
+    "title": "Sovereign Wealth & Institutional Capital",
+    "description": "ADIA, PIF, GIC and peers — commitment sizes, co-investment structures, and the geopolitics behind the capital.",
+    "school": {
+      "id": "D4",
+      "name": "M&A & Capital Markets",
+      "cluster": "Commercial & Capital"
+    },
+    "level": "201",
+    "programType": "Course",
+    "personas": [
+      "Investor",
+      "Executive",
+      "Consultant"
+    ],
+    "durationMinutes": 75,
+    "priceUSD": 9.99,
+    "maturity": "Established",
+    "themes": [
+      "T-004",
+      "T-006"
+    ],
+    "url": null,
+    "slug": "sovereign-wealth-and-institutional-capital",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-27T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D4-4",
+    "title": "Integrated Infrastructure Vendor M&A",
+    "description": "Eaton, Vertiv and Schneider acquisitions across thermal, power electronics, and modular delivery — convergence visible in deals first.",
+    "school": {
+      "id": "D4",
+      "name": "M&A & Capital Markets",
+      "cluster": "Commercial & Capital"
+    },
+    "level": "301",
+    "programType": "Course",
+    "personas": [
+      "Investor",
+      "Executive",
+      "Consultant"
+    ],
+    "durationMinutes": 120,
+    "priceUSD": 9.99,
+    "maturity": "Established",
+    "themes": [
+      "T-002",
+      "T-004"
+    ],
+    "url": null,
+    "slug": "integrated-infrastructure-vendor-manda",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-26T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D4-CERT",
+    "title": "Faraday M&A & Capital Markets Practitioner",
+    "description": "A live-brief credential: prove you can read real M&A & Capital Markets signals under deadline — not recite fixed content.",
+    "school": {
+      "id": "D4",
+      "name": "M&A & Capital Markets",
+      "cluster": "Commercial & Capital"
+    },
+    "level": "401",
+    "programType": "Certification",
+    "personas": [
+      "Investor",
+      "Executive",
+      "Consultant"
+    ],
+    "durationMinutes": 180,
+    "priceUSD": 99,
+    "maturity": "Developing",
+    "themes": [],
+    "url": null,
+    "slug": "faraday-manda-and-capital-markets-practitioner-certification",
+    "isFree": false,
+    "isCertification": true,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-25T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D5-101",
+    "title": "Hyperscaler Activity in 45 Minutes",
+    "description": "The Big 5 set the demand curve — their capex guidance, campus announcements, and technology decisions cascade through every domain in the IDF.",
+    "school": {
+      "id": "D5",
+      "name": "Hyperscaler Activity",
+      "cluster": "Cross-Stack"
+    },
+    "level": "101",
+    "programType": "Primer",
+    "personas": [
+      "Executive",
+      "Engineer",
+      "Investor"
+    ],
+    "durationMinutes": 45,
+    "priceUSD": 0,
+    "maturity": "Established",
+    "themes": [],
+    "url": "https://faraday-intelligence.ai/academy/c/hyperscaler-activity-in-45-minutes",
+    "slug": "hyperscaler-activity-in-45-minutes",
+    "isFree": true,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-24T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D5-1",
+    "title": "Big 5 Capex & Campus Announcements",
+    "description": "Quarterly capex from AWS, Azure, Google, Meta and Oracle, plus campus announcements and the announced-vs-delivered MW delta.",
+    "school": {
+      "id": "D5",
+      "name": "Hyperscaler Activity",
+      "cluster": "Cross-Stack"
+    },
+    "level": "201",
+    "programType": "Course",
+    "personas": [
+      "Engineer",
+      "Investor",
+      "Executive"
+    ],
+    "durationMinutes": 75,
+    "priceUSD": 9.99,
+    "maturity": "Established",
+    "themes": [
+      "T-001",
+      "T-004"
+    ],
+    "url": null,
+    "slug": "big-5-capex-and-campus-announcements",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-23T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D5-2",
+    "title": "Hyperscaler Custom Silicon",
+    "description": "Trainium, TPU, MTIA and Maia — internal substitution rates and what chip independence means for GPU infrastructure.",
+    "school": {
+      "id": "D5",
+      "name": "Hyperscaler Activity",
+      "cluster": "Cross-Stack"
+    },
+    "level": "301",
+    "programType": "Course",
+    "personas": [
+      "Engineer",
+      "Investor",
+      "Executive"
+    ],
+    "durationMinutes": 120,
+    "priceUSD": 9.99,
+    "maturity": "Established",
+    "themes": [
+      "T-005"
+    ],
+    "url": null,
+    "slug": "hyperscaler-custom-silicon",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-22T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D5-CERT",
+    "title": "Faraday Hyperscaler Activity Practitioner",
+    "description": "A live-brief credential: prove you can read real Hyperscaler Activity signals under deadline — not recite fixed content.",
+    "school": {
+      "id": "D5",
+      "name": "Hyperscaler Activity",
+      "cluster": "Cross-Stack"
+    },
+    "level": "401",
+    "programType": "Certification",
+    "personas": [
+      "Engineer",
+      "Investor",
+      "Executive",
+      "Consultant"
+    ],
+    "durationMinutes": 180,
+    "priceUSD": 99,
+    "maturity": "Developing",
+    "themes": [],
+    "url": null,
+    "slug": "faraday-hyperscaler-activity-practitioner-certification",
+    "isFree": false,
+    "isCertification": true,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-21T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D6-101",
+    "title": "New Entrants in 45 Minutes",
+    "description": "The AI infrastructure gold rush is attracting capital to new categories — neoclouds, inference operators, edge developers, and sovereign AI programs are reshap…",
+    "school": {
+      "id": "D6",
+      "name": "New Entrants",
+      "cluster": "Commercial & Capital"
+    },
+    "level": "101",
+    "programType": "Primer",
+    "personas": [
+      "Executive",
+      "Investor",
+      "Consultant"
+    ],
+    "durationMinutes": 45,
+    "priceUSD": 0,
+    "maturity": "Established",
+    "themes": [],
+    "url": "https://faraday-intelligence.ai/academy/c/new-entrants-in-45-minutes",
+    "slug": "new-entrants-in-45-minutes",
+    "isFree": true,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-20T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D6-1",
+    "title": "Neocloud Infrastructure",
+    "description": "CoreWeave, Nebius, Lambda, Crusoe and peers — funding, capacity commitments, and positioning vs the Big 5 cloud.",
+    "school": {
+      "id": "D6",
+      "name": "New Entrants",
+      "cluster": "Commercial & Capital"
+    },
+    "level": "201",
+    "programType": "Course",
+    "personas": [
+      "Investor",
+      "Executive",
+      "Consultant"
+    ],
+    "durationMinutes": 75,
+    "priceUSD": 9.99,
+    "maturity": "Established",
+    "themes": [
+      "T-004",
+      "T-005"
+    ],
+    "url": null,
+    "slug": "neocloud-infrastructure",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-19T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D6-2",
+    "title": "Sovereign AI Programs & National Compute",
+    "description": "Humain, G42, India's AI Mission and EU Gigafactories — who builds and operates state-backed compute.",
+    "school": {
+      "id": "D6",
+      "name": "New Entrants",
+      "cluster": "Commercial & Capital"
+    },
+    "level": "301",
+    "programType": "Course",
+    "personas": [
+      "Investor",
+      "Executive",
+      "Consultant"
+    ],
+    "durationMinutes": 120,
+    "priceUSD": 9.99,
+    "maturity": "Established",
+    "themes": [
+      "T-006"
+    ],
+    "url": null,
+    "slug": "sovereign-ai-programs-and-national-compute",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-18T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D6-CERT",
+    "title": "Faraday New Entrants Practitioner",
+    "description": "A live-brief credential: prove you can read real New Entrants signals under deadline — not recite fixed content.",
+    "school": {
+      "id": "D6",
+      "name": "New Entrants",
+      "cluster": "Commercial & Capital"
+    },
+    "level": "401",
+    "programType": "Certification",
+    "personas": [
+      "Investor",
+      "Executive",
+      "Consultant"
+    ],
+    "durationMinutes": 180,
+    "priceUSD": 99,
+    "maturity": "Developing",
+    "themes": [],
+    "url": null,
+    "slug": "faraday-new-entrants-practitioner-certification",
+    "isFree": false,
+    "isCertification": true,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-17T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D7-101",
+    "title": "Cooling & Water in 45 Minutes",
+    "description": "Rack density escalation is making air cooling economically untenable — the transition to liquid cooling is the biggest capex opportunity in data center infrast…",
+    "school": {
+      "id": "D7",
+      "name": "Cooling & Water",
+      "cluster": "Physical Stack"
+    },
+    "level": "101",
+    "programType": "Primer",
+    "personas": [
+      "Executive",
+      "Engineer",
+      "Operator"
+    ],
+    "durationMinutes": 45,
+    "priceUSD": 0,
+    "maturity": "Established",
+    "themes": [],
+    "url": "https://faraday-intelligence.ai/academy/c/cooling-and-water-in-45-minutes",
+    "slug": "cooling-and-water-in-45-minutes",
+    "isFree": true,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-16T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D7-1",
+    "title": "Direct-to-Chip Liquid Cooling (DLC)",
+    "description": "Cold-plate and direct-to-chip systems — deployment economics, GPU compatibility, and CDU market share dynamics.",
+    "school": {
+      "id": "D7",
+      "name": "Cooling & Water",
+      "cluster": "Physical Stack"
+    },
+    "level": "201",
+    "programType": "Course",
+    "personas": [
+      "Engineer",
+      "Operator",
+      "Executive"
+    ],
+    "durationMinutes": 75,
+    "priceUSD": 9.99,
+    "maturity": "Established",
+    "themes": [
+      "T-002"
+    ],
+    "url": null,
+    "slug": "direct-to-chip-liquid-cooling-dlc",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-15T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D7-2",
+    "title": "Immersion Cooling",
+    "description": "Single- and two-phase immersion — TCO vs DLC, fluid chemistry and safety, and the use-case boundary as density rises.",
+    "school": {
+      "id": "D7",
+      "name": "Cooling & Water",
+      "cluster": "Physical Stack"
+    },
+    "level": "301",
+    "programType": "Course",
+    "personas": [
+      "Engineer",
+      "Operator",
+      "Executive"
+    ],
+    "durationMinutes": 120,
+    "priceUSD": 9.99,
+    "maturity": "Established",
+    "themes": [
+      "T-002"
+    ],
+    "url": null,
+    "slug": "immersion-cooling",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-14T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D7-3",
+    "title": "Water Use & Waterless Cooling Strategies",
+    "description": "WUE metrics, evaporative alternatives, closed-loop adiabatic, and waterless cooling under rising water scrutiny.",
+    "school": {
+      "id": "D7",
+      "name": "Cooling & Water",
+      "cluster": "Physical Stack"
+    },
+    "level": "201",
+    "programType": "Course",
+    "personas": [
+      "Engineer",
+      "Operator",
+      "Executive"
+    ],
+    "durationMinutes": 75,
+    "priceUSD": 9.99,
+    "maturity": "Established",
+    "themes": [
+      "T-002",
+      "T-003"
+    ],
+    "url": null,
+    "slug": "water-use-and-waterless-cooling-strategies",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-13T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D7-CERT",
+    "title": "Faraday Cooling & Water Practitioner",
+    "description": "A live-brief credential: prove you can read real Cooling & Water signals under deadline — not recite fixed content.",
+    "school": {
+      "id": "D7",
+      "name": "Cooling & Water",
+      "cluster": "Physical Stack"
+    },
+    "level": "401",
+    "programType": "Certification",
+    "personas": [
+      "Engineer",
+      "Operator",
+      "Executive",
+      "Investor",
+      "Consultant"
+    ],
+    "durationMinutes": 180,
+    "priceUSD": 99,
+    "maturity": "Developing",
+    "themes": [],
+    "url": null,
+    "slug": "faraday-cooling-and-water-practitioner-certification",
+    "isFree": false,
+    "isCertification": true,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-12T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D8-101",
+    "title": "People & Signals in 45 Minutes",
+    "description": "Executive moves, conference conversations, and LinkedIn posts are leading indicators — the people layer is often where market shifts are visible before they ap…",
+    "school": {
+      "id": "D8",
+      "name": "People & Signals",
+      "cluster": "Operations & Resilience"
+    },
+    "level": "101",
+    "programType": "Primer",
+    "personas": [
+      "Executive",
+      "Operator",
+      "Engineer"
+    ],
+    "durationMinutes": 45,
+    "priceUSD": 0,
+    "maturity": "Established",
+    "themes": [],
+    "url": "https://faraday-intelligence.ai/academy/c/people-and-signals-in-45-minutes",
+    "slug": "people-and-signals-in-45-minutes",
+    "isFree": true,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-11T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D8-1",
+    "title": "Executive Movement & C-Suite Intelligence",
+    "description": "C-suite and VP moves across operators, hyperscalers and platforms as a leading indicator of strategic pivots.",
+    "school": {
+      "id": "D8",
+      "name": "People & Signals",
+      "cluster": "Operations & Resilience"
+    },
+    "level": "201",
+    "programType": "Know the Players",
+    "personas": [
+      "Operator",
+      "Engineer",
+      "Executive"
+    ],
+    "durationMinutes": 75,
+    "priceUSD": 4.99,
+    "maturity": "Established",
+    "themes": [
+      "T-004"
+    ],
+    "url": null,
+    "slug": "executive-movement-and-c-suite-intelligence",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-10T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D8-2",
+    "title": "Conference Intelligence & Speaking Circuit",
+    "description": "DCD Connect, GTC and OCP Summit — speaker lineups and panel topics as real-time signals of where consensus is forming.",
+    "school": {
+      "id": "D8",
+      "name": "People & Signals",
+      "cluster": "Operations & Resilience"
+    },
+    "level": "301",
+    "programType": "Know the Players",
+    "personas": [
+      "Operator",
+      "Engineer",
+      "Executive"
+    ],
+    "durationMinutes": 120,
+    "priceUSD": 4.99,
+    "maturity": "Established",
+    "themes": [],
+    "url": null,
+    "slug": "conference-intelligence-and-speaking-circuit",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-09T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D8-CERT",
+    "title": "Faraday People & Signals Practitioner",
+    "description": "A live-brief credential: prove you can read real People & Signals signals under deadline — not recite fixed content.",
+    "school": {
+      "id": "D8",
+      "name": "People & Signals",
+      "cluster": "Operations & Resilience"
+    },
+    "level": "401",
+    "programType": "Certification",
+    "personas": [
+      "Operator",
+      "Engineer",
+      "Executive",
+      "Investor",
+      "Consultant"
+    ],
+    "durationMinutes": 180,
+    "priceUSD": 99,
+    "maturity": "Developing",
+    "themes": [],
+    "url": null,
+    "slug": "faraday-people-and-signals-practitioner-certification",
+    "isFree": false,
+    "isCertification": true,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-08T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D9-101",
+    "title": "Orchestration in 45 Minutes",
+    "description": "As GPU clusters scale to NVL72 and beyond, orchestration and control plane decisions increasingly affect facility design, capex allocation, and sustained power…",
+    "school": {
+      "id": "D9",
+      "name": "Orchestration",
+      "cluster": "Operations & Resilience"
+    },
+    "level": "101",
+    "programType": "Primer",
+    "personas": [
+      "Executive",
+      "Operator",
+      "Engineer"
+    ],
+    "durationMinutes": 45,
+    "priceUSD": 0,
+    "maturity": "Established",
+    "themes": [],
+    "url": "https://faraday-intelligence.ai/academy/c/orchestration-in-45-minutes",
+    "slug": "orchestration-in-45-minutes",
+    "isFree": true,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-07T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D9-1",
+    "title": "AI Factory Orchestration & DCIM",
+    "description": "NVIDIA DSX, NVL72/144 cluster management, and how orchestration decisions drive sustained power and cooling.",
+    "school": {
+      "id": "D9",
+      "name": "Orchestration",
+      "cluster": "Operations & Resilience"
+    },
+    "level": "201",
+    "programType": "Course",
+    "personas": [
+      "Operator",
+      "Engineer",
+      "Executive"
+    ],
+    "durationMinutes": 75,
+    "priceUSD": 9.99,
+    "maturity": "Established",
+    "themes": [
+      "T-005"
+    ],
+    "url": null,
+    "slug": "ai-factory-orchestration-and-dcim",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-06T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D9-2",
+    "title": "GPU Utilization & Compute Scheduling Economics",
+    "description": "run:ai scheduling and multi-tenancy — why GPU utilization is the line between a profitable and unprofitable AI business.",
+    "school": {
+      "id": "D9",
+      "name": "Orchestration",
+      "cluster": "Operations & Resilience"
+    },
+    "level": "301",
+    "programType": "Course",
+    "personas": [
+      "Operator",
+      "Engineer",
+      "Executive"
+    ],
+    "durationMinutes": 120,
+    "priceUSD": 9.99,
+    "maturity": "Established",
+    "themes": [
+      "T-005"
+    ],
+    "url": null,
+    "slug": "gpu-utilization-and-compute-scheduling-economics",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-05T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D9-CERT",
+    "title": "Faraday Orchestration Practitioner",
+    "description": "A live-brief credential: prove you can read real Orchestration signals under deadline — not recite fixed content.",
+    "school": {
+      "id": "D9",
+      "name": "Orchestration",
+      "cluster": "Operations & Resilience"
+    },
+    "level": "401",
+    "programType": "Certification",
+    "personas": [
+      "Operator",
+      "Engineer",
+      "Executive",
+      "Investor",
+      "Consultant"
+    ],
+    "durationMinutes": 180,
+    "priceUSD": 99,
+    "maturity": "Developing",
+    "themes": [],
+    "url": null,
+    "slug": "faraday-orchestration-practitioner-certification",
+    "isFree": false,
+    "isCertification": true,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-04T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D10-101",
+    "title": "Construction in 45 Minutes",
+    "description": "Data center delivery is now constrained by construction capacity, commissioning throughput, and long-lead supply chains — build execution itself is a strategic…",
+    "school": {
+      "id": "D10",
+      "name": "Construction",
+      "cluster": "Physical Stack"
+    },
+    "level": "101",
+    "programType": "Primer",
+    "personas": [
+      "Executive",
+      "Engineer",
+      "Operator"
+    ],
+    "durationMinutes": 45,
+    "priceUSD": 0,
+    "maturity": "Developing",
+    "themes": [],
+    "url": "https://faraday-intelligence.ai/academy/c/construction-in-45-minutes",
+    "slug": "construction-in-45-minutes",
+    "isFree": true,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-03T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D10-1",
+    "title": "Long-Lead Equipment & Supply Chain",
+    "description": "Transformer, switchgear, generator and chiller lead times — the procurement bottleneck now decided years in advance.",
+    "school": {
+      "id": "D10",
+      "name": "Construction",
+      "cluster": "Physical Stack"
+    },
+    "level": "201",
+    "programType": "Course",
+    "personas": [
+      "Engineer",
+      "Operator",
+      "Executive"
+    ],
+    "durationMinutes": 75,
+    "priceUSD": 9.99,
+    "maturity": "Developing",
+    "themes": [
+      "T-001"
+    ],
+    "url": null,
+    "slug": "long-lead-equipment-and-supply-chain",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-02T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D10-2",
+    "title": "GC/EPC Capacity & Construction Execution",
+    "description": "GC/EPC capacity, commissioning throughput, and why reliable delivery now commands a leasing premium.",
+    "school": {
+      "id": "D10",
+      "name": "Construction",
+      "cluster": "Physical Stack"
+    },
+    "level": "301",
+    "programType": "Course",
+    "personas": [
+      "Engineer",
+      "Operator",
+      "Executive"
+    ],
+    "durationMinutes": 120,
+    "priceUSD": 9.99,
+    "maturity": "Developing",
+    "themes": [
+      "T-001"
+    ],
+    "url": null,
+    "slug": "gc-epc-capacity-and-construction-execution",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-01T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D10-3",
+    "title": "Modular & Prefabricated Data Center Delivery",
+    "description": "The shift from stick-built to factory-prefab MEP — the construction enabler for the 800V DC and DLC transitions.",
+    "school": {
+      "id": "D10",
+      "name": "Construction",
+      "cluster": "Physical Stack"
+    },
+    "level": "201",
+    "programType": "Course",
+    "personas": [
+      "Engineer",
+      "Operator",
+      "Executive"
+    ],
+    "durationMinutes": 75,
+    "priceUSD": 9.99,
+    "maturity": "Developing",
+    "themes": [
+      "T-002",
+      "T-001"
+    ],
+    "url": null,
+    "slug": "modular-and-prefabricated-data-center-delivery",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-04-30T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D10-CERT",
+    "title": "Faraday Construction Practitioner",
+    "description": "A live-brief credential: prove you can read real Construction signals under deadline — not recite fixed content.",
+    "school": {
+      "id": "D10",
+      "name": "Construction",
+      "cluster": "Physical Stack"
+    },
+    "level": "401",
+    "programType": "Certification",
+    "personas": [
+      "Engineer",
+      "Operator",
+      "Executive",
+      "Investor",
+      "Consultant"
+    ],
+    "durationMinutes": 180,
+    "priceUSD": 99,
+    "maturity": "Developing",
+    "themes": [],
+    "url": null,
+    "slug": "faraday-construction-practitioner-certification",
+    "isFree": false,
+    "isCertification": true,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-04-29T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D11-101",
+    "title": "Sustainability in 45 Minutes",
+    "description": "Sustainability constraints are becoming first-order drivers of siting, permitting, power procurement, and customer adoption — shaping which projects get built…",
+    "school": {
+      "id": "D11",
+      "name": "Sustainability",
+      "cluster": "Cross-Stack"
+    },
+    "level": "101",
+    "programType": "Primer",
+    "personas": [
+      "Executive",
+      "Engineer",
+      "Investor"
+    ],
+    "durationMinutes": 45,
+    "priceUSD": 0,
+    "maturity": "Developing",
+    "themes": [],
+    "url": "https://faraday-intelligence.ai/academy/c/sustainability-in-45-minutes",
+    "slug": "sustainability-in-45-minutes",
+    "isFree": true,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-04-28T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D11-1",
+    "title": "Clean Energy Procurement (PPA/REC/CFE)",
+    "description": "PPAs, RECs and 24/7 carbon-free matching — procurement as both a sustainability obligation and a long-term cost hedge.",
+    "school": {
+      "id": "D11",
+      "name": "Sustainability",
+      "cluster": "Cross-Stack"
+    },
+    "level": "201",
+    "programType": "Course",
+    "personas": [
+      "Engineer",
+      "Investor",
+      "Executive"
+    ],
+    "durationMinutes": 75,
+    "priceUSD": 9.99,
+    "maturity": "Developing",
+    "themes": [
+      "T-007"
+    ],
+    "url": null,
+    "slug": "clean-energy-procurement-ppa-rec-cfe",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-04-27T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D11-2",
+    "title": "Carbon Accounting & Scope 1-3 Reporting",
+    "description": "GHG Protocol Scope 1–3 reporting, embodied carbon, and the convergence of ESG mandates with regulatory disclosure.",
+    "school": {
+      "id": "D11",
+      "name": "Sustainability",
+      "cluster": "Cross-Stack"
+    },
+    "level": "301",
+    "programType": "Course",
+    "personas": [
+      "Engineer",
+      "Investor",
+      "Executive"
+    ],
+    "durationMinutes": 120,
+    "priceUSD": 9.99,
+    "maturity": "Developing",
+    "themes": [
+      "T-003"
+    ],
+    "url": null,
+    "slug": "carbon-accounting-and-scope-1-3-reporting",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-04-26T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D11-CERT",
+    "title": "Faraday Sustainability Practitioner",
+    "description": "A live-brief credential: prove you can read real Sustainability signals under deadline — not recite fixed content.",
+    "school": {
+      "id": "D11",
+      "name": "Sustainability",
+      "cluster": "Cross-Stack"
+    },
+    "level": "401",
+    "programType": "Certification",
+    "personas": [
+      "Engineer",
+      "Investor",
+      "Executive",
+      "Consultant"
+    ],
+    "durationMinutes": 180,
+    "priceUSD": 99,
+    "maturity": "Developing",
+    "themes": [],
+    "url": null,
+    "slug": "faraday-sustainability-practitioner-certification",
+    "isFree": false,
+    "isCertification": true,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-04-25T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D12-101",
+    "title": "Networking & Interconnect in 45 Minutes",
+    "description": "Fiber, IX exchanges, and subsea cable investment are reliable leading indicators of hyperscaler campus expansion — preceding facility announcements by 6–18 mon…",
+    "school": {
+      "id": "D12",
+      "name": "Networking & Interconnect",
+      "cluster": "Cross-Stack"
+    },
+    "level": "101",
+    "programType": "Primer",
+    "personas": [
+      "Executive",
+      "Engineer",
+      "Investor"
+    ],
+    "durationMinutes": 45,
+    "priceUSD": 0,
+    "maturity": "Developing",
+    "themes": [],
+    "url": "https://faraday-intelligence.ai/academy/c/networking-and-interconnect-in-45-minutes",
+    "slug": "networking-and-interconnect-in-45-minutes",
+    "isFree": true,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-04-24T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D12-CERT",
+    "title": "Faraday Networking & Interconnect Practitioner",
+    "description": "A live-brief credential: prove you can read real Networking & Interconnect signals under deadline — not recite fixed content.",
+    "school": {
+      "id": "D12",
+      "name": "Networking & Interconnect",
+      "cluster": "Cross-Stack"
+    },
+    "level": "401",
+    "programType": "Certification",
+    "personas": [
+      "Engineer",
+      "Investor",
+      "Executive",
+      "Consultant"
+    ],
+    "durationMinutes": 180,
+    "priceUSD": 99,
+    "maturity": "Developing",
+    "themes": [],
+    "url": null,
+    "slug": "faraday-networking-and-interconnect-practitioner-certification",
+    "isFree": false,
+    "isCertification": true,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-04-23T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D13-101",
+    "title": "Community Relations in 45 Minutes",
+    "description": "Community opposition is a first-order siting risk — data centers are winning on the grid but increasingly losing at the planning commission.",
+    "school": {
+      "id": "D13",
+      "name": "Community Relations",
+      "cluster": "Market & Policy"
+    },
+    "level": "101",
+    "programType": "Primer",
+    "personas": [
+      "Executive",
+      "Policy",
+      "Operator",
+      "Consultant"
+    ],
+    "durationMinutes": 45,
+    "priceUSD": 0,
+    "maturity": "Developing",
+    "themes": [],
+    "url": "https://faraday-intelligence.ai/academy/c/community-relations-in-45-minutes",
+    "slug": "community-relations-in-45-minutes",
+    "isFree": true,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-04-22T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D13-CERT",
+    "title": "Faraday Community Relations Practitioner",
+    "description": "A live-brief credential: prove you can read real Community Relations signals under deadline — not recite fixed content.",
+    "school": {
+      "id": "D13",
+      "name": "Community Relations",
+      "cluster": "Market & Policy"
+    },
+    "level": "401",
+    "programType": "Certification",
+    "personas": [
+      "Policy",
+      "Operator",
+      "Consultant",
+      "Investor"
+    ],
+    "durationMinutes": 180,
+    "priceUSD": 99,
+    "maturity": "Developing",
+    "themes": [],
+    "url": null,
+    "slug": "faraday-community-relations-practitioner-certification",
+    "isFree": false,
+    "isCertification": true,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-04-21T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D14-101",
+    "title": "Real Estate & Site Selection in 45 Minutes",
+    "description": "Entitled, powered land is the scarcest and most competitively sought asset in the AI infrastructure supply chain.",
+    "school": {
+      "id": "D14",
+      "name": "Real Estate & Site Selection",
+      "cluster": "Market & Policy"
+    },
+    "level": "101",
+    "programType": "Primer",
+    "personas": [
+      "Executive",
+      "Policy",
+      "Operator",
+      "Consultant"
+    ],
+    "durationMinutes": 45,
+    "priceUSD": 0,
+    "maturity": "Developing",
+    "themes": [],
+    "url": "https://faraday-intelligence.ai/academy/c/real-estate-and-site-selection-in-45-minutes",
+    "slug": "real-estate-and-site-selection-in-45-minutes",
+    "isFree": true,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-04-20T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D14-1",
+    "title": "Site Selection Criteria & Market Scoring",
+    "description": "The multi-factor siting process — power, zoning, water, fiber, climate — and the shift to power-driven decisions.",
+    "school": {
+      "id": "D14",
+      "name": "Real Estate & Site Selection",
+      "cluster": "Market & Policy"
+    },
+    "level": "201",
+    "programType": "Course",
+    "personas": [
+      "Policy",
+      "Operator",
+      "Consultant"
+    ],
+    "durationMinutes": 75,
+    "priceUSD": 9.99,
+    "maturity": "Developing",
+    "themes": [
+      "T-001",
+      "T-003"
+    ],
+    "url": null,
+    "slug": "site-selection-criteria-and-market-scoring",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-04-19T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D14-CERT",
+    "title": "Faraday Real Estate & Site Selection Practitioner",
+    "description": "A live-brief credential: prove you can read real Real Estate & Site Selection signals under deadline — not recite fixed content.",
+    "school": {
+      "id": "D14",
+      "name": "Real Estate & Site Selection",
+      "cluster": "Market & Policy"
+    },
+    "level": "401",
+    "programType": "Certification",
+    "personas": [
+      "Policy",
+      "Operator",
+      "Consultant",
+      "Investor"
+    ],
+    "durationMinutes": 180,
+    "priceUSD": 99,
+    "maturity": "Developing",
+    "themes": [],
+    "url": null,
+    "slug": "faraday-real-estate-and-site-selection-practitioner-certification",
+    "isFree": false,
+    "isCertification": true,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-04-18T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D15-101",
+    "title": "Sovereign AI & Geopolitics in 45 Minutes",
+    "description": "AI chip export controls and sovereign AI mandates are reshaping the global compute map faster than any market force.",
+    "school": {
+      "id": "D15",
+      "name": "Sovereign AI & Geopolitics",
+      "cluster": "Commercial & Capital"
+    },
+    "level": "101",
+    "programType": "Primer",
+    "personas": [
+      "Executive",
+      "Investor",
+      "Consultant"
+    ],
+    "durationMinutes": 45,
+    "priceUSD": 0,
+    "maturity": "Developing",
+    "themes": [],
+    "url": "https://faraday-intelligence.ai/academy/c/sovereign-ai-and-geopolitics-in-45-minutes",
+    "slug": "sovereign-ai-and-geopolitics-in-45-minutes",
+    "isFree": true,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-04-17T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D15-1",
+    "title": "Chip Export Controls & BIS Regime",
+    "description": "BIS rule changes, Entity List additions and CFIUS reviews — the fastest-moving geopolitical variable in AI infrastructure.",
+    "school": {
+      "id": "D15",
+      "name": "Sovereign AI & Geopolitics",
+      "cluster": "Commercial & Capital"
+    },
+    "level": "201",
+    "programType": "Course",
+    "personas": [
+      "Investor",
+      "Executive",
+      "Consultant"
+    ],
+    "durationMinutes": 75,
+    "priceUSD": 9.99,
+    "maturity": "Developing",
+    "themes": [
+      "T-006"
+    ],
+    "url": null,
+    "slug": "chip-export-controls-and-bis-regime",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-04-16T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D15-CERT",
+    "title": "Faraday Sovereign AI & Geopolitics Practitioner",
+    "description": "A live-brief credential: prove you can read real Sovereign AI & Geopolitics signals under deadline — not recite fixed content.",
+    "school": {
+      "id": "D15",
+      "name": "Sovereign AI & Geopolitics",
+      "cluster": "Commercial & Capital"
+    },
+    "level": "401",
+    "programType": "Certification",
+    "personas": [
+      "Investor",
+      "Executive",
+      "Consultant"
+    ],
+    "durationMinutes": 180,
+    "priceUSD": 99,
+    "maturity": "Developing",
+    "themes": [],
+    "url": null,
+    "slug": "faraday-sovereign-ai-and-geopolitics-practitioner-certification",
+    "isFree": false,
+    "isCertification": true,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-04-15T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D16-101",
+    "title": "Cyber & Physical Security in 45 Minutes",
+    "description": "Physical and cyber security for AI infrastructure is a distinct risk surface that enterprise security frameworks do not address.",
+    "school": {
+      "id": "D16",
+      "name": "Cyber & Physical Security",
+      "cluster": "Cross-Stack"
+    },
+    "level": "101",
+    "programType": "Primer",
+    "personas": [
+      "Executive",
+      "Engineer",
+      "Investor"
+    ],
+    "durationMinutes": 45,
+    "priceUSD": 0,
+    "maturity": "Developing",
+    "themes": [],
+    "url": "https://faraday-intelligence.ai/academy/c/cyber-and-physical-security-in-45-minutes",
+    "slug": "cyber-and-physical-security-in-45-minutes",
+    "isFree": true,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-04-14T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D16-1",
+    "title": "Enterprise IT Cybersecurity & Cloud Security",
+    "description": "Identity, network segmentation, cloud workload protection and zero-trust at DC operators and hyperscalers.",
+    "school": {
+      "id": "D16",
+      "name": "Cyber & Physical Security",
+      "cluster": "Cross-Stack"
+    },
+    "level": "201",
+    "programType": "Course",
+    "personas": [
+      "Engineer",
+      "Investor",
+      "Executive"
+    ],
+    "durationMinutes": 75,
+    "priceUSD": 9.99,
+    "maturity": "Candidate",
+    "themes": [
+      "T-006"
+    ],
+    "url": null,
+    "slug": "enterprise-it-cybersecurity-and-cloud-security",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-04-13T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D16-2",
+    "title": "OT / ICS / SCADA Cybersecurity",
+    "description": "BMS, DCIM and cooling SCADA as a cyber surface — CISA ICS advisories and OT network segmentation.",
+    "school": {
+      "id": "D16",
+      "name": "Cyber & Physical Security",
+      "cluster": "Cross-Stack"
+    },
+    "level": "301",
+    "programType": "Course",
+    "personas": [
+      "Engineer",
+      "Investor",
+      "Executive"
+    ],
+    "durationMinutes": 120,
+    "priceUSD": 9.99,
+    "maturity": "Candidate",
+    "themes": [
+      "T-001",
+      "T-006"
+    ],
+    "url": null,
+    "slug": "ot-ics-scada-cybersecurity",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-04-12T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D16-3",
+    "title": "Physical Security & Access Control",
+    "description": "Biometrics, video analytics, intrusion detection and drone defense — the facility envelope as its own threat surface.",
+    "school": {
+      "id": "D16",
+      "name": "Cyber & Physical Security",
+      "cluster": "Cross-Stack"
+    },
+    "level": "201",
+    "programType": "Course",
+    "personas": [
+      "Engineer",
+      "Investor",
+      "Executive"
+    ],
+    "durationMinutes": 75,
+    "priceUSD": 9.99,
+    "maturity": "Candidate",
+    "themes": [
+      "T-001"
+    ],
+    "url": null,
+    "slug": "physical-security-and-access-control",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-04-11T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D16-4",
+    "title": "State-Sponsored & Advanced Persistent Threats",
+    "description": "APT tracking, state-actor campaigns against DC infrastructure, and geopolitical threat modeling.",
+    "school": {
+      "id": "D16",
+      "name": "Cyber & Physical Security",
+      "cluster": "Cross-Stack"
+    },
+    "level": "301",
+    "programType": "Course",
+    "personas": [
+      "Engineer",
+      "Investor",
+      "Executive"
+    ],
+    "durationMinutes": 120,
+    "priceUSD": 9.99,
+    "maturity": "Candidate",
+    "themes": [
+      "T-006"
+    ],
+    "url": null,
+    "slug": "state-sponsored-and-advanced-persistent-threats",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-04-10T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D16-5",
+    "title": "Software Supply Chain & Vendor Risk",
+    "description": "SolarWinds-class attacks, SBOM requirements and third-party risk — the fastest-growing vector for operators.",
+    "school": {
+      "id": "D16",
+      "name": "Cyber & Physical Security",
+      "cluster": "Cross-Stack"
+    },
+    "level": "201",
+    "programType": "Course",
+    "personas": [
+      "Engineer",
+      "Investor",
+      "Executive"
+    ],
+    "durationMinutes": 75,
+    "priceUSD": 9.99,
+    "maturity": "Candidate",
+    "themes": [
+      "T-006"
+    ],
+    "url": null,
+    "slug": "software-supply-chain-and-vendor-risk",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-04-09T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D16-6",
+    "title": "Security Operations & Incident Response",
+    "description": "SOC operations, tabletop exercises, and the operational discipline that turns alerts into action.",
+    "school": {
+      "id": "D16",
+      "name": "Cyber & Physical Security",
+      "cluster": "Cross-Stack"
+    },
+    "level": "301",
+    "programType": "Course",
+    "personas": [
+      "Engineer",
+      "Investor",
+      "Executive"
+    ],
+    "durationMinutes": 120,
+    "priceUSD": 9.99,
+    "maturity": "Candidate",
+    "themes": [
+      "T-006"
+    ],
+    "url": null,
+    "slug": "security-operations-and-incident-response",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-04-08T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D16-CERT",
+    "title": "Faraday Cyber & Physical Security Practitioner",
+    "description": "A live-brief credential: prove you can read real Cyber & Physical Security signals under deadline — not recite fixed content.",
+    "school": {
+      "id": "D16",
+      "name": "Cyber & Physical Security",
+      "cluster": "Cross-Stack"
+    },
+    "level": "401",
+    "programType": "Certification",
+    "personas": [
+      "Engineer",
+      "Investor",
+      "Executive",
+      "Consultant"
+    ],
+    "durationMinutes": 180,
+    "priceUSD": 99,
+    "maturity": "Developing",
+    "themes": [],
+    "url": null,
+    "slug": "faraday-cyber-and-physical-security-practitioner-certification",
+    "isFree": false,
+    "isCertification": true,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-04-07T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D17-101",
+    "title": "Workforce & Labor Markets in 45 Minutes",
+    "description": "The data center industry is building at unprecedented scale but does not have the trades workforce to commission it — labor is now a hard constraint on deliver…",
+    "school": {
+      "id": "D17",
+      "name": "Workforce & Labor Markets",
+      "cluster": "Operations & Resilience"
+    },
+    "level": "101",
+    "programType": "Primer",
+    "personas": [
+      "Executive",
+      "Operator",
+      "Engineer"
+    ],
+    "durationMinutes": 45,
+    "priceUSD": 0,
+    "maturity": "Developing",
+    "themes": [],
+    "url": "https://faraday-intelligence.ai/academy/c/workforce-and-labor-markets-in-45-minutes",
+    "slug": "workforce-and-labor-markets-in-45-minutes",
+    "isFree": true,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-04-06T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D17-CERT",
+    "title": "Faraday Workforce & Labor Markets Practitioner",
+    "description": "A live-brief credential: prove you can read real Workforce & Labor Markets signals under deadline — not recite fixed content.",
+    "school": {
+      "id": "D17",
+      "name": "Workforce & Labor Markets",
+      "cluster": "Operations & Resilience"
+    },
+    "level": "401",
+    "programType": "Certification",
+    "personas": [
+      "Operator",
+      "Engineer",
+      "Executive",
+      "Investor",
+      "Consultant"
+    ],
+    "durationMinutes": 180,
+    "priceUSD": 99,
+    "maturity": "Developing",
+    "themes": [],
+    "url": null,
+    "slug": "faraday-workforce-and-labor-markets-practitioner-certification",
+    "isFree": false,
+    "isCertification": true,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-04-05T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D18-101",
+    "title": "Community Opposition & Regulatory Risk in 45 Minutes",
+    "description": "Community opposition has evolved from an occasional entitlement risk into a structural supply constraint — the gap between announced CAPEX and delivered megawa…",
+    "school": {
+      "id": "D18",
+      "name": "Community Opposition & Regulatory Risk",
+      "cluster": "Market & Policy"
+    },
+    "level": "101",
+    "programType": "Primer",
+    "personas": [
+      "Executive",
+      "Policy",
+      "Operator",
+      "Consultant"
+    ],
+    "durationMinutes": 45,
+    "priceUSD": 0,
+    "maturity": "Developing",
+    "themes": [],
+    "url": "https://faraday-intelligence.ai/academy/c/community-opposition-and-regulatory-risk-in-45-minutes",
+    "slug": "community-opposition-and-regulatory-risk-in-45-minutes",
+    "isFree": true,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-04-04T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D18-1",
+    "title": "Project Opposition Register",
+    "description": "Project-level tracking — developer, location, MW, opposition groups and dollar value at risk — Faraday's core D18 asset.",
+    "school": {
+      "id": "D18",
+      "name": "Community Opposition & Regulatory Risk",
+      "cluster": "Market & Policy"
+    },
+    "level": "201",
+    "programType": "Case Study",
+    "personas": [
+      "Policy",
+      "Operator",
+      "Consultant"
+    ],
+    "durationMinutes": 75,
+    "priceUSD": 9.99,
+    "maturity": "Developing",
+    "themes": [
+      "T-003"
+    ],
+    "url": null,
+    "slug": "project-opposition-register",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-04-03T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D18-2",
+    "title": "Jurisdiction Posture Intelligence (JPS)",
+    "description": "The proprietary 0–100 Jurisdiction Posture Score across five dimensions — turning opposition tracking into predictive siting.",
+    "school": {
+      "id": "D18",
+      "name": "Community Opposition & Regulatory Risk",
+      "cluster": "Market & Policy"
+    },
+    "level": "301",
+    "programType": "Course",
+    "personas": [
+      "Policy",
+      "Operator",
+      "Consultant"
+    ],
+    "durationMinutes": 120,
+    "priceUSD": 9.99,
+    "maturity": "Developing",
+    "themes": [
+      "T-003"
+    ],
+    "url": null,
+    "slug": "jurisdiction-posture-intelligence-jps",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-04-02T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D18-CERT",
+    "title": "Faraday Community Opposition & Regulatory Risk Practitioner",
+    "description": "A live-brief credential: prove you can read real Community Opposition & Regulatory Risk signals under deadline — not recite fixed content.",
+    "school": {
+      "id": "D18",
+      "name": "Community Opposition & Regulatory Risk",
+      "cluster": "Market & Policy"
+    },
+    "level": "401",
+    "programType": "Certification",
+    "personas": [
+      "Policy",
+      "Operator",
+      "Consultant",
+      "Investor"
+    ],
+    "durationMinutes": 180,
+    "priceUSD": 99,
+    "maturity": "Developing",
+    "themes": [],
+    "url": null,
+    "slug": "faraday-community-opposition-and-regulatory-risk-practitioner-certification",
+    "isFree": false,
+    "isCertification": true,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-06-15T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D19-101",
+    "title": "Tax, Incentives & Fiscal Policy in 45 Minutes",
+    "description": "Fiscal policy is the second power grid — invisible infrastructure that determines where capex actually lands.",
+    "school": {
+      "id": "D19",
+      "name": "Tax, Incentives & Fiscal Policy",
+      "cluster": "Commercial & Capital"
+    },
+    "level": "101",
+    "programType": "Primer",
+    "personas": [
+      "Executive",
+      "Investor",
+      "Consultant"
+    ],
+    "durationMinutes": 45,
+    "priceUSD": 0,
+    "maturity": "Developing",
+    "themes": [],
+    "url": "https://faraday-intelligence.ai/academy/c/tax-incentives-and-fiscal-policy-in-45-minutes",
+    "slug": "tax-incentives-and-fiscal-policy-in-45-minutes",
+    "isFree": true,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-06-14T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D19-1",
+    "title": "State & Local Tax Incentives",
+    "description": "Property tax abatements, sales-tax exemptions, PILOTs and TIF districts — a primary site-selection input.",
+    "school": {
+      "id": "D19",
+      "name": "Tax, Incentives & Fiscal Policy",
+      "cluster": "Commercial & Capital"
+    },
+    "level": "201",
+    "programType": "Course",
+    "personas": [
+      "Investor",
+      "Executive",
+      "Consultant"
+    ],
+    "durationMinutes": 75,
+    "priceUSD": 9.99,
+    "maturity": "Developing",
+    "themes": [
+      "T-003",
+      "T-004"
+    ],
+    "url": null,
+    "slug": "state-and-local-tax-incentives",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-06-13T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D19-2",
+    "title": "Federal Tax Policy",
+    "description": "IRA clean-energy credits, CHIPS Act 48D, Section 174 and bonus depreciation as the structural backdrop.",
+    "school": {
+      "id": "D19",
+      "name": "Tax, Incentives & Fiscal Policy",
+      "cluster": "Commercial & Capital"
+    },
+    "level": "301",
+    "programType": "Course",
+    "personas": [
+      "Investor",
+      "Executive",
+      "Consultant"
+    ],
+    "durationMinutes": 120,
+    "priceUSD": 9.99,
+    "maturity": "Developing",
+    "themes": [
+      "T-004"
+    ],
+    "url": null,
+    "slug": "federal-tax-policy",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-06-12T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D19-3",
+    "title": "International Tax & Transfer Pricing",
+    "description": "Ireland, Singapore and UAE regimes plus OECD Pillar Two — governing where international capacity lands.",
+    "school": {
+      "id": "D19",
+      "name": "Tax, Incentives & Fiscal Policy",
+      "cluster": "Commercial & Capital"
+    },
+    "level": "201",
+    "programType": "Course",
+    "personas": [
+      "Investor",
+      "Executive",
+      "Consultant"
+    ],
+    "durationMinutes": 75,
+    "priceUSD": 9.99,
+    "maturity": "Developing",
+    "themes": [
+      "T-006",
+      "T-004"
+    ],
+    "url": null,
+    "slug": "international-tax-and-transfer-pricing",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-06-11T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D19-4",
+    "title": "Tax Incentive Backlash & Clawback",
+    "description": "Incentive tallies, clawback legislation, and the shift from automatic to contested data center tax breaks.",
+    "school": {
+      "id": "D19",
+      "name": "Tax, Incentives & Fiscal Policy",
+      "cluster": "Commercial & Capital"
+    },
+    "level": "301",
+    "programType": "Course",
+    "personas": [
+      "Investor",
+      "Executive",
+      "Consultant"
+    ],
+    "durationMinutes": 120,
+    "priceUSD": 9.99,
+    "maturity": "Developing",
+    "themes": [
+      "T-003"
+    ],
+    "url": null,
+    "slug": "tax-incentive-backlash-and-clawback",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-06-10T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D19-5",
+    "title": "Tax-Driven Deal Structuring",
+    "description": "REIT tax treatment, like-kind exchanges and tax-efficient capital stacks as a material component of deal pricing.",
+    "school": {
+      "id": "D19",
+      "name": "Tax, Incentives & Fiscal Policy",
+      "cluster": "Commercial & Capital"
+    },
+    "level": "201",
+    "programType": "Course",
+    "personas": [
+      "Investor",
+      "Executive",
+      "Consultant"
+    ],
+    "durationMinutes": 75,
+    "priceUSD": 9.99,
+    "maturity": "Developing",
+    "themes": [
+      "T-004"
+    ],
+    "url": null,
+    "slug": "tax-driven-deal-structuring",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-06-09T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D19-CERT",
+    "title": "Faraday Tax, Incentives & Fiscal Policy Practitioner",
+    "description": "A live-brief credential: prove you can read real Tax, Incentives & Fiscal Policy signals under deadline — not recite fixed content.",
+    "school": {
+      "id": "D19",
+      "name": "Tax, Incentives & Fiscal Policy",
+      "cluster": "Commercial & Capital"
+    },
+    "level": "401",
+    "programType": "Certification",
+    "personas": [
+      "Investor",
+      "Executive",
+      "Consultant"
+    ],
+    "durationMinutes": 180,
+    "priceUSD": 99,
+    "maturity": "Developing",
+    "themes": [],
+    "url": null,
+    "slug": "faraday-tax-incentives-and-fiscal-policy-practitioner-certification",
+    "isFree": false,
+    "isCertification": true,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-06-08T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D20-101",
+    "title": "Facility IT & OT in 45 Minutes",
+    "description": "The facility's nervous system is a separate intelligence surface from its compute workload.",
+    "school": {
+      "id": "D20",
+      "name": "Facility IT & OT",
+      "cluster": "Physical Stack"
+    },
+    "level": "101",
+    "programType": "Primer",
+    "personas": [
+      "Executive",
+      "Engineer",
+      "Operator"
+    ],
+    "durationMinutes": 45,
+    "priceUSD": 0,
+    "maturity": "Developing",
+    "themes": [],
+    "url": "https://faraday-intelligence.ai/academy/c/facility-it-and-ot-in-45-minutes",
+    "slug": "facility-it-and-ot-in-45-minutes",
+    "isFree": true,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-06-07T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D20-1",
+    "title": "Building Management Systems & HVAC Control",
+    "description": "Desigo, Metasys and EcoStruxure — BMS as the facility layer running HVAC, power monitoring and environmental control.",
+    "school": {
+      "id": "D20",
+      "name": "Facility IT & OT",
+      "cluster": "Physical Stack"
+    },
+    "level": "201",
+    "programType": "Course",
+    "personas": [
+      "Engineer",
+      "Operator",
+      "Executive"
+    ],
+    "durationMinutes": 75,
+    "priceUSD": 9.99,
+    "maturity": "Developing",
+    "themes": [
+      "T-001",
+      "T-002"
+    ],
+    "url": null,
+    "slug": "building-management-systems-and-hvac-control",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-06-06T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D20-2",
+    "title": "Facility DCIM & Digital Twin",
+    "description": "Nlyte, Sunbird, EcoStruxure DC and Omniverse — power, thermal and capacity management at room and cabinet level.",
+    "school": {
+      "id": "D20",
+      "name": "Facility IT & OT",
+      "cluster": "Physical Stack"
+    },
+    "level": "301",
+    "programType": "Course",
+    "personas": [
+      "Engineer",
+      "Operator",
+      "Executive"
+    ],
+    "durationMinutes": 120,
+    "priceUSD": 9.99,
+    "maturity": "Developing",
+    "themes": [
+      "T-001",
+      "T-002"
+    ],
+    "url": null,
+    "slug": "facility-dcim-and-digital-twin",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-06-05T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D20-CERT",
+    "title": "Faraday Facility IT & OT Practitioner",
+    "description": "A live-brief credential: prove you can read real Facility IT & OT signals under deadline — not recite fixed content.",
+    "school": {
+      "id": "D20",
+      "name": "Facility IT & OT",
+      "cluster": "Physical Stack"
+    },
+    "level": "401",
+    "programType": "Certification",
+    "personas": [
+      "Engineer",
+      "Operator",
+      "Executive",
+      "Investor",
+      "Consultant"
+    ],
+    "durationMinutes": 180,
+    "priceUSD": 99,
+    "maturity": "Developing",
+    "themes": [],
+    "url": null,
+    "slug": "faraday-facility-it-and-ot-practitioner-certification",
+    "isFree": false,
+    "isCertification": true,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-06-04T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D21-101",
+    "title": "Insurance & Risk Markets in 45 Minutes",
+    "description": "Insurability is emerging as the next siting constraint after power and water.",
+    "school": {
+      "id": "D21",
+      "name": "Insurance & Risk Markets",
+      "cluster": "Commercial & Capital"
+    },
+    "level": "101",
+    "programType": "Primer",
+    "personas": [
+      "Executive",
+      "Investor",
+      "Consultant"
+    ],
+    "durationMinutes": 45,
+    "priceUSD": 0,
+    "maturity": "Developing",
+    "themes": [],
+    "url": "https://faraday-intelligence.ai/academy/c/insurance-and-risk-markets-in-45-minutes",
+    "slug": "insurance-and-risk-markets-in-45-minutes",
+    "isFree": true,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-06-03T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D21-1",
+    "title": "Data Center Property & Casualty Insurance",
+    "description": "Large-format property, business interruption and equipment breakdown — insurability as a sourcing constraint.",
+    "school": {
+      "id": "D21",
+      "name": "Insurance & Risk Markets",
+      "cluster": "Commercial & Capital"
+    },
+    "level": "201",
+    "programType": "Course",
+    "personas": [
+      "Investor",
+      "Executive",
+      "Consultant"
+    ],
+    "durationMinutes": 75,
+    "priceUSD": 9.99,
+    "maturity": "Developing",
+    "themes": [
+      "T-001"
+    ],
+    "url": null,
+    "slug": "data-center-property-and-casualty-insurance",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-06-02T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D21-2",
+    "title": "Cyber Insurance & Tech E&O",
+    "description": "Standalone cyber coverage, ransomware exclusions and the state-actor exclusion debate.",
+    "school": {
+      "id": "D21",
+      "name": "Insurance & Risk Markets",
+      "cluster": "Commercial & Capital"
+    },
+    "level": "301",
+    "programType": "Course",
+    "personas": [
+      "Investor",
+      "Executive",
+      "Consultant"
+    ],
+    "durationMinutes": 120,
+    "priceUSD": 9.99,
+    "maturity": "Developing",
+    "themes": [
+      "T-004",
+      "T-006"
+    ],
+    "url": null,
+    "slug": "cyber-insurance-and-tech-eando",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-06-01T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D21-3",
+    "title": "Climate & Parametric Risk Products",
+    "description": "Weather parametric triggers and insurability-zone mapping — how capital prices climate-driven siting risk.",
+    "school": {
+      "id": "D21",
+      "name": "Insurance & Risk Markets",
+      "cluster": "Commercial & Capital"
+    },
+    "level": "201",
+    "programType": "Course",
+    "personas": [
+      "Investor",
+      "Executive",
+      "Consultant"
+    ],
+    "durationMinutes": 75,
+    "priceUSD": 9.99,
+    "maturity": "Developing",
+    "themes": [
+      "T-003"
+    ],
+    "url": null,
+    "slug": "climate-and-parametric-risk-products",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-31T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D21-4",
+    "title": "Lender Insurance Requirements & Risk Transfer",
+    "description": "Builders risk, surety bonds and lender-mandated coverage as a gating item for debt closes.",
+    "school": {
+      "id": "D21",
+      "name": "Insurance & Risk Markets",
+      "cluster": "Commercial & Capital"
+    },
+    "level": "301",
+    "programType": "Course",
+    "personas": [
+      "Investor",
+      "Executive",
+      "Consultant"
+    ],
+    "durationMinutes": 120,
+    "priceUSD": 9.99,
+    "maturity": "Developing",
+    "themes": [
+      "T-001",
+      "T-004"
+    ],
+    "url": null,
+    "slug": "lender-insurance-requirements-and-risk-transfer",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-30T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D21-CERT",
+    "title": "Faraday Insurance & Risk Markets Practitioner",
+    "description": "A live-brief credential: prove you can read real Insurance & Risk Markets signals under deadline — not recite fixed content.",
+    "school": {
+      "id": "D21",
+      "name": "Insurance & Risk Markets",
+      "cluster": "Commercial & Capital"
+    },
+    "level": "401",
+    "programType": "Certification",
+    "personas": [
+      "Investor",
+      "Executive",
+      "Consultant"
+    ],
+    "durationMinutes": 180,
+    "priceUSD": 99,
+    "maturity": "Developing",
+    "themes": [],
+    "url": null,
+    "slug": "faraday-insurance-and-risk-markets-practitioner-certification",
+    "isFree": false,
+    "isCertification": true,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-29T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D22-101",
+    "title": "Industry Media & Analyst Coverage in 45 Minutes",
+    "description": "Who covers the story shapes what the market believes about the story.",
+    "school": {
+      "id": "D22",
+      "name": "Industry Media & Analyst Coverage",
+      "cluster": "Market & Policy"
+    },
+    "level": "101",
+    "programType": "Primer",
+    "personas": [
+      "Executive",
+      "Policy",
+      "Operator",
+      "Consultant"
+    ],
+    "durationMinutes": 45,
+    "priceUSD": 0,
+    "maturity": "Established",
+    "themes": [],
+    "url": "https://faraday-intelligence.ai/academy/c/industry-media-and-analyst-coverage-in-45-minutes",
+    "slug": "industry-media-and-analyst-coverage-in-45-minutes",
+    "isFree": true,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-28T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D22-1",
+    "title": "U.S. Media Coverage",
+    "description": "DCD, Data Center Knowledge, Bisnow and the business press — the lens that builds the DC story for capital and policy.",
+    "school": {
+      "id": "D22",
+      "name": "Industry Media & Analyst Coverage",
+      "cluster": "Market & Policy"
+    },
+    "level": "201",
+    "programType": "Know the Players",
+    "personas": [
+      "Policy",
+      "Operator",
+      "Consultant"
+    ],
+    "durationMinutes": 75,
+    "priceUSD": 4.99,
+    "maturity": "Established",
+    "themes": [],
+    "url": null,
+    "slug": "u-s-media-coverage",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-27T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D22-2",
+    "title": "EU Media Coverage",
+    "description": "DCD Europe and regional trade press — EU coverage has become structurally more regulatory than the US.",
+    "school": {
+      "id": "D22",
+      "name": "Industry Media & Analyst Coverage",
+      "cluster": "Market & Policy"
+    },
+    "level": "301",
+    "programType": "Know the Players",
+    "personas": [
+      "Policy",
+      "Operator",
+      "Consultant"
+    ],
+    "durationMinutes": 120,
+    "priceUSD": 4.99,
+    "maturity": "Established",
+    "themes": [],
+    "url": null,
+    "slug": "eu-media-coverage",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-26T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D22-3",
+    "title": "APAC / LATAM / MENA Media Coverage",
+    "description": "Regional press across APAC, LATAM, MENA and Africa as the buildout globalizes.",
+    "school": {
+      "id": "D22",
+      "name": "Industry Media & Analyst Coverage",
+      "cluster": "Market & Policy"
+    },
+    "level": "201",
+    "programType": "Know the Players",
+    "personas": [
+      "Policy",
+      "Operator",
+      "Consultant"
+    ],
+    "durationMinutes": 75,
+    "priceUSD": 4.99,
+    "maturity": "Established",
+    "themes": [],
+    "url": null,
+    "slug": "apac-latam-mena-media-coverage",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-25T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D22-4",
+    "title": "Industry Analysts",
+    "description": "Gartner, IDC, Synergy, Dell'Oro and CRE analysts — reports and rankings that shape buying and valuations.",
+    "school": {
+      "id": "D22",
+      "name": "Industry Media & Analyst Coverage",
+      "cluster": "Market & Policy"
+    },
+    "level": "301",
+    "programType": "Know the Players",
+    "personas": [
+      "Policy",
+      "Operator",
+      "Consultant"
+    ],
+    "durationMinutes": 120,
+    "priceUSD": 4.99,
+    "maturity": "Established",
+    "themes": [],
+    "url": null,
+    "slug": "industry-analysts",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-24T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D22-CERT",
+    "title": "Faraday Industry Media & Analyst Coverage Practitioner",
+    "description": "A live-brief credential: prove you can read real Industry Media & Analyst Coverage signals under deadline — not recite fixed content.",
+    "school": {
+      "id": "D22",
+      "name": "Industry Media & Analyst Coverage",
+      "cluster": "Market & Policy"
+    },
+    "level": "401",
+    "programType": "Certification",
+    "personas": [
+      "Policy",
+      "Operator",
+      "Consultant",
+      "Investor"
+    ],
+    "durationMinutes": 180,
+    "priceUSD": 99,
+    "maturity": "Developing",
+    "themes": [],
+    "url": null,
+    "slug": "faraday-industry-media-and-analyst-coverage-practitioner-certification",
+    "isFree": false,
+    "isCertification": true,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-23T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D23-101",
+    "title": "Outage Intelligence & Emergency Response in 45 Minutes",
+    "description": "Failure is the cheapest intelligence — somebody else's outage is tomorrow's architecture decision.",
+    "school": {
+      "id": "D23",
+      "name": "Outage Intelligence & Emergency Response",
+      "cluster": "Operations & Resilience"
+    },
+    "level": "101",
+    "programType": "Primer",
+    "personas": [
+      "Executive",
+      "Operator",
+      "Engineer"
+    ],
+    "durationMinutes": 45,
+    "priceUSD": 0,
+    "maturity": "Developing",
+    "themes": [],
+    "url": "https://faraday-intelligence.ai/academy/c/outage-intelligence-and-emergency-response-in-45-minutes",
+    "slug": "outage-intelligence-and-emergency-response-in-45-minutes",
+    "isFree": true,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-22T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D23-1",
+    "title": "Major Outage Postmortems",
+    "description": "Hyperscaler outage RCAs and root-cause patterns — where architectural mistakes become public before standard practice.",
+    "school": {
+      "id": "D23",
+      "name": "Outage Intelligence & Emergency Response",
+      "cluster": "Operations & Resilience"
+    },
+    "level": "201",
+    "programType": "Case Study",
+    "personas": [
+      "Operator",
+      "Engineer",
+      "Executive"
+    ],
+    "durationMinutes": 75,
+    "priceUSD": 9.99,
+    "maturity": "Developing",
+    "themes": [
+      "T-001",
+      "T-005"
+    ],
+    "url": null,
+    "slug": "major-outage-postmortems",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-21T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D23-2",
+    "title": "Grid Events & Physical Disasters",
+    "description": "Extreme weather, grid failures and wildfire evacuations affecting campuses, from ERCOT winter storms onward.",
+    "school": {
+      "id": "D23",
+      "name": "Outage Intelligence & Emergency Response",
+      "cluster": "Operations & Resilience"
+    },
+    "level": "301",
+    "programType": "Course",
+    "personas": [
+      "Operator",
+      "Engineer",
+      "Executive"
+    ],
+    "durationMinutes": 120,
+    "priceUSD": 9.99,
+    "maturity": "Developing",
+    "themes": [
+      "T-001",
+      "T-003"
+    ],
+    "url": null,
+    "slug": "grid-events-and-physical-disasters",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-20T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D23-3",
+    "title": "Cyber Incidents Targeting DC Infrastructure",
+    "description": "Ransomware, supply-chain attacks and state-actor targeting — the operational consequence of cyber threats.",
+    "school": {
+      "id": "D23",
+      "name": "Outage Intelligence & Emergency Response",
+      "cluster": "Operations & Resilience"
+    },
+    "level": "201",
+    "programType": "Case Study",
+    "personas": [
+      "Operator",
+      "Engineer",
+      "Executive"
+    ],
+    "durationMinutes": 75,
+    "priceUSD": 9.99,
+    "maturity": "Developing",
+    "themes": [
+      "T-006"
+    ],
+    "url": null,
+    "slug": "cyber-incidents-targeting-dc-infrastructure",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-19T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D23-4",
+    "title": "Business Continuity & Disaster Recovery Practice",
+    "description": "DR site strategy, multi-region failover and runbook evolution as a baseline for AI-class workloads.",
+    "school": {
+      "id": "D23",
+      "name": "Outage Intelligence & Emergency Response",
+      "cluster": "Operations & Resilience"
+    },
+    "level": "301",
+    "programType": "Course",
+    "personas": [
+      "Operator",
+      "Engineer",
+      "Executive"
+    ],
+    "durationMinutes": 120,
+    "priceUSD": 9.99,
+    "maturity": "Developing",
+    "themes": [
+      "T-001"
+    ],
+    "url": null,
+    "slug": "business-continuity-and-disaster-recovery-practice",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-18T00:00:00.000Z"
+  },
+  {
+    "id": "FA-D23-CERT",
+    "title": "Faraday Outage Intelligence & Emergency Response Practitioner",
+    "description": "A live-brief credential: prove you can read real Outage Intelligence & Emergency Response signals under deadline — not recite fixed content.",
+    "school": {
+      "id": "D23",
+      "name": "Outage Intelligence & Emergency Response",
+      "cluster": "Operations & Resilience"
+    },
+    "level": "401",
+    "programType": "Certification",
+    "personas": [
+      "Operator",
+      "Engineer",
+      "Executive",
+      "Investor",
+      "Consultant"
+    ],
+    "durationMinutes": 180,
+    "priceUSD": 99,
+    "maturity": "Developing",
+    "themes": [],
+    "url": null,
+    "slug": "faraday-outage-intelligence-and-emergency-response-practitioner-certification",
+    "isFree": false,
+    "isCertification": true,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-17T00:00:00.000Z"
+  },
+  {
+    "id": "FA-T-001-TRK",
+    "title": "The Power Reckoning (Learning Path)",
+    "description": "The grid wasn't built for this. Every gigawatt of announced hyperscaler capacity is racing against transformer lead times, interconnection queues, utility rate…",
+    "school": {
+      "id": "D2",
+      "name": "Power Architecture",
+      "cluster": "Physical Stack"
+    },
+    "level": "X",
+    "programType": "Track",
+    "personas": [
+      "Executive",
+      "Investor",
+      "Consultant",
+      "Engineer",
+      "Operator"
+    ],
+    "durationMinutes": 240,
+    "priceUSD": 9.99,
+    "maturity": "Developing",
+    "themes": [
+      "T-001"
+    ],
+    "url": null,
+    "slug": "the-power-reckoning-learning-path",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-16T00:00:00.000Z"
+  },
+  {
+    "id": "FA-T-002-TRK",
+    "title": "The Rack Revolution (Learning Path)",
+    "description": "The rack is being rebuilt from the ground up — and taking the facility with it. Liquid cooling, the 800V DC transition, and modular prefabrication are convergi…",
+    "school": {
+      "id": "D1",
+      "name": "Chips & Density",
+      "cluster": "Physical Stack"
+    },
+    "level": "X",
+    "programType": "Track",
+    "personas": [
+      "Executive",
+      "Investor",
+      "Consultant",
+      "Engineer",
+      "Operator"
+    ],
+    "durationMinutes": 240,
+    "priceUSD": 9.99,
+    "maturity": "Developing",
+    "themes": [
+      "T-002"
+    ],
+    "url": null,
+    "slug": "the-rack-revolution-learning-path",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-15T00:00:00.000Z"
+  },
+  {
+    "id": "FA-T-003-TRK",
+    "title": "The Consent Crisis (Learning Path)",
+    "description": "Communities are the new permitting authority. Communities are saying no to data centers at a rate the industry didn't anticipate. Community acceptance is now a…",
+    "school": {
+      "id": "D18",
+      "name": "Community Opposition & Regulatory Risk",
+      "cluster": "Market & Policy"
+    },
+    "level": "X",
+    "programType": "Track",
+    "personas": [
+      "Executive",
+      "Investor",
+      "Consultant",
+      "Policy",
+      "Operator"
+    ],
+    "durationMinutes": 240,
+    "priceUSD": 9.99,
+    "maturity": "Developing",
+    "themes": [
+      "T-003"
+    ],
+    "url": null,
+    "slug": "the-consent-crisis-learning-path",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-14T00:00:00.000Z"
+  },
+  {
+    "id": "FA-T-004-TRK",
+    "title": "The Capital Concentration (Learning Path)",
+    "description": "Fewer hands. More capital. Higher stakes. A handful of hyperscalers, sovereign wealth funds, and mega-PE platforms now control the majority of AI infrastructur…",
+    "school": {
+      "id": "D4",
+      "name": "M&A & Capital Markets",
+      "cluster": "Commercial & Capital"
+    },
+    "level": "X",
+    "programType": "Track",
+    "personas": [
+      "Executive",
+      "Investor",
+      "Consultant"
+    ],
+    "durationMinutes": 240,
+    "priceUSD": 9.99,
+    "maturity": "Developing",
+    "themes": [
+      "T-004"
+    ],
+    "url": null,
+    "slug": "the-capital-concentration-learning-path",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-13T00:00:00.000Z"
+  },
+  {
+    "id": "FA-T-005-TRK",
+    "title": "The Inference Economy (Learning Path)",
+    "description": "Training built the factories. Inference fills them. AI training built the data centers; inference will define their economics. Cost-per-token, tokens-per-watt,…",
+    "school": {
+      "id": "D9",
+      "name": "Orchestration",
+      "cluster": "Operations & Resilience"
+    },
+    "level": "X",
+    "programType": "Track",
+    "personas": [
+      "Executive",
+      "Investor",
+      "Consultant",
+      "Operator",
+      "Engineer"
+    ],
+    "durationMinutes": 240,
+    "priceUSD": 9.99,
+    "maturity": "Developing",
+    "themes": [
+      "T-005"
+    ],
+    "url": null,
+    "slug": "the-inference-economy-learning-path",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-12T00:00:00.000Z"
+  },
+  {
+    "id": "FA-T-006-TRK",
+    "title": "The Sovereign AI Race (Learning Path)",
+    "description": "Compute is the new strategic reserve. Nation-states are treating AI compute as sovereign infrastructure — in the same category as energy reserves and financial…",
+    "school": {
+      "id": "D15",
+      "name": "Sovereign AI & Geopolitics",
+      "cluster": "Commercial & Capital"
+    },
+    "level": "X",
+    "programType": "Track",
+    "personas": [
+      "Executive",
+      "Investor",
+      "Consultant"
+    ],
+    "durationMinutes": 240,
+    "priceUSD": 9.99,
+    "maturity": "Developing",
+    "themes": [
+      "T-006"
+    ],
+    "url": null,
+    "slug": "the-sovereign-ai-race-learning-path",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-11T00:00:00.000Z"
+  },
+  {
+    "id": "FA-T-007-TRK",
+    "title": "The New Energy Stack (Learning Path)",
+    "description": "The grid is no longer the default. Behind-the-meter generation, nuclear offtakes, long-duration storage, and gas peakers are replacing the assumption of grid-s…",
+    "school": {
+      "id": "D2",
+      "name": "Power Architecture",
+      "cluster": "Physical Stack"
+    },
+    "level": "X",
+    "programType": "Track",
+    "personas": [
+      "Executive",
+      "Investor",
+      "Consultant",
+      "Engineer",
+      "Operator"
+    ],
+    "durationMinutes": 240,
+    "priceUSD": 9.99,
+    "maturity": "Developing",
+    "themes": [
+      "T-007"
+    ],
+    "url": null,
+    "slug": "the-new-energy-stack-learning-path",
+    "isFree": false,
+    "isCertification": false,
+    "rating": null,
+    "ratingCount": null,
+    "thumbnailUrl": null,
+    "status": "Published",
+    "updatedAt": "2026-05-10T00:00:00.000Z"
+  }
+]

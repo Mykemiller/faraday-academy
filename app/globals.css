@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+/* Faraday brand system (spec §9). Locked palette — do not substitute.
+   warm-white is the page surface; never pure #FFFFFF. Gold is accent/focus/large only. */
+@theme {
+  --color-forest: #1c3424;
+  --color-forest-90: #2b4633;
+  --color-forest-70: #4a6354;
+  --color-forest-40: #93a596;
+  --color-gold: #c4922a;
+  --color-gold-soft: #d9b873;
+  --color-warm-white: #f8f5f0;
+  --color-warm-white-card: #fcfaf6;
+  --color-sage: #8ca68a;
+  --color-sage-40: #c9d4c7;
+  --color-sage-20: #e7ede6;
+
+  --font-serif: var(--font-plex-serif), Georgia, serif;
+  --font-sans: var(--font-bricolage), system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+
+  --radius-card: 0.5rem;
+}
+
+html {
+  background: var(--color-warm-white);
+}
+
+body {
+  background: var(--color-warm-white);
+  color: var(--color-forest);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Visible gold focus ring on every interactive element (spec §9.4 / §11). */
+*:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+/* Restrained motion; honor reduced-motion (spec §9.4 / §11). */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Hover lift only where hover is a real pointer affordance (spec §9.4). */
+@media (hover: hover) {
+  .card-hover {
+    transition: transform 150ms ease, box-shadow 150ms ease, border-color 150ms ease;
+  }
+  .card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px -8px rgba(28, 52, 36, 0.25);
+    border-color: var(--color-sage);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fade-in 220ms ease both;
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--color-sage-20) 25%,
+    var(--color-sage-40) 37%,
+    var(--color-sage-20) 63%
+  );
+  background-size: 400% 100%;
+  animation: skeleton-shimmer 1.4s ease infinite;
+}
+@keyframes skeleton-shimmer {
+  0% { background-position: 100% 50%; }
+  100% { background-position: 0 50%; }
+}

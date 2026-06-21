@@ -1,0 +1,186 @@
+[
+  {
+    "id": "D1",
+    "name": "Chips & Density",
+    "fullName": "Chips & Density",
+    "cluster": "Physical Stack",
+    "coreThesis": "GPU generations are the upstream cause of every downstream consequence in the data center economy — rack density is the primary forcing function for every infrastructure decision that follows.",
+    "domainType": "Core"
+  },
+  {
+    "id": "D2",
+    "name": "Power Architecture",
+    "fullName": "Power Architecture",
+    "cluster": "Physical Stack",
+    "coreThesis": "Power architecture is undergoing the most significant structural change since AC electrification — the 800V DC transition will reshape the entire data center build stack.",
+    "domainType": "Core"
+  },
+  {
+    "id": "D3",
+    "name": "Grid & Regulatory",
+    "fullName": "Grid & Regulatory",
+    "cluster": "Market & Policy",
+    "coreThesis": "Entitled, powered land is the scarcest asset in the data center supply chain — grid queues, moratoriums, and utility constraints define the development opportunity map.",
+    "domainType": "Core"
+  },
+  {
+    "id": "D4",
+    "name": "M&A & Capital Markets",
+    "fullName": "M&A & Capital Markets",
+    "cluster": "Commercial & Capital",
+    "coreThesis": "$580B+ deployed globally in 2025, $660–750B guided for 2026 — capital velocity and deal structure are intelligence products in themselves.",
+    "domainType": "Core"
+  },
+  {
+    "id": "D5",
+    "name": "Hyperscaler Activity",
+    "fullName": "Hyperscaler Activity",
+    "cluster": "Cross-Stack",
+    "coreThesis": "The Big 5 set the demand curve — their capex guidance, campus announcements, and technology decisions cascade through every domain in the IDF.",
+    "domainType": "Core"
+  },
+  {
+    "id": "D6",
+    "name": "New Entrants",
+    "fullName": "New Entrants",
+    "cluster": "Commercial & Capital",
+    "coreThesis": "The AI infrastructure gold rush is attracting capital to new categories — neoclouds, inference operators, edge developers, and sovereign AI programs are reshaping the competitive map.",
+    "domainType": "Core"
+  },
+  {
+    "id": "D7",
+    "name": "Cooling & Water",
+    "fullName": "Cooling & Water Technology",
+    "cluster": "Physical Stack",
+    "coreThesis": "Rack density escalation is making air cooling economically untenable — the transition to liquid cooling is the biggest capex opportunity in data center infrastructure right now.",
+    "domainType": "Core"
+  },
+  {
+    "id": "D8",
+    "name": "People & Signals",
+    "fullName": "People & Signals",
+    "cluster": "Operations & Resilience",
+    "coreThesis": "Executive moves, conference conversations, and LinkedIn posts are leading indicators — the people layer is often where market shifts are visible before they appear in filings.",
+    "domainType": "Core"
+  },
+  {
+    "id": "D9",
+    "name": "Orchestration",
+    "fullName": "Orchestration Intelligence & Control Plane",
+    "cluster": "Operations & Resilience",
+    "coreThesis": "As GPU clusters scale to NVL72 and beyond, orchestration and control plane decisions increasingly affect facility design, capex allocation, and sustained power draw.",
+    "domainType": "Core"
+  },
+  {
+    "id": "D10",
+    "name": "Construction",
+    "fullName": "Construction",
+    "cluster": "Physical Stack",
+    "coreThesis": "Data center delivery is now constrained by construction capacity, commissioning throughput, and long-lead supply chains — build execution itself is a strategic differentiator.",
+    "domainType": "Passion"
+  },
+  {
+    "id": "D11",
+    "name": "Sustainability",
+    "fullName": "Sustainability",
+    "cluster": "Cross-Stack",
+    "coreThesis": "Sustainability constraints are becoming first-order drivers of siting, permitting, power procurement, and customer adoption — shaping which projects get built and which get blocked.",
+    "domainType": "Passion"
+  },
+  {
+    "id": "D12",
+    "name": "Networking & Interconnect",
+    "fullName": "Networking & Interconnect",
+    "cluster": "Cross-Stack",
+    "coreThesis": "Fiber, IX exchanges, and subsea cable investment are reliable leading indicators of hyperscaler campus expansion — preceding facility announcements by 6–18 months.",
+    "domainType": "Passion"
+  },
+  {
+    "id": "D13",
+    "name": "Community Relations",
+    "fullName": "Community Relations",
+    "cluster": "Market & Policy",
+    "coreThesis": "Community opposition is a first-order siting risk — data centers are winning on the grid but increasingly losing at the planning commission.",
+    "domainType": "Passion"
+  },
+  {
+    "id": "D14",
+    "name": "Real Estate & Site Selection",
+    "fullName": "Real Estate & Site Selection",
+    "cluster": "Market & Policy",
+    "coreThesis": "Entitled, powered land is the scarcest and most competitively sought asset in the AI infrastructure supply chain.",
+    "domainType": "Passion"
+  },
+  {
+    "id": "D15",
+    "name": "Sovereign AI & Geopolitics",
+    "fullName": "Sovereign AI & Geopolitics",
+    "cluster": "Commercial & Capital",
+    "coreThesis": "AI chip export controls and sovereign AI mandates are reshaping the global compute map faster than any market force.",
+    "domainType": "Passion"
+  },
+  {
+    "id": "D16",
+    "name": "Cyber & Physical Security",
+    "fullName": "Cyber & Physical Security and Resilience",
+    "cluster": "Cross-Stack",
+    "coreThesis": "Physical and cyber security for AI infrastructure is a distinct risk surface that enterprise security frameworks do not address.",
+    "domainType": "Developing"
+  },
+  {
+    "id": "D17",
+    "name": "Workforce & Labor Markets",
+    "fullName": "Workforce & Labor Markets",
+    "cluster": "Operations & Resilience",
+    "coreThesis": "The data center industry is building at unprecedented scale but does not have the trades workforce to commission it — labor is now a hard constraint on delivery timelines.",
+    "domainType": "Passion"
+  },
+  {
+    "id": "D18",
+    "name": "Community Opposition & Regulatory Risk",
+    "fullName": "Community Opposition & Regulatory Risk",
+    "cluster": "Market & Policy",
+    "coreThesis": "Community opposition has evolved from an occasional entitlement risk into a structural supply constraint — the gap between announced CAPEX and delivered megawatts is the signal this domain tracks.",
+    "domainType": "Passion"
+  },
+  {
+    "id": "D19",
+    "name": "Tax, Incentives & Fiscal Policy",
+    "fullName": "Tax, Incentives & Fiscal Policy",
+    "cluster": "Commercial & Capital",
+    "coreThesis": "Fiscal policy is the second power grid — invisible infrastructure that determines where capex actually lands.",
+    "domainType": "Developing"
+  },
+  {
+    "id": "D20",
+    "name": "Facility IT & OT",
+    "fullName": "Facility IT & Operational Technology",
+    "cluster": "Physical Stack",
+    "coreThesis": "The facility's nervous system is a separate intelligence surface from its compute workload.",
+    "domainType": "Developing"
+  },
+  {
+    "id": "D21",
+    "name": "Insurance & Risk Markets",
+    "fullName": "Insurance & Risk Markets",
+    "cluster": "Commercial & Capital",
+    "coreThesis": "Insurability is emerging as the next siting constraint after power and water.",
+    "domainType": "Developing"
+  },
+  {
+    "id": "D22",
+    "name": "Industry Media & Analyst Coverage",
+    "fullName": "Industry Media & Analyst Coverage",
+    "cluster": "Market & Policy",
+    "coreThesis": "Who covers the story shapes what the market believes about the story.",
+    "domainType": "Established"
+  },
+  {
+    "id": "D23",
+    "name": "Outage Intelligence & Emergency Response",
+    "fullName": "Outage Intelligence & Emergency Response",
+    "cluster": "Operations & Resilience",
+    "coreThesis": "Failure is the cheapest intelligence — somebody else's outage is tomorrow's architecture decision.",
+    "domainType": "Developing"
+  }
+]

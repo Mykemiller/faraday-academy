@@ -1,0 +1,58 @@
+[
+  {
+    "id": "T-001",
+    "name": "The Power Reckoning",
+    "tagline": "The grid wasn't built for this.",
+    "lifecycle": "Active",
+    "primaryDomain": "D2",
+    "thesis": "Every gigawatt of announced hyperscaler capacity is racing against transformer lead times, interconnection queues, utility rate cases, and community opposition. The gap between announced and delivered megawatts is the defining constraint of the 2025–2028 cycle."
+  },
+  {
+    "id": "T-002",
+    "name": "The Rack Revolution",
+    "tagline": "The rack is being rebuilt from the ground up — and taking the facility with it.",
+    "lifecycle": "Active",
+    "primaryDomain": "D1",
+    "thesis": "Liquid cooling, the 800V DC transition, and modular prefabrication are converging at the rack level to make the AI data center architecturally unrecognizable within a single hardware generation."
+  },
+  {
+    "id": "T-003",
+    "name": "The Consent Crisis",
+    "tagline": "Communities are the new permitting authority.",
+    "lifecycle": "Active",
+    "primaryDomain": "D18",
+    "thesis": "Communities are saying no to data centers at a rate the industry didn't anticipate. Community acceptance is now a first-order constraint on where AI infrastructure can be built — alongside power and land."
+  },
+  {
+    "id": "T-004",
+    "name": "The Capital Concentration",
+    "tagline": "Fewer hands. More capital. Higher stakes.",
+    "lifecycle": "Active",
+    "primaryDomain": "D4",
+    "thesis": "A handful of hyperscalers, sovereign wealth funds, and mega-PE platforms now control the majority of AI infrastructure capital allocation globally — with underappreciated implications for competition, pricing, and access."
+  },
+  {
+    "id": "T-005",
+    "name": "The Inference Economy",
+    "tagline": "Training built the factories. Inference fills them.",
+    "lifecycle": "Active",
+    "primaryDomain": "D9",
+    "thesis": "AI training built the data centers; inference will define their economics. Cost-per-token, tokens-per-watt, and disaggregated inference architecture are the new metrics for infrastructure investment."
+  },
+  {
+    "id": "T-006",
+    "name": "The Sovereign AI Race",
+    "tagline": "Compute is the new strategic reserve.",
+    "lifecycle": "Active",
+    "primaryDomain": "D15",
+    "thesis": "Nation-states are treating AI compute as sovereign infrastructure — in the same category as energy reserves and financial systems. The geopolitical overlay is becoming as important as the technical architecture."
+  },
+  {
+    "id": "T-007",
+    "name": "The New Energy Stack",
+    "tagline": "The grid is no longer the default.",
+    "lifecycle": "Active",
+    "primaryDomain": "D2",
+    "thesis": "Behind-the-meter generation, nuclear offtakes, long-duration storage, and gas peakers are replacing the assumption of grid-sourced power. The data center is becoming an energy system that happens to run compute."
+  }
+]
