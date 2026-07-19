@@ -226,3 +226,33 @@ published by any agent — only an explicit Myke sign-off transaction
    remain open; their ACs were **not** checked. See the FAR-30 comment posted this run.
 6. **Activation** — flip Hermes/Sibyl/Gutenberg off `staged` with a one-line instruction when
    their triggers fire (each is a single-row update, not a rebuild).
+
+---
+
+## Addendum — Myke go/no-go applied (2026-07-19, later same day)
+
+Myke's decisions on §6 were returned and executed:
+
+1. **Courses approved.** FA-D19-101, FA-D21-101, FA-D23-101 transitioned `myke_review →
+   approved` under an explicit Myke sign-off (`SET LOCAL academy.myke_signoff='true'`),
+   logged in `academy_review_log` (actor `myke`). The governance gate correctly *permitted*
+   the signed-off transition (and separately *rejected* an unauthorized one) — verified.
+   These are `approved`, not `published`; LearnWorlds load stays deferred/manual.
+2. **Catalog count approved → generation proceeding.** Scheh is authoring the remaining
+   Sprint-2 batch (13 courses: D19 ×5, D21 ×4, D23 ×4). Each flows through Argus → `myke_review`
+   as it completes; none auto-approves.
+3. **Pricing** — deferred by Myke to a separate decision; the $0-Primer reconciliation and
+   billing rail (AC-011) remain open. No pricing change made.
+4. **FAR-30** — the three course-production ACs recorded as met (workflow operational, IDF
+   8-field tagging, Myke-sign-off gate now exercised); commercial/certification ACs left open,
+   consistent with the deferred pricing/billing decision and the un-built LearnWorlds flow.
+   Recorded via a FAR-30 comment.
+5. **Agents activated.** Hermes, Sibyl, Gutenberg flipped to `activation_status='active'` in
+   `academy_agent_staff`; skill specs moved out of `_staged/`. Two carry operational
+   preconditions that activation does not override: Hermes has no data until first publish, and
+   **Gutenberg must not push to LearnWorlds until the plan's API access is confirmed** (still
+   manual until then).
+
+**New request logged:** a course-media enhancement process (audio narration + animated
+graphics) — proposal at `docs/proposals/2026-07-19-course-media-enhancements.md`, pending Myke's
+go/no-go on approach + the budget/brand-voice blockers.

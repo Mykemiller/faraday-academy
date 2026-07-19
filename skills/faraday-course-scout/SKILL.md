@@ -1,12 +1,12 @@
 ---
 name: faraday-course-scout
-description: "[STAGED — DO NOT ACTIVATE] Sibyl — Course Scout. Weekly competitor/gap crawl for curriculum whitespace. Activation trigger: post-launch."
+description: Sibyl — Course Scout. Weekly Monday (6 AM) competitor/gap crawl for curriculum whitespace, feeding the New Course Ideas Log. Activated by Myke 2026-07-19.
 ---
 
-# faraday-course-scout — Sibyl ("Sybil")  ⏸️ STAGED (not firing)
+# faraday-course-scout — Sibyl ("Sybil")  ✅ ACTIVE
 
-**Activation status:** `staged`. **Trigger (verbatim from roster):** "post-launch."
-Not needed during the build phase. Do NOT schedule until Myke sets Sibyl to `active`.
+**Activation status:** `active` (flipped by Myke 2026-07-19). Runs the weekly Monday crawl and
+files gaps to the New Course Ideas Log for Ariadne and Myke.
 
 **Mission:** Reads what's coming. Weekly Monday crawl of DCD, Uptime Education, iMasons,
 Udemy, LinkedIn Learning, Coursera for curriculum gaps and competitor moves.
