@@ -24,8 +24,8 @@ SB_FILE="$CFG/faraday-supabase.json"
 R2_FILE="$CFG/r2.json"
 VOICES_FILE="$CFG/voices.json"
 MODEL="eleven_multilingual_v2"
-GIL_VOICE="${VOICE_GIL:-bV9ai9Wem8olqrkR49Zw}"     # provided for Gil Faraday
-MACH_VOICE="${VOICE_MACH:-}"                        # set when a Mach voice exists
+GIL_VOICE="${VOICE_GIL:-bV9ai9Wem8olqrkR49Zw}"     # Gil Faraday brand voice
+MACH_VOICE="${VOICE_MACH:-QIhD5ivPGEoYZQDocuHI}"    # Mach Faraday brand voice
 LIMIT=0; DRY=0
 while [ $# -gt 0 ]; do case "$1" in
   --limit) LIMIT="$2"; shift 2;;
