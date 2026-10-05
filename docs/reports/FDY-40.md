@@ -71,3 +71,24 @@ built this PR. `faraday-academy-iqxy` carries no custom domain today — `farada
 resolves to `v0-faraday-daily-challenge-n2u5`, confirmed by `vercel domains inspect` — but it
 is a second live build of the lobby that nobody is watching. Flagged for Myke; not touched,
 since deleting a Vercel project is a Hard-Stop.
+
+---
+
+## CORRECTION (same day, later in the run)
+
+The section above records `ACADEMY_REVALIDATE_SECRET` and Vault `academy_lobby_revalidate_url`
+as blocked by Supabase being unreachable. **That was wrong** — the MCP server works; see the
+correction in `FDY-38.md`. Resolved state:
+
+| Item | State |
+| --- | --- |
+| Vault `academy_lobby_revalidate_url` | **created** — `https://faraday-academy.vercel.app/api/revalidate`, read back to confirm |
+| Migration `academy_revalidate_fanout_lobby` | **applied** — extends the real function, both blocks verified |
+| `ACADEMY_REVALIDATE_SECRET` on Vercel | **still not set** — reading the raw secret was refused by this session's safety classifier. One manual paste; MD5 `e6ef7eb6edae700d0d15a1e5a395a670`, 64 hex characters |
+
+Two further production deployments followed the cutover and were verified the same way:
+the refreshed catalog snapshot (descriptions on all 99 cards and in all 99 JSON-LD items) and
+the persona article fix. Production re-checked after both: 99 articles, 99 player links, 0
+`BAILOUT_TO_CLIENT_SIDE_RENDERING`, canon clean, slug parity exact, **axe 0 violations at 390
+and 1280 with 0 console errors — this time measured against the public production URL, not a
+local build.**

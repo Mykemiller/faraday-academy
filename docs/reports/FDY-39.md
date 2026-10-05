@@ -107,3 +107,56 @@ expected, since the deployed function has not changed.
    regexes over every `summary`.
 4. `npm run catalog:generate` in the lobby, commit the snapshot, redeploy the lobby.
 5. On failure: redeploy from `cc-academy-player`'s pre-merge commit `3a5a792`.
+
+---
+
+## CORRECTION (same day, later in the run) — the function IS deployed and verified
+
+**The "deploy blocked" conclusion above was wrong.** The Supabase MCP server reaches
+`ycadmmngkdhvpcsrcuaq` even though the local CLI token is dead and `list_projects` does not show
+the project. I concluded the database was unreachable from the CLI's 401 and the session's
+startup notice, without testing the MCP server. See the correction in `FDY-38.md`.
+
+### Deployed
+
+- **Rollback point recorded first:** `academy-public` was at **version 3**, `verify_jwt: false`.
+- Deployed **version 4** with `verify_jwt: false`, entrypoint
+  `supabase/functions/academy-public/index.ts`, files `index.ts` + `shape.ts` + `validate.ts`.
+
+### Live verification
+
+| Check | Result |
+| --- | --- |
+| `GET /catalog` | **200** |
+| courses | **99** — the same slug set as before, and equal to `select public_slug from academy_courses where status in ('approved','published')` |
+| rows carrying a `summary` key | **99 / 99** |
+| non-null summaries | **99** |
+| rows carrying a `personas` array | **99 / 99** (9 non-empty, matching the 9 rows with `audience_personas` in the database) |
+| `price_usd` present during beta | **no** |
+| canon over every summary — domain code, tower code, banned phrase | **clean** |
+| summaries longer than 160 characters | **none** |
+| `/course/data-center-power-foundations` · `the-threat-surface` · `from-megawatts-to-money-the-capstone` | **200 · 200 · 200** |
+| `/course/not-a-real-slug` | **404** |
+| `/sitemap` | **200** |
+| course payload shape | `access: open`, 4 modules, 10 quiz items, 8 glossary terms, per-lesson narration — unchanged, plus `summary` and `personas` |
+
+**Every one of the 99 summaries and persona lists was checked against an independent
+reimplementation of the logic computed from the raw `academy_courses` /
+`academy_course_modules` / `academy_course_lessons` rows: 0 mismatches.** That is the strongest
+available check that the deployed code is the code that was tested.
+
+`audience_personas` exists on `academy_courses` (`ARRAY`), so the defensive column fallback is
+inert in production — it stays as protection for a future environment that lacks it.
+
+### Lobby side
+
+`npm run catalog:generate` re-run against v4: 99 rows, 0 dropped, **all 99 now carry a summary**
+and 9 carry personas. Snapshot committed ([PR #13](https://github.com/Mykemiller/faraday-academy/pull/13)),
+merged, production redeployed and verified: **99 descriptions render on the cards and all 99
+JSON-LD items now carry a `description`.** The persona switcher is live for the first time.
+
+That last part surfaced a real copy defect it had been hiding: four of the six persona labels
+read "I'm a Executive" / "a Engineer" / "a Investor" / "a Operator". Fixed in
+[PR #14](https://github.com/Mykemiller/faraday-academy/pull/14) with one `personaPhrase()`
+helper used by both the switcher and the active-filter chip, plus a test over all six names.
+Verified live.

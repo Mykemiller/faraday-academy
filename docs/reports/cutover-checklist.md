@@ -122,3 +122,21 @@ Against **https://faraday-academy.vercel.app/academy**, unauthenticated:
 3. The three environment variables can be left in place — the old build reads none of them.
 4. Nothing else needs undoing: no database write, no Vault write, no domain change, and no
    edge function deploy was part of this cutover.
+
+---
+
+## Post-cutover amendment
+
+The "one blocked item" above was based on a wrong reading of Supabase availability. Corrected:
+
+- Vault `academy_lobby_revalidate_url` — **created**.
+- Migration `academy_revalidate_fanout_lobby` — **applied**, extending the real
+  `academy_notify_revalidate()` function with a second, independently guarded post to the lobby.
+- `ACADEMY_REVALIDATE_SECRET` on Vercel — **still unset**, and the only item left. Reading the
+  raw Vault value was refused by this session's safety classifier. Paste it by hand into
+  `faraday-academy` → Production and redeploy. Check the paste by MD5:
+  `e6ef7eb6edae700d0d15a1e5a395a670`, 64 lowercase hex characters.
+
+Until that one variable is set, `/api/revalidate` returns 401 to the trigger and the lobby
+refreshes on its 300-second ISR window. The trigger swallows the rejection, so nothing is
+broken by waiting.
