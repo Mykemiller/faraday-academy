@@ -89,6 +89,50 @@ describe("CourseCard", () => {
     expect(screen.getByText("Cross-Stack")).toBeInTheDocument();
   });
 
+  it("exposes exactly one link per card, pointed at the player", () => {
+    const { container } = render(<CourseCard course={bySlug("the-threat-surface")} betaFree />);
+    const links = container.querySelectorAll("a[href]");
+    expect(links).toHaveLength(1);
+    expect(links[0]).toHaveAttribute("href", `${BASE}/the-threat-surface`);
+  });
+
+  it("names the course in its link, and opens in the same tab", () => {
+    render(<CourseCard course={bySlug("the-threat-surface")} betaFree />);
+    const link = screen.getByRole("link", { name: "The Threat Surface" });
+    expect(link).not.toHaveAttribute("target");
+    expect(link).not.toHaveAttribute("rel");
+  });
+
+  it("stretches the link over the card so the whole card is clickable", () => {
+    const { container } = render(<CourseCard course={bySlug("the-threat-surface")} betaFree />);
+    expect(container.querySelector("article")).toHaveClass("relative");
+    expect(container.querySelector("a")?.className).toMatch(/after:absolute/);
+  });
+
+  it("keeps the CTA decorative, so it is not a second tab stop", () => {
+    render(<CourseCard course={bySlug("the-threat-surface")} betaFree />);
+    expect(screen.queryByRole("link", { name: /start reading/i })).toBeNull();
+    expect(screen.getByText("Start reading")).toHaveAttribute("aria-hidden", "true");
+  });
+
+  it("builds a player link with no query string and no course code", () => {
+    for (const course of courses) {
+      const { container, unmount } = render(<CourseCard course={course} betaFree />);
+      const href = container.querySelector("a")!.getAttribute("href")!;
+      expect(href).toBe(`${BASE}/${course.slug}`);
+      expect(href).not.toMatch(/[?#]/);
+      expect(href).not.toMatch(/\bFA-/);
+      unmount();
+    }
+  });
+
+  it("is focusable by keyboard", async () => {
+    render(<CourseCard course={bySlug("the-threat-surface")} betaFree />);
+    const link = screen.getByRole("link", { name: "The Threat Surface" });
+    link.focus();
+    expect(link).toHaveFocus();
+  });
+
   it("is axe clean", async () => {
     const { container } = render(<CourseCard course={bySlug("the-threat-surface")} betaFree />);
     expect(await axe(container)).toHaveNoViolations();
@@ -110,6 +154,19 @@ describe("CourseGrid", () => {
     render(<CourseGrid results={[]} betaFree onClearAll={() => {}} />);
     expect(screen.getByText(/Nothing matches these filters/i)).toBeInTheDocument();
     expect(screen.getByRole("button", { name: /clear all filters/i })).toBeInTheDocument();
+  });
+
+  it("gives every card in the grid its own player link", () => {
+    const { container } = render(<CourseGrid results={courses} betaFree />);
+    const hrefs = [...container.querySelectorAll("a[href]")].map((a) => a.getAttribute("href"));
+    expect(hrefs).toHaveLength(courses.length);
+    expect(new Set(hrefs).size).toBe(courses.length);
+    expect(hrefs).toEqual(expect.arrayContaining(courses.map((c) => `${BASE}/${c.slug}`)));
+  });
+
+  it("is axe clean across a full grid", async () => {
+    const { container } = render(<CourseGrid results={courses} betaFree />);
+    expect(await axe(container)).toHaveNoViolations();
   });
 
   it("states no count anywhere", () => {

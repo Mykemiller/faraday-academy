@@ -14,7 +14,10 @@ export default function CourseCard({
     betaFree || course.priceUSD === null ? BETA_PRICE_LABEL : formatPrice(course.priceUSD);
 
   return (
-    <article className="card-hover flex flex-col overflow-hidden rounded-[var(--radius-card)] border border-sage-20 bg-warm-white-card">
+    // One link per card. The title anchor is stretched over the whole card by
+    // its ::after, so the card is a single tab stop and the CTA below is
+    // decoration rather than a second, identical destination.
+    <article className="card-hover relative flex flex-col overflow-hidden rounded-[var(--radius-card)] border border-sage-20 bg-warm-white-card focus-within:border-sage">
       <div className="flex flex-1 flex-col gap-2.5 p-5">
         <div className="flex items-center justify-between gap-2">
           <span className="inline-flex min-w-0 items-center gap-1.5 rounded-full bg-sage-20 px-2.5 py-1 text-[11px] text-forest-90">
@@ -29,7 +32,7 @@ export default function CourseCard({
         <h3 className="font-serif text-lg leading-snug text-forest">
           <a
             href={course.playerUrl}
-            className="text-forest underline-offset-4 hover:underline"
+            className="text-forest underline-offset-4 after:absolute after:inset-0 after:content-[''] hover:underline"
           >
             {course.title}
           </a>
@@ -64,13 +67,13 @@ export default function CourseCard({
         </div>
 
         <div className="mt-auto pt-3">
-          <a
-            href={course.playerUrl}
-            className="inline-flex items-center gap-1.5 text-sm font-medium text-forest underline-offset-4 hover:underline"
+          <span
+            aria-hidden
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-forest"
           >
             Start reading
             <ArrowRight className="h-4 w-4 text-gold" aria-hidden />
-          </a>
+          </span>
         </div>
       </div>
     </article>
