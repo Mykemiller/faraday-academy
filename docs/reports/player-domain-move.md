@@ -180,3 +180,32 @@ eventually merge into `main`, and the merge would delete the engine's schedule.
   attempt. **Not deleted** — deleting a Vercel project is a Hard-Stop.
 - **Vercel Sensitive variables make project-to-project migration a dashboard job.** Worth
   knowing before the next move is planned around a CLI step that cannot work.
+
+---
+
+## Addendum — Vault `academy_revalidate_url` does NOT point at the player's domain
+
+Step 6 of this issue asks for a read-only check that Vault `academy_revalidate_url` still names
+`https://www.faraday-player.com/api/revalidate`. It does not. It holds:
+
+```
+https://v0-faraday-daily-challenge-n2u5-git-cc-a-8922c8-project-foundry.vercel.app/api/revalidate
+```
+
+a Vercel **git-branch preview alias** for `cc-academy-player` on the old project. It answers
+today (POST without a secret → 404, the player's deliberate opaque rejection), so revalidation
+is working. But it is the wrong form in two ways:
+
+1. It is tied to the old project. **After the domain move it would keep pointing at
+   `v0-faraday-daily-challenge-n2u5`**, so the player's on-demand revalidation would silently
+   refresh a deployment nobody is reading while the real one went stale.
+2. A branch alias is not a stable address. It changes if the project is renamed or the branch
+   is retargeted.
+
+**Recommended, not done** (this issue says read-only): set it to
+`https://www.faraday-player.com/api/revalidate`, which is stable and survives the move. The
+equivalent lobby secret created in FDY-40 already uses the canonical domain form.
+
+The Supabase blocker named earlier in this report was also wrong — see `FDY-38.md`. It does not
+change this issue's outcome: the blocker here is Vercel Sensitive environment variables, which
+is unrelated to Supabase and still stands.
