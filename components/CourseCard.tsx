@@ -53,17 +53,14 @@ export default function CourseCard({
             <Clock className="h-3.5 w-3.5" aria-hidden />
             {formatReadingMinutes(course.readingMinutes)}
           </span>
-          {course.narrated && (
-            <>
-              <span aria-hidden>·</span>
-              <span className="inline-flex items-center gap-1">
-                <Headphones className="h-3.5 w-3.5" aria-hidden />
-                Narrated
-              </span>
-            </>
-          )}
           <span aria-hidden>·</span>
           <span className="font-medium text-forest">{price}</span>
+          {course.narrated && (
+            <span className="inline-flex items-center gap-1 rounded-full border border-sage-40 px-2 py-0.5 text-[10px] uppercase tracking-wide text-forest-90">
+              <Headphones className="h-3 w-3" aria-hidden />
+              Narrated
+            </span>
+          )}
         </div>
 
         <div className="mt-auto pt-3">

@@ -37,7 +37,7 @@ export default function FilterControls({
           groups would be read twice. */}
       {includePersona && facets.anyPersonas && (
         <div>
-          <h3 className={SECTION}>I&apos;m a…</h3>
+          <h2 className={SECTION}>I&apos;m a…</h2>
           <PersonaSwitcher value={filters.persona} onChange={handlers.setPersona} />
         </div>
       )}
@@ -71,7 +71,7 @@ export default function FilterControls({
 
       {facets.subjectsByCluster.length > 0 && (
         <div>
-          <h3 className={SECTION}>Subject</h3>
+          <h2 className={SECTION}>Subject</h2>
           <SubjectFilter
             groups={facets.subjectsByCluster}
             selected={filters.subjects}
@@ -112,7 +112,7 @@ export default function FilterControls({
 
       {facets.anyNarrated && (
         <div>
-          <h3 className={SECTION}>Narration</h3>
+          <h2 className={SECTION}>Narration</h2>
           <label
             htmlFor={`${idPrefix}-narrated`}
             className="flex cursor-pointer items-center gap-2 text-sm text-forest-90"

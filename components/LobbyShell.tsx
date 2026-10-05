@@ -119,6 +119,9 @@ export default function LobbyShell({ catalog }: { catalog: LobbyCatalog }) {
           <FilterRail filters={filters} facets={facets} handlers={handlers} />
 
           <div className="min-w-0 flex-1 space-y-5">
+            {/* The grid needs a level-2 heading of its own: on a phone the filter
+                rail is display:none, so without this the document jumps h1 → h3. */}
+            <h2 className="sr-only">Courses</h2>
             <Toolbar
               q={filters.q}
               onQChange={(q) => setFilters((f) => ({ ...f, q }))}
