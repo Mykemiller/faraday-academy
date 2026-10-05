@@ -1,6 +1,6 @@
 // Pure, dependency-free filter/sort/chip core. The UI never re-implements it.
 import type { Chip, FilterState, LobbyCourse, Persona, SortKey } from "./types";
-import { LEVEL_ORDER } from "./constants";
+import { LEVEL_ORDER, personaPhrase } from "./constants";
 
 export function matchText(c: LobbyCourse, q: string): boolean {
   const needle = q.trim().toLowerCase();
@@ -58,7 +58,7 @@ export function authorLabel(voice: "gil" | "mach"): string {
 
 export function activeChips(f: FilterState): Chip[] {
   const chips: Chip[] = [];
-  if (f.persona) chips.push({ key: "persona", label: `I'm a ${f.persona}`, kind: "persona" });
+  if (f.persona) chips.push({ key: "persona", label: personaPhrase(f.persona), kind: "persona" });
   for (const level of f.levels) {
     chips.push({ key: `level:${level}`, label: `Level ${level}`, kind: "level", value: level });
   }

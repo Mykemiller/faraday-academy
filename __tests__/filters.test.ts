@@ -108,6 +108,15 @@ describe("chips", () => {
     expect(chips.find((c) => c.kind === "author")!.label).toBe("Mach Eigen");
   });
 
+  it("uses the right article for every persona name", () => {
+    const labels = (["Executive","Engineer","Investor","Operator","Policy","Consultant"] as const)
+      .map((p) => activeChips(f({ persona: p }))[0].label);
+    expect(labels).toEqual([
+      "I'm an Executive", "I'm an Engineer", "I'm an Investor",
+      "I'm an Operator", "I'm a Policy", "I'm a Consultant",
+    ]);
+  });
+
   it("hasActiveFilters tracks the default state", () => {
     expect(hasActiveFilters(f())).toBe(false);
     expect(hasActiveFilters(f({ narrated: true }))).toBe(true);
