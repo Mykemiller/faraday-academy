@@ -1,6 +1,6 @@
 "use client";
 import type { Persona } from "@/lib/types";
-import { PERSONAS } from "@/lib/constants";
+import { PERSONAS, personaPhrase } from "@/lib/constants";
 
 // "I'm a…" discovery lens. It reorders the grid and never hides a course.
 export default function PersonaSwitcher({
@@ -35,7 +35,7 @@ export default function PersonaSwitcher({
                 : "bg-transparent text-forest-90 border-sage-40 hover:border-sage",
             ].join(" ")}
           >
-            {val === null ? label : `I'm a ${label}`}
+            {val === null ? label : personaPhrase(label)}
           </button>
         );
       })}

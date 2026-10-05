@@ -97,3 +97,13 @@ export function formatPrice(priceUSD: number): string {
 }
 
 export const BETA_PRICE_LABEL = "Free during beta";
+
+/**
+ * "I'm an Executive", not "I'm a Executive". The persona switcher only became
+ * visible once the catalog started carrying personas, which is when the wrong
+ * article started showing on four of the six labels.
+ */
+export function personaPhrase(persona: string): string {
+  const article = /^[AEIOU]/i.test(persona) ? "an" : "a";
+  return `I'm ${article} ${persona}`;
+}
