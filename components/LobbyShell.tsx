@@ -1,6 +1,5 @@
 "use client";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import type { AuthorVoice, Chip, FilterState, Level, LobbyCatalog } from "@/lib/types";
 import { applyFilters, applySort } from "@/lib/filters";
 import { activeChips } from "@/lib/filters";
@@ -14,33 +13,51 @@ import PersonaSwitcher from "./PersonaSwitcher";
 import Toolbar from "./Toolbar";
 import CourseGrid from "./CourseGrid";
 
+/**
+ * Deliberately does NOT call useSearchParams.
+ *
+ * On a prerendered route that hook forces the client tree up to the nearest
+ * Suspense boundary to be client-side rendered, which is exactly what produced
+ * a lobby whose HTML was skeletons and whose 99 player links existed only after
+ * hydration — invisible to a crawler and to a reader on a slow connection.
+ *
+ * Instead the server renders the unfiltered grid, the shell hydrates with the
+ * same default state (so the markup matches), and the URL is read once on mount
+ * and on popstate. Writes go through window.history.replaceState, which Next
+ * integrates with its router without a navigation round trip.
+ */
 export default function LobbyShell({ catalog }: { catalog: LobbyCatalog }) {
-  const router = useRouter();
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-
   const facets = useMemo(() => facetsFor(catalog.courses), [catalog.courses]);
 
-  const urlFilters = useMemo(
-    () => parseFilters(new URLSearchParams(searchParams.toString()), facets.subjects),
-    [searchParams, facets.subjects],
-  );
-
-  const [filters, setFilters] = useState<FilterState>(urlFilters);
+  const [filters, setFilters] = useState<FilterState>(DEFAULT_FILTERS);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const drawerTriggerRef = useRef<HTMLButtonElement>(null);
+  const readUrl = useRef(false);
 
-  // Mirror filter state to the URL so a view is shareable and back/forward safe.
-  const serialized = useMemo(() => serializeFilters(filters).toString(), [filters]);
-  const urlSerialized = useMemo(
-    () => serializeFilters(urlFilters).toString(),
-    [urlFilters],
-  );
+  const subjects = facets.subjects;
+
+  // Read the URL after hydration, and again on back/forward.
   useEffect(() => {
-    if (serialized !== urlSerialized) {
-      router.replace(`${pathname}${serialized ? `?${serialized}` : ""}`, { scroll: false });
-    }
-  }, [serialized, urlSerialized, pathname, router]);
+    const fromUrl = () =>
+      setFilters(parseFilters(new URLSearchParams(window.location.search), subjects));
+    fromUrl();
+    readUrl.current = true;
+    window.addEventListener("popstate", fromUrl);
+    return () => window.removeEventListener("popstate", fromUrl);
+  }, [subjects]);
+
+  // Mirror filter state back to the URL so a view is shareable.
+  const serialized = useMemo(() => serializeFilters(filters).toString(), [filters]);
+  useEffect(() => {
+    if (!readUrl.current) return;
+    const current = window.location.search.replace(/^\?/, "");
+    if (serialized === current) return;
+    window.history.replaceState(
+      null,
+      "",
+      `${window.location.pathname}${serialized ? `?${serialized}` : ""}`,
+    );
+  }, [serialized]);
 
   const results = useMemo(
     () => applySort(applyFilters(catalog.courses, filters), filters.sort, filters.persona),

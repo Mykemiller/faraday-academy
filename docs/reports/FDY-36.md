@@ -73,3 +73,21 @@ are dropped in silence, which `filters.test.ts` asserts.
 
 No count appears in any user-visible string; the result line is an `sr-only`
 `aria-live` "Results updated."
+
+## Amendment after the preview check (same day)
+
+Running the canon regexes over the *branch preview's* HTML surfaced two things worth stating
+plainly rather than scoring as a pass:
+
+1. **A `$1` "price" match is a false positive.** It is React Flight payload syntax
+   (`["$","$1","c",{...}]`), not a rendered price. The canon test deliberately asserts over
+   `renderToStaticMarkup` output — real rendered HTML — rather than over a page that still
+   embeds a flight payload.
+2. **"Free during beta" and "Results updated." were absent from the preview HTML**, because at
+   this commit the grid was still client-side rendered (`BAILOUT_TO_CLIENT_SIDE_RENDERING`).
+   The canon regex pass over the preview was therefore partly vacuous: there was very little
+   rendered text to check. FDY-37 removes the bailout, and the full preview check is re-run
+   there and again at FDY-40's gate.
+
+Codes, legacy URLs, "Coming soon", LearnWorlds and banned phrases were all genuinely clean on
+the preview, and the 99 player links were present.
