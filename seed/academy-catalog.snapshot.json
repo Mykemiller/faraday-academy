@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-05T20:17:29.088Z",
+  "generated_at": "2026-10-05T21:33:53.366Z",
   "beta": {
     "free": true
   },
@@ -14,7 +14,9 @@
       },
       "group": "Chips & Density",
       "reading_minutes": 28,
-      "narrated": true
+      "narrated": true,
+      "summary": "Open the lid of a modern AI accelerator and the first surprise is how little of it is the thing everyone talks about.",
+      "personas": []
     },
     {
       "slug": "ai-back-end-fabric-and-optical-interconnect",
@@ -26,7 +28,9 @@
       },
       "group": "Networking & Interconnect",
       "reading_minutes": 28,
-      "narrated": true
+      "narrated": true,
+      "summary": "Start with the claim the rest of the course defends: a large training cluster is a single machine, and its speed is governed by communication, not computation.",
+      "personas": []
     },
     {
       "slug": "ai-chips-and-compute-density-foundations",
@@ -38,7 +42,13 @@
       },
       "group": "Chips & Density",
       "reading_minutes": 27,
-      "narrated": true
+      "narrated": true,
+      "summary": "The constraint is simple: buildings take years to deliver, and the chips inside them now change every year.",
+      "personas": [
+        "Investor",
+        "Operator",
+        "Engineer"
+      ]
     },
     {
       "slug": "ai-factory-architecture",
@@ -50,7 +60,9 @@
       },
       "group": "Chips & Density",
       "reading_minutes": 28,
-      "narrated": true
+      "narrated": true,
+      "summary": "Stop picturing a data center.",
+      "personas": []
     },
     {
       "slug": "ai-factory-operations-and-control-foundations",
@@ -62,7 +74,13 @@
       },
       "group": "Orchestration Intelligence & Control Plane",
       "reading_minutes": 28,
-      "narrated": true
+      "narrated": true,
+      "summary": "An AI factory is a machine for turning capital into computation.",
+      "personas": [
+        "Operator",
+        "Engineer",
+        "Investor"
+      ]
     },
     {
       "slug": "ai-labs-as-infrastructure-buyers",
@@ -74,7 +92,9 @@
       },
       "group": "New Entrants",
       "reading_minutes": 26,
-      "narrated": true
+      "narrated": true,
+      "summary": "Start with the structural fact: the entities that train frontier models have stopped renting infrastructure and started commissioning it.",
+      "personas": []
     },
     {
       "slug": "analyst-intelligence-reading-gartner-idc-and-the-trade-press",
@@ -86,7 +106,9 @@
       },
       "group": "Industry Media & Analyst Coverage",
       "reading_minutes": 26,
-      "narrated": true
+      "narrated": true,
+      "summary": "Start with the map, because the analyst world is not one thing.",
+      "personas": []
     },
     {
       "slug": "behind-the-fence-gas-and-fuel-cells",
@@ -98,7 +120,9 @@
       },
       "group": "Power Architecture",
       "reading_minutes": 30,
-      "narrated": true
+      "narrated": true,
+      "summary": "Start with the arithmetic, because the arithmetic is what makes this course necessary.",
+      "personas": []
     },
     {
       "slug": "behind-the-meter-strategy",
@@ -110,7 +134,9 @@
       },
       "group": "Power Architecture",
       "reading_minutes": 27,
-      "narrated": true
+      "narrated": true,
+      "summary": "Start with the physical fact.",
+      "personas": []
     },
     {
       "slug": "build-vs-lease-and-capacity-geography",
@@ -122,7 +148,9 @@
       },
       "group": "Hyperscaler Activity",
       "reading_minutes": 25,
-      "narrated": true
+      "narrated": true,
+      "summary": "Every hyperscaler faces the same question for each new increment of capacity: do we build and own the facility, lease a purpose-built shell from a developer…",
+      "personas": []
     },
     {
       "slug": "building-management-systems-and-hvac-control",
@@ -134,7 +162,9 @@
       },
       "group": "Facility IT & Operational Technology",
       "reading_minutes": 30,
-      "narrated": true
+      "narrated": true,
+      "summary": "Start with a clean separation.",
+      "personas": []
     },
     {
       "slug": "business-continuity-and-disaster-recovery-practice",
@@ -146,7 +176,9 @@
       },
       "group": "Outage Intelligence & Emergency Response",
       "reading_minutes": 27,
-      "narrated": true
+      "narrated": true,
+      "summary": "Every recovery conversation eventually reduces to two questions, and the discipline of continuity planning is mostly the discipline of asking them in the…",
+      "personas": []
     },
     {
       "slug": "campus-portfolio-strategy-and-site-selection-mastery",
@@ -158,7 +190,9 @@
       },
       "group": "Real Estate & Site Selection",
       "reading_minutes": 26,
-      "narrated": true
+      "narrated": true,
+      "summary": "Expert site selection begins with an uncomfortable admission: the skills that win a single deal can lose a portfolio.",
+      "personas": []
     },
     {
       "slug": "chip-export-controls-and-outbound-dual-use",
@@ -170,7 +204,9 @@
       },
       "group": "Sovereign AI & Geopolitics",
       "reading_minutes": 29,
-      "narrated": true
+      "narrated": true,
+      "summary": "Export controls are one of the oldest instruments of statecraft, but the version that now governs computing is a recent and deliberate invention.",
+      "personas": []
     },
     {
       "slug": "clean-energy-procurement-ppa-rec-and-24-7-cfe",
@@ -182,7 +218,9 @@
       },
       "group": "Sustainability",
       "reading_minutes": 30,
-      "narrated": true
+      "narrated": true,
+      "summary": "Start with a picture that will keep you honest for the rest of this course.",
+      "personas": []
     },
     {
       "slug": "climate-and-parametric-risk-products",
@@ -194,7 +232,9 @@
       },
       "group": "Insurance & Risk Markets",
       "reading_minutes": 26,
-      "narrated": true
+      "narrated": true,
+      "summary": "Every parametric contract rests on three moving parts, and the discipline of the product is to define each so tightly that no adjuster is ever needed.",
+      "personas": []
     },
     {
       "slug": "community-benefits-and-host-agreements",
@@ -206,7 +246,9 @@
       },
       "group": "Community Relations",
       "reading_minutes": 27,
-      "narrated": true
+      "narrated": true,
+      "summary": "Let me name the instrument before we use it.",
+      "personas": []
     },
     {
       "slug": "community-relations-foundations",
@@ -218,7 +260,9 @@
       },
       "group": "Community Relations",
       "reading_minutes": 30,
-      "narrated": true
+      "narrated": true,
+      "summary": "Let me start with the observation that organizes everything else in this course.",
+      "personas": []
     },
     {
       "slug": "community-strategy-master-class",
@@ -230,7 +274,9 @@
       },
       "group": "Community Relations",
       "reading_minutes": 28,
-      "narrated": true
+      "narrated": true,
+      "summary": "The planning commission is the real interconnection queue.",
+      "personas": []
     },
     {
       "slug": "construction-and-skilled-trades-labor",
@@ -242,7 +288,9 @@
       },
       "group": "Workforce & Labor Markets",
       "reading_minutes": 26,
-      "narrated": true
+      "narrated": true,
+      "summary": "When people picture the buildout behind a new plant, a data center, or a grid upgrade, they tend to see concrete and steel.",
+      "personas": []
     },
     {
       "slug": "construction-foundations-for-ai-infrastructure",
@@ -254,7 +302,9 @@
       },
       "group": "Construction",
       "reading_minutes": 30,
-      "narrated": true
+      "narrated": true,
+      "summary": "The schedule is the product now.",
+      "personas": []
     },
     {
       "slug": "cooling-and-water-foundations-for-ai-infrastructure",
@@ -266,7 +316,13 @@
       },
       "group": "Cooling & Water Technology",
       "reading_minutes": 28,
-      "narrated": true
+      "narrated": true,
+      "summary": "A server drawing a kilowatt is, for practical purposes, a kilowatt heater that answers questions.",
+      "personas": [
+        "Engineer",
+        "Operator",
+        "Investor"
+      ]
     },
     {
       "slug": "cyber-incidents-targeting-dc-infrastructure",
@@ -278,7 +334,9 @@
       },
       "group": "Outage Intelligence & Emergency Response",
       "reading_minutes": 28,
-      "narrated": true
+      "narrated": true,
+      "summary": "Start with a distinction that will organize everything else in this course: an accident is random, and an adversary is optimized.",
+      "personas": []
     },
     {
       "slug": "cyber-insurance-and-state-actor-exclusions",
@@ -290,7 +348,9 @@
       },
       "group": "Insurance & Risk Markets",
       "reading_minutes": 28,
-      "narrated": true
+      "narrated": true,
+      "summary": "Cyber risk did not begin as its own product.",
+      "personas": []
     },
     {
       "slug": "data-center-capital-markets-foundations",
@@ -302,7 +362,12 @@
       },
       "group": "M&A & Capital Markets",
       "reading_minutes": 29,
-      "narrated": true
+      "narrated": true,
+      "summary": "Capital does not buy data centers.",
+      "personas": [
+        "Investor",
+        "Consultant"
+      ]
     },
     {
       "slug": "data-center-power-foundations",
@@ -314,7 +379,13 @@
       },
       "group": "Power Architecture",
       "reading_minutes": 26,
-      "narrated": true
+      "narrated": true,
+      "summary": "Power sets the ceiling.",
+      "personas": [
+        "Operator",
+        "Investor",
+        "Engineer"
+      ]
     },
     {
       "slug": "data-sovereignty-and-cross-border-data-flows",
@@ -326,7 +397,9 @@
       },
       "group": "Sovereign AI & Geopolitics",
       "reading_minutes": 29,
-      "narrated": true
+      "narrated": true,
+      "summary": "The early internet was engineered to route around obstacles, and its architects treated national borders as exactly that: obstacles.",
+      "personas": []
     },
     {
       "slug": "earnings-call-and-investor-day-signal-extraction",
@@ -338,7 +411,9 @@
       },
       "group": "People & Signals",
       "reading_minutes": 28,
-      "narrated": true
+      "narrated": true,
+      "summary": "Let me start with a claim I can defend with a decade of transcripts: by the time a company issues a press release, the interesting information has usually…",
+      "personas": []
     },
     {
       "slug": "executive-signals-before-the-deal",
@@ -350,7 +425,9 @@
       },
       "group": "People & Signals",
       "reading_minutes": 27,
-      "narrated": true
+      "narrated": true,
+      "summary": "Let me start with a claim I can defend from the evidence: by the time a merger is announced, the people who will make it work have usually already been chosen.",
+      "personas": []
     },
     {
       "slug": "facility-dcim-and-digital-twin",
@@ -362,7 +439,9 @@
       },
       "group": "Facility IT & Operational Technology",
       "reading_minutes": 26,
-      "narrated": true
+      "narrated": true,
+      "summary": "Data Center Infrastructure Management is a category with a precise remit.",
+      "personas": []
     },
     {
       "slug": "facility-it-and-operational-technology-foundations",
@@ -374,7 +453,9 @@
       },
       "group": "Facility IT & Operational Technology",
       "reading_minutes": 31,
-      "narrated": true
+      "narrated": true,
+      "summary": "Start with a claim, because the whole course hangs from it: a data center is not one machine but two, and they are governed by different logic.",
+      "personas": []
     },
     {
       "slug": "federal-tax-policy-ira-chips-and-section-174",
@@ -386,7 +467,9 @@
       },
       "group": "Tax, Incentives & Fiscal Policy",
       "reading_minutes": 29,
-      "narrated": true
+      "narrated": true,
+      "summary": "Start with a claim that sounds like a metaphor and turns out to be an accounting identity: fiscal policy is the second power grid.",
+      "personas": []
     },
     {
       "slug": "from-grid-to-rack",
@@ -398,7 +481,9 @@
       },
       "group": "Power Architecture",
       "reading_minutes": 27,
-      "narrated": true
+      "narrated": true,
+      "summary": "Start with the uncomfortable fact.",
+      "personas": []
     },
     {
       "slug": "from-megawatts-to-money-the-capstone",
@@ -410,7 +495,9 @@
       },
       "group": "Capstone",
       "reading_minutes": 27,
-      "narrated": true
+      "narrated": true,
+      "summary": "Every course before this one studied a part.",
+      "personas": []
     },
     {
       "slug": "from-silicon-to-system",
@@ -422,7 +509,9 @@
       },
       "group": "Chips & Density",
       "reading_minutes": 27,
-      "narrated": true
+      "narrated": true,
+      "summary": "A bare accelerator is a slab of silicon that can multiply matrices very fast and do almost nothing else on its own.",
+      "personas": []
     },
     {
       "slug": "gpu-backed-and-neocloud-financing",
@@ -434,7 +523,9 @@
       },
       "group": "M&A & Capital Markets",
       "reading_minutes": 29,
-      "narrated": true
+      "narrated": true,
+      "summary": "The AI build-out runs on a simple constraint: someone has to pay for the chips before the chips earn a dollar.",
+      "personas": []
     },
     {
       "slug": "grid-access-and-regulation-foundations",
@@ -446,7 +537,13 @@
       },
       "group": "Grid & Regulatory",
       "reading_minutes": 26,
-      "narrated": true
+      "narrated": true,
+      "summary": "For most of the industry's history, power followed the building.",
+      "personas": [
+        "Policy",
+        "Investor",
+        "Operator"
+      ]
     },
     {
       "slug": "grid-events-and-physical-disaster-response",
@@ -458,7 +555,9 @@
       },
       "group": "Outage Intelligence & Emergency Response",
       "reading_minutes": 28,
-      "narrated": true
+      "narrated": true,
+      "summary": "Start with a fact that annoys people: the electric grid is the largest machine humans have ever built, and it has no meaningful storage.",
+      "personas": []
     },
     {
       "slug": "grid-interactive-load-microgrids-and-advanced-power-conversion",
@@ -470,7 +569,9 @@
       },
       "group": "Power Architecture",
       "reading_minutes": 32,
-      "narrated": true
+      "narrated": true,
+      "summary": "Start with the number that governs everything else in this course: the interconnection queue.",
+      "personas": []
     },
     {
       "slug": "how-hyperscalers-reshape-m-and-a",
@@ -482,7 +583,9 @@
       },
       "group": "M&A & Capital Markets",
       "reading_minutes": 27,
-      "narrated": true
+      "narrated": true,
+      "summary": "Start with the number that dominates every other number in this market: hyperscaler capital spending.",
+      "personas": []
     },
     {
       "slug": "hyperscaler-infrastructure-foundations",
@@ -494,7 +597,12 @@
       },
       "group": "Hyperscaler Activity",
       "reading_minutes": 27,
-      "narrated": true
+      "narrated": true,
+      "summary": "A press release about a data center is a promise.",
+      "personas": [
+        "Investor",
+        "Operator"
+      ]
     },
     {
       "slug": "inference-serving-and-model-routing-infrastructure",
@@ -506,7 +614,9 @@
       },
       "group": "Orchestration Intelligence & Control Plane",
       "reading_minutes": 26,
-      "narrated": true
+      "narrated": true,
+      "summary": "Start with the shape of the workload.",
+      "personas": []
     },
     {
       "slug": "insurability-as-the-next-siting-constraint",
@@ -518,7 +628,9 @@
       },
       "group": "Insurance & Risk Markets",
       "reading_minutes": 27,
-      "narrated": true
+      "narrated": true,
+      "summary": "For most of the industry's history, the siting conversation ran in a familiar order.",
+      "personas": []
     },
     {
       "slug": "insurance-foundations-for-ai-infrastructure",
@@ -530,7 +642,9 @@
       },
       "group": "Insurance & Risk Markets",
       "reading_minutes": 26,
-      "narrated": true
+      "narrated": true,
+      "summary": "Start with the structure of the thing, because the structure explains everything downstream.",
+      "personas": []
     },
     {
       "slug": "interconnect-strategy-and-investment",
@@ -542,7 +656,9 @@
       },
       "group": "Networking & Interconnect",
       "reading_minutes": 29,
-      "narrated": true
+      "narrated": true,
+      "summary": "The dominant narrative of the AI infrastructure boom has two protagonists: silicon and electricity.",
+      "personas": []
     },
     {
       "slug": "international-markets-and-site-certification",
@@ -554,7 +670,9 @@
       },
       "group": "Real Estate & Site Selection",
       "reading_minutes": 26,
-      "narrated": true
+      "narrated": true,
+      "summary": "FLAP-D is shorthand for Europe's five primary data-center metros: Frankfurt, London, Amsterdam, Paris, and Dublin.",
+      "personas": []
     },
     {
       "slug": "international-tax-and-oecd-pillar-two",
@@ -566,7 +684,9 @@
       },
       "group": "Tax, Incentives & Fiscal Policy",
       "reading_minutes": 29,
-      "narrated": true
+      "narrated": true,
+      "summary": "Start with a distinction that sounds pedantic and turns out to organise the whole field.",
+      "personas": []
     },
     {
       "slug": "land-pricing-and-acquisition-of-powered-land",
@@ -578,7 +698,9 @@
       },
       "group": "Real Estate & Site Selection",
       "reading_minutes": 30,
-      "narrated": true
+      "narrated": true,
+      "summary": "Start with how land has been priced for as long as there has been a market for it.",
+      "personas": []
     },
     {
       "slug": "large-load-tariffs-and-co-location-rules",
@@ -590,7 +712,9 @@
       },
       "group": "Grid & Regulatory",
       "reading_minutes": 24,
-      "narrated": true
+      "narrated": true,
+      "summary": "Let me start with the mechanism, because most confusion about data-center power dissolves once you follow the paperwork.",
+      "personas": []
     },
     {
       "slug": "lender-insurance-requirements-and-risk-transfer",
@@ -602,7 +726,9 @@
       },
       "group": "Insurance & Risk Markets",
       "reading_minutes": 26,
-      "narrated": true
+      "narrated": true,
+      "summary": "For a decade, the shorthand for siting a large data center ran through two questions: can you get the power, and can you get the water.",
+      "personas": []
     },
     {
       "slug": "long-haul-dark-fiber-and-subsea-systems",
@@ -614,7 +740,9 @@
       },
       "group": "Networking & Interconnect",
       "reading_minutes": 31,
-      "narrated": true
+      "narrated": true,
+      "summary": "Start with a claim and hold it through the whole course: a data center is not a destination, it is a node on a graph.",
+      "personas": []
     },
     {
       "slug": "long-lead-equipment-modular-delivery-and-schedule-intelligence",
@@ -626,7 +754,9 @@
       },
       "group": "Construction",
       "reading_minutes": 30,
-      "narrated": true
+      "narrated": true,
+      "summary": "Ask a developer what starts the clock on a data center and the honest answer has changed.",
+      "personas": []
     },
     {
       "slug": "major-outage-postmortems-and-pattern-recognition",
@@ -638,7 +768,9 @@
       },
       "group": "Outage Intelligence & Emergency Response",
       "reading_minutes": 31,
-      "narrated": true
+      "narrated": true,
+      "summary": "Let me start with the thesis that runs through this whole course, because everything else hangs off it: failure is the cheapest intelligence you will ever…",
+      "personas": []
     },
     {
       "slug": "memory-systems-hbm-and-the-bandwidth-wall",
@@ -650,7 +782,9 @@
       },
       "group": "Chips & Density",
       "reading_minutes": 28,
-      "narrated": true
+      "narrated": true,
+      "summary": "The accelerator isn't limited by math.",
+      "personas": []
     },
     {
       "slug": "national-compute-strategies-and-sovereign-programs",
@@ -662,7 +796,9 @@
       },
       "group": "Sovereign AI & Geopolitics",
       "reading_minutes": 28,
-      "narrated": true
+      "narrated": true,
+      "summary": "Start with a deflationary claim: almost no country on Earth possesses sovereign compute in the strict sense.",
+      "personas": []
     },
     {
       "slug": "neocloud-and-new-operator-foundations",
@@ -674,7 +810,12 @@
       },
       "group": "New Entrants",
       "reading_minutes": 25,
-      "narrated": true
+      "narrated": true,
+      "summary": "A neocloud is a bet that four clocks will keep time together: the customer's contract, the chip's working life, the power at the site, and the loan that paid…",
+      "personas": [
+        "Investor",
+        "Operator"
+      ]
     },
     {
       "slug": "networking-and-interconnect-foundations",
@@ -686,7 +827,9 @@
       },
       "group": "Networking & Interconnect",
       "reading_minutes": 25,
-      "narrated": true
+      "narrated": true,
+      "summary": "Start with a claim and defend it: network architecture is the under-tracked constraint on AI compute delivery.",
+      "personas": []
     },
     {
       "slug": "nuclear-and-smr-offtake-for-data-centers",
@@ -698,7 +841,9 @@
       },
       "group": "Power Architecture",
       "reading_minutes": 27,
-      "narrated": true
+      "narrated": true,
+      "summary": "Let me start with the number that reorganized the whole conversation.",
+      "personas": []
     },
     {
       "slug": "operations-workforce-immigration-and-regional-competition",
@@ -710,7 +855,9 @@
       },
       "group": "Workforce & Labor Markets",
       "reading_minutes": 29,
-      "narrated": true
+      "narrated": true,
+      "summary": "A finished data center is often described as if it runs itself.",
+      "personas": []
     },
     {
       "slug": "opposition-movements-and-public-engagement-practice",
@@ -722,7 +869,9 @@
       },
       "group": "Community Relations",
       "reading_minutes": 29,
-      "narrated": true
+      "narrated": true,
+      "summary": "Let me start with the thing most practitioners get wrong.",
+      "personas": []
     },
     {
       "slug": "opposition-playbook-master-class",
@@ -734,7 +883,9 @@
       },
       "group": "Community Opposition & Regulatory Risk",
       "reading_minutes": 28,
-      "narrated": true
+      "narrated": true,
+      "summary": "There was a time, and it was not long ago, when siting a large piece of infrastructure was fundamentally a sourcing exercise.",
+      "personas": []
     },
     {
       "slug": "ot-ics-scada-cybersecurity",
@@ -746,7 +897,9 @@
       },
       "group": "Cyber & Physical Security and Resilience",
       "reading_minutes": 27,
-      "narrated": true
+      "narrated": true,
+      "summary": "The data center you picture as a hall of servers is, physically, two machines fused together.",
+      "personas": []
     },
     {
       "slug": "outage-intelligence-and-emergency-response-foundations",
@@ -758,7 +911,9 @@
       },
       "group": "Outage Intelligence & Emergency Response",
       "reading_minutes": 30,
-      "narrated": true
+      "narrated": true,
+      "summary": "Start with a plain observation: complex systems fail, and they fail in ways their designers did not anticipate.",
+      "personas": []
     },
     {
       "slug": "people-and-market-signals-foundations",
@@ -770,7 +925,12 @@
       },
       "group": "People & Signals",
       "reading_minutes": 27,
-      "narrated": true
+      "narrated": true,
+      "summary": "In March 2024, Equinix named its next chief executive nearly three months before she started.",
+      "personas": [
+        "Investor",
+        "Consultant"
+      ]
     },
     {
       "slug": "physical-security-and-access-control",
@@ -782,7 +942,9 @@
       },
       "group": "Cyber & Physical Security and Resilience",
       "reading_minutes": 26,
-      "narrated": true
+      "narrated": true,
+      "summary": "Physical security for a data center is a layered system.",
+      "personas": []
     },
     {
       "slug": "power-aware-and-grid-responsive-orchestration",
@@ -794,7 +956,9 @@
       },
       "group": "Orchestration Intelligence & Control Plane",
       "reading_minutes": 27,
-      "narrated": true
+      "narrated": true,
+      "summary": "Start with a definition, because the term is abused.",
+      "personas": []
     },
     {
       "slug": "primary-and-emerging-data-center-markets",
@@ -806,7 +970,9 @@
       },
       "group": "Real Estate & Site Selection",
       "reading_minutes": 29,
-      "narrated": true
+      "narrated": true,
+      "summary": "Start with a single county in Virginia, because everything about how this industry maps itself onto geography starts there.",
+      "personas": []
     },
     {
       "slug": "private-credit-and-data-center-debt-financing",
@@ -818,7 +984,9 @@
       },
       "group": "M&A & Capital Markets",
       "reading_minutes": 26,
-      "narrated": true
+      "narrated": true,
+      "summary": "Start with the physical fact and the money follows.",
+      "personas": []
     },
     {
       "slug": "property-and-casualty-business-interruption-for-data-centers",
@@ -830,7 +998,9 @@
       },
       "group": "Insurance & Risk Markets",
       "reading_minutes": 25,
-      "narrated": true
+      "narrated": true,
+      "summary": "A facility that can't be insured can't be financed.",
+      "personas": []
     },
     {
       "slug": "reading-the-industry",
@@ -842,7 +1012,9 @@
       },
       "group": "Industry Media & Analyst Coverage",
       "reading_minutes": 28,
-      "narrated": true
+      "narrated": true,
+      "summary": "Every serious operator eventually notices the same thing: the report that landed in your inbox this morning, the one shaping the boardroom conversation this…",
+      "personas": []
     },
     {
       "slug": "reading-the-industry-media-and-analyst-foundations",
@@ -854,7 +1026,9 @@
       },
       "group": "Industry Media & Analyst Coverage",
       "reading_minutes": 30,
-      "narrated": true
+      "narrated": true,
+      "summary": "Start with a fact that sounds obvious until you sit with it: nobody covers everything.",
+      "personas": []
     },
     {
       "slug": "reading-the-outage",
@@ -866,7 +1040,9 @@
       },
       "group": "Outage Intelligence & Emergency Response",
       "reading_minutes": 30,
-      "narrated": true
+      "narrated": true,
+      "summary": "Every outage leaves a record.",
+      "personas": []
     },
     {
       "slug": "reputational-and-political-risk",
@@ -878,7 +1054,9 @@
       },
       "group": "Community Opposition & Regulatory Risk",
       "reading_minutes": 24,
-      "narrated": true
+      "narrated": true,
+      "summary": "There is a story operators used to tell themselves, and it went like this: pick the site with the cheapest power and the shortest interconnection queue, wrap…",
+      "personas": []
     },
     {
       "slug": "security-foundations-for-ai-infrastructure",
@@ -890,7 +1068,9 @@
       },
       "group": "Cyber & Physical Security and Resilience",
       "reading_minutes": 28,
-      "narrated": true
+      "narrated": true,
+      "summary": "An AI data center is not one system.",
+      "personas": []
     },
     {
       "slug": "security-operations-and-incident-response",
@@ -902,7 +1082,9 @@
       },
       "group": "Cyber & Physical Security and Resilience",
       "reading_minutes": 26,
-      "narrated": true
+      "narrated": true,
+      "summary": "The rule is simple: defend the asset, not the network.",
+      "personas": []
     },
     {
       "slug": "site-selection-foundations",
@@ -914,7 +1096,9 @@
       },
       "group": "Real Estate & Site Selection",
       "reading_minutes": 28,
-      "narrated": true
+      "narrated": true,
+      "summary": "Start with the phrase itself, because it carries more freight than any other in this industry.",
+      "personas": []
     },
     {
       "slug": "sovereign-ai-and-geopolitics-foundations",
@@ -926,7 +1110,9 @@
       },
       "group": "Sovereign AI & Geopolitics",
       "reading_minutes": 27,
-      "narrated": true
+      "narrated": true,
+      "summary": "States have always organized themselves around whatever resource their era treats as the master input.",
+      "personas": []
     },
     {
       "slug": "sovereign-ai-and-the-grid",
@@ -938,7 +1124,9 @@
       },
       "group": "Sovereign AI & Geopolitics",
       "reading_minutes": 24,
-      "narrated": true
+      "narrated": true,
+      "summary": "Sovereign AI is sold as a policy achievement.",
+      "personas": []
     },
     {
       "slug": "spotting-the-next-neocloud",
@@ -950,7 +1138,9 @@
       },
       "group": "New Entrants",
       "reading_minutes": 28,
-      "narrated": true
+      "narrated": true,
+      "summary": "A neocloud is a cloud provider built around a single function: it acquires the newest AI accelerators in volume, installs them in high-density data centers…",
+      "personas": []
     },
     {
       "slug": "state-and-local-tax-incentives",
@@ -962,7 +1152,9 @@
       },
       "group": "Tax, Incentives & Fiscal Policy",
       "reading_minutes": 29,
-      "narrated": true
+      "narrated": true,
+      "summary": "Before you argue about an incentive, learn what is being reduced.",
+      "personas": []
     },
     {
       "slug": "state-sponsored-threats-and-supply-chain-risk",
@@ -974,7 +1166,9 @@
       },
       "group": "Cyber & Physical Security and Resilience",
       "reading_minutes": 23,
-      "narrated": true
+      "narrated": true,
+      "summary": "Start with a correction.",
+      "personas": []
     },
     {
       "slug": "strategic-minerals-ai-diplomacy-and-investment-screening",
@@ -986,7 +1180,9 @@
       },
       "group": "Sovereign AI & Geopolitics",
       "reading_minutes": 28,
-      "narrated": true
+      "narrated": true,
+      "summary": "Rare-earth elements are the great misnomer of geopolitics.",
+      "personas": []
     },
     {
       "slug": "sustainability-foundations-for-ai-infrastructure",
@@ -998,7 +1194,9 @@
       },
       "group": "Sustainability",
       "reading_minutes": 32,
-      "narrated": true
+      "narrated": true,
+      "summary": "There is a tidy story the data-center industry used to tell itself.",
+      "personas": []
     },
     {
       "slug": "sustainability-regulation-heat-recovery-and-embodied-carbon",
@@ -1010,7 +1208,9 @@
       },
       "group": "Sustainability",
       "reading_minutes": 29,
-      "narrated": true
+      "narrated": true,
+      "summary": "The European Union's Corporate Sustainability Reporting Directive, adopted in 2022, is the most consequential piece of sustainability regulation yet written…",
+      "personas": []
     },
     {
       "slug": "talent-flows-and-network-mapping",
@@ -1022,7 +1222,9 @@
       },
       "group": "People & Signals",
       "reading_minutes": 26,
-      "narrated": true
+      "narrated": true,
+      "summary": "Before a company announces a new campus, it has to staff one.",
+      "personas": []
     },
     {
       "slug": "tax-and-fiscal-policy-foundations-for-ai-infrastructure",
@@ -1034,7 +1236,9 @@
       },
       "group": "Tax, Incentives & Fiscal Policy",
       "reading_minutes": 26,
-      "narrated": true
+      "narrated": true,
+      "summary": "When people outside the industry picture a data-center siting decision, they picture engineers arguing about megawatts and water.",
+      "personas": []
     },
     {
       "slug": "tax-driven-deal-structuring",
@@ -1046,7 +1250,9 @@
       },
       "group": "Tax, Incentives & Fiscal Policy",
       "reading_minutes": 31,
-      "narrated": true
+      "narrated": true,
+      "summary": "Walk a data center and you can inventory almost everything that matters to an engineer.",
+      "personas": []
     },
     {
       "slug": "tax-incentive-backlash-and-the-clawback-landscape",
@@ -1058,7 +1264,9 @@
       },
       "group": "Tax, Incentives & Fiscal Policy",
       "reading_minutes": 26,
-      "narrated": true
+      "narrated": true,
+      "summary": "When a governor stands at a podium beside a corporate logo and names a number — jobs, investment, payroll — you are watching a communications event, not a…",
+      "personas": []
     },
     {
       "slug": "the-factory-floor",
@@ -1070,7 +1278,9 @@
       },
       "group": "Construction",
       "reading_minutes": 28,
-      "narrated": true
+      "narrated": true,
+      "summary": "Start with the taxonomy, because the market is illegible without it.",
+      "personas": []
     },
     {
       "slug": "the-fiscal-grid",
@@ -1082,7 +1292,9 @@
       },
       "group": "Tax, Incentives & Fiscal Policy",
       "reading_minutes": 28,
-      "narrated": true
+      "narrated": true,
+      "summary": "Every operator learns to read the physical map early.",
+      "personas": []
     },
     {
       "slug": "the-opposition-register",
@@ -1094,7 +1306,9 @@
       },
       "group": "Community Opposition & Regulatory Risk",
       "reading_minutes": 25,
-      "narrated": true
+      "narrated": true,
+      "summary": "For most of the last two decades, a siting decision was fundamentally an engineering and economics problem.",
+      "personas": []
     },
     {
       "slug": "the-takeout-premium",
@@ -1106,7 +1320,9 @@
       },
       "group": "M&A & Capital Markets",
       "reading_minutes": 26,
-      "narrated": true
+      "narrated": true,
+      "summary": "Start with the exit and work backwards.",
+      "personas": []
     },
     {
       "slug": "the-thermal-power-convergence",
@@ -1118,7 +1334,9 @@
       },
       "group": "Power Architecture",
       "reading_minutes": 29,
-      "narrated": true
+      "narrated": true,
+      "summary": "For most of the data center era, power and cooling were designed by different teams who met only at the loading dock.",
+      "personas": []
     },
     {
       "slug": "the-threat-surface",
@@ -1130,7 +1348,9 @@
       },
       "group": "Cyber & Physical Security and Resilience",
       "reading_minutes": 28,
-      "narrated": true
+      "narrated": true,
+      "summary": "Start with the physical truth.",
+      "personas": []
     },
     {
       "slug": "thermal-components-and-coolant-supply-chain",
@@ -1142,7 +1362,9 @@
       },
       "group": "Cooling & Water Technology",
       "reading_minutes": 25,
-      "narrated": true
+      "narrated": true,
+      "summary": "Let me start with a number that reframes everything.",
+      "personas": []
     },
     {
       "slug": "transmission-buildout-and-ferc-policy",
@@ -1154,7 +1376,9 @@
       },
       "group": "Grid & Regulatory",
       "reading_minutes": 27,
-      "narrated": true
+      "narrated": true,
+      "summary": "When people ask why a new data center cannot simply \"plug in\" to a grid that already runs surplus power at 3 a.m., the honest answer starts with a piece of…",
+      "personas": []
     },
     {
       "slug": "water-and-watts",
@@ -1166,7 +1390,9 @@
       },
       "group": "Cooling & Water Technology",
       "reading_minutes": 30,
-      "narrated": true
+      "narrated": true,
+      "summary": "Start with a fact that surprises newcomers: a large hyperscale campus can evaporate millions of gallons of water on a hot afternoon, and most of that water…",
+      "personas": []
     },
     {
       "slug": "water-stewardship-and-carbon-accounting",
@@ -1178,7 +1404,9 @@
       },
       "group": "Sustainability",
       "reading_minutes": 26,
-      "narrated": true
+      "narrated": true,
+      "summary": "Let me start by clearing up a confusion that trips up even experienced infrastructure people: a data center's relationship with water is mostly about heat…",
+      "personas": []
     },
     {
       "slug": "workforce-foundations-for-ai-infrastructure",
@@ -1190,7 +1418,9 @@
       },
       "group": "Workforce & Labor Markets",
       "reading_minutes": 27,
-      "narrated": true
+      "narrated": true,
+      "summary": "Start with a simple observation that anyone who has managed a large construction program will confirm: the schedule almost never breaks because the money ran…",
+      "personas": []
     }
   ]
 }
