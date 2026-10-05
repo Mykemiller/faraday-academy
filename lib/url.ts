@@ -1,56 +1,62 @@
-// FilterState ⇄ URLSearchParams (spec §7.3). Defaults are omitted from the URL.
-import type { FilterState, Persona, SortKey, PriceFilterValue, DurationFilterValue } from "./types";
-import { DEFAULT_FILTERS, PERSONAS, SORTS, SCHOOLS } from "./constants";
+// FilterState ⇄ URLSearchParams. Defaults are omitted from the URL, and the
+// retired params (persona-as-gate, price, duration, cert, schools) are ignored
+// in silence so an old bookmark still lands on a working lobby.
+//
+// Level and Subject repeat the key rather than comma-joining: subject names
+// contain commas ("Tax, Incentives & Fiscal Policy") and would not survive a
+// split.
 
-const VALID_SCHOOL_IDS = new Set(SCHOOLS.map((s) => s.id));
-const VALID_SORTS = new Set(SORTS.map((s) => s.key));
-const VALID_PRICE: PriceFilterValue[] = ["all", "free", "paid"];
-const VALID_DURATION: DurationFilterValue[] = ["any", "lt60", "60to180", "gt180"];
+import type { AuthorVoice, FilterState, Level, Persona, SortKey } from "./types";
+import { AUTHOR_VOICES, DEFAULT_FILTERS, LEVELS, PERSONAS, SORTS } from "./constants";
 
-export function parseFilters(params: URLSearchParams): FilterState {
+const VALID_LEVELS = new Set<string>(LEVELS);
+const VALID_SORTS = new Set<string>(SORTS.map((s) => s.key));
+const VALID_VOICES = new Set<string>(AUTHOR_VOICES);
+const VALID_PERSONAS = new Set<string>(PERSONAS);
+
+/** Subjects are validated against the catalog in hand, never a hard-coded list. */
+export function parseFilters(
+  params: URLSearchParams,
+  knownSubjects: readonly string[] = [],
+): FilterState {
+  const subjectSet = new Set(knownSubjects);
+
+  const levels = params
+    .getAll("level")
+    .filter((v) => VALID_LEVELS.has(v)) as Level[];
+
+  const subjects = params
+    .getAll("subject")
+    .filter((v) => subjectSet.size === 0 || subjectSet.has(v));
+
+  const authorRaw = params.get("author");
+  const author = authorRaw && VALID_VOICES.has(authorRaw) ? (authorRaw as AuthorVoice) : null;
+
+  const sortRaw = params.get("sort");
+  const sort = sortRaw && VALID_SORTS.has(sortRaw) ? (sortRaw as SortKey) : DEFAULT_FILTERS.sort;
+
   const personaRaw = params.get("persona");
-  const persona = (PERSONAS as string[]).includes(personaRaw ?? "")
-    ? (personaRaw as Persona)
-    : null;
-
-  const schools = (params.get("schools") ?? "")
-    .split(",")
-    .map((s) => s.trim())
-    .filter((s) => VALID_SCHOOL_IDS.has(s));
-
-  const priceRaw = params.get("price") as PriceFilterValue | null;
-  const price = priceRaw && VALID_PRICE.includes(priceRaw) ? priceRaw : "all";
-
-  const durationRaw = params.get("duration") as DurationFilterValue | null;
-  const duration = durationRaw && VALID_DURATION.includes(durationRaw) ? durationRaw : "any";
-
-  const sortRaw = params.get("sort") as SortKey | null;
-  const sort = sortRaw && VALID_SORTS.has(sortRaw) ? sortRaw : "recommended";
+  const persona = personaRaw && VALID_PERSONAS.has(personaRaw) ? (personaRaw as Persona) : null;
 
   return {
-    persona,
-    schools,
-    price,
-    duration,
-    certOnly: params.get("cert") === "1",
+    levels: [...new Set(levels)],
+    subjects: [...new Set(subjects)],
+    author,
+    narrated: params.get("narrated") === "1",
     q: params.get("q") ?? "",
     sort,
+    persona,
   };
 }
 
 export function serializeFilters(f: FilterState): URLSearchParams {
   const p = new URLSearchParams();
-  if (f.persona) p.set("persona", f.persona);
-  if (f.schools.length) p.set("schools", f.schools.join(","));
-  if (f.price !== DEFAULT_FILTERS.price) p.set("price", f.price);
-  if (f.duration !== DEFAULT_FILTERS.duration) p.set("duration", f.duration);
-  if (f.certOnly) p.set("cert", "1");
-  if (f.q.trim()) p.set("q", f.q.trim());
+  for (const level of f.levels) p.append("level", level);
+  for (const subject of f.subjects) p.append("subject", subject);
+  if (f.author) p.set("author", f.author);
+  if (f.narrated) p.set("narrated", "1");
+  if (f.q.trim() !== "") p.set("q", f.q.trim());
   if (f.sort !== DEFAULT_FILTERS.sort) p.set("sort", f.sort);
+  if (f.persona) p.set("persona", f.persona);
   return p;
-}
-
-export function filtersToQueryString(f: FilterState): string {
-  const s = serializeFilters(f).toString();
-  return s ? `?${s}` : "";
 }

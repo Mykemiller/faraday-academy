@@ -2,15 +2,13 @@
 import type { Persona } from "@/lib/types";
 import { PERSONAS } from "@/lib/constants";
 
-// "I'm a…" discovery lens (spec §3). A lens, never a gate (§13.5).
+// "I'm a…" discovery lens. It reorders the grid and never hides a course.
 export default function PersonaSwitcher({
   value,
   onChange,
-  idPrefix = "persona",
 }: {
   value: Persona | null;
   onChange: (p: Persona | null) => void;
-  idPrefix?: string;
 }) {
   const options: { label: string; val: Persona | null }[] = [
     { label: "Everyone", val: null },

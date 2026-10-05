@@ -2,6 +2,7 @@
 import { useEffect, useRef } from "react";
 import { X } from "lucide-react";
 import type { FilterState } from "@/lib/types";
+import type { Facets } from "@/lib/facets";
 import FilterControls, { type FilterHandlers } from "./FilterControls";
 
 // Mobile slide-over (< lg). Escape closes and returns focus to the trigger (spec §11).
@@ -9,15 +10,15 @@ export default function FilterDrawer({
   open,
   onClose,
   filters,
+  facets,
   handlers,
-  resultCount,
   triggerRef,
 }: {
   open: boolean;
   onClose: () => void;
   filters: FilterState;
+  facets: Facets;
   handlers: FilterHandlers;
-  resultCount: number;
   triggerRef: React.RefObject<HTMLButtonElement | null>;
 }) {
   const panelRef = useRef<HTMLDivElement>(null);
@@ -74,6 +75,7 @@ export default function FilterDrawer({
         <div className="flex-1 overflow-y-auto px-4 py-5">
           <FilterControls
             filters={filters}
+            facets={facets}
             handlers={handlers}
             includePersona
             idPrefix="drawer"
@@ -88,7 +90,7 @@ export default function FilterDrawer({
             }}
             className="w-full rounded-md bg-forest px-4 py-2.5 text-sm font-medium text-warm-white"
           >
-            Show {resultCount} {resultCount === 1 ? "course" : "courses"}
+            Show results
           </button>
         </div>
       </div>

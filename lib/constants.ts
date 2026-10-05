@@ -1,5 +1,11 @@
-// Canonical reference data (spec §5, Appendix B). Single source of truth for the UI.
-import type { Cluster, Persona, School, SortKey, DurationFilterValue } from "./types";
+// Canonical reference data for the lobby.
+//
+// SUBJECT_CLUSTER is keyed by the plain subject names the live catalog publishes
+// in `group`. It carries no domain, sub-domain or tower identifiers, and the
+// subject list the UI renders is always derived from the catalog in hand — this
+// map only answers "which cluster does this subject belong to?".
+
+import type { AuthorVoice, Cluster, Level, Persona, SortKey } from "./types";
 
 export const PERSONAS: Persona[] = [
   "Executive", "Engineer", "Investor", "Operator", "Policy", "Consultant",
@@ -10,79 +16,84 @@ export const CLUSTERS: Cluster[] = [
   "Operations & Resilience", "Cross-Stack",
 ];
 
-// 23 Schools (IDF Domains) grouped by cluster — matches the live Airtable Schools table.
-export const SCHOOLS: School[] = [
-  { id: "D1", name: "Chips & Density", cluster: "Physical Stack" },
-  { id: "D2", name: "Power Architecture", cluster: "Physical Stack" },
-  { id: "D7", name: "Cooling & Water", cluster: "Physical Stack" },
-  { id: "D10", name: "Construction", cluster: "Physical Stack" },
-  { id: "D20", name: "Facility IT & OT", cluster: "Physical Stack" },
-  { id: "D4", name: "M&A & Capital Markets", cluster: "Commercial & Capital" },
-  { id: "D6", name: "New Entrants", cluster: "Commercial & Capital" },
-  { id: "D15", name: "Sovereign AI & Geopolitics", cluster: "Commercial & Capital" },
-  { id: "D19", name: "Tax, Incentives & Fiscal Policy", cluster: "Commercial & Capital" },
-  { id: "D21", name: "Insurance & Risk Markets", cluster: "Commercial & Capital" },
-  { id: "D3", name: "Grid & Regulatory", cluster: "Market & Policy" },
-  { id: "D13", name: "Community Relations", cluster: "Market & Policy" },
-  { id: "D14", name: "Real Estate & Site Selection", cluster: "Market & Policy" },
-  { id: "D18", name: "Community Opposition & Regulatory Risk", cluster: "Market & Policy" },
-  { id: "D22", name: "Industry Media & Analyst Coverage", cluster: "Market & Policy" },
-  { id: "D8", name: "People & Signals", cluster: "Operations & Resilience" },
-  { id: "D9", name: "Orchestration", cluster: "Operations & Resilience" },
-  { id: "D17", name: "Workforce & Labor Markets", cluster: "Operations & Resilience" },
-  { id: "D23", name: "Outage Intelligence & Emergency Response", cluster: "Operations & Resilience" },
-  { id: "D5", name: "Hyperscaler Activity", cluster: "Cross-Stack" },
-  { id: "D11", name: "Sustainability", cluster: "Cross-Stack" },
-  { id: "D12", name: "Networking & Interconnect", cluster: "Cross-Stack" },
-  { id: "D16", name: "Cyber & Physical Security", cluster: "Cross-Stack" },
-];
+export const LEVELS: Level[] = ["101", "201", "301", "401", "X", "Capstone"];
 
-export const SCHOOLS_BY_CLUSTER: Record<Cluster, School[]> = CLUSTERS.reduce(
-  (acc, cluster) => {
-    acc[cluster] = SCHOOLS.filter((s) => s.cluster === cluster);
-    return acc;
-  },
-  {} as Record<Cluster, School[]>,
-);
+export const SUBJECT_CLUSTER: Record<string, Cluster> = {
+  // Physical Stack
+  "Chips & Density": "Physical Stack",
+  "Power Architecture": "Physical Stack",
+  "Cooling & Water Technology": "Physical Stack",
+  "Construction": "Physical Stack",
+  "Facility IT & Operational Technology": "Physical Stack",
+  // Commercial & Capital
+  "M&A & Capital Markets": "Commercial & Capital",
+  "New Entrants": "Commercial & Capital",
+  "Sovereign AI & Geopolitics": "Commercial & Capital",
+  "Tax, Incentives & Fiscal Policy": "Commercial & Capital",
+  "Insurance & Risk Markets": "Commercial & Capital",
+  // Market & Policy
+  "Grid & Regulatory": "Market & Policy",
+  "Community Relations": "Market & Policy",
+  "Real Estate & Site Selection": "Market & Policy",
+  "Community Opposition & Regulatory Risk": "Market & Policy",
+  "Industry Media & Analyst Coverage": "Market & Policy",
+  // Operations & Resilience
+  "People & Signals": "Operations & Resilience",
+  "Orchestration Intelligence & Control Plane": "Operations & Resilience",
+  "Workforce & Labor Markets": "Operations & Resilience",
+  "Outage Intelligence & Emergency Response": "Operations & Resilience",
+  // Cross-Stack
+  "Hyperscaler Activity": "Cross-Stack",
+  "Sustainability": "Cross-Stack",
+  "Networking & Interconnect": "Cross-Stack",
+  "Cyber & Physical Security and Resilience": "Cross-Stack",
+  "Capstone": "Cross-Stack",
+};
 
-export const DURATION_BUCKETS: { key: DurationFilterValue; label: string }[] = [
-  { key: "any", label: "Any" },
-  { key: "lt60", label: "Under 1 hour" },
-  { key: "60to180", label: "1–3 hours" },
-  { key: "gt180", label: "3+ hours" },
-];
+const UNMAPPED_SUBJECTS = new Set<string>();
+
+/** Unknown subjects land in Cross-Stack and are logged once each. */
+export function clusterForSubject(subject: string): Cluster {
+  const known = SUBJECT_CLUSTER[subject];
+  if (known) return known;
+  if (!UNMAPPED_SUBJECTS.has(subject)) {
+    UNMAPPED_SUBJECTS.add(subject);
+    console.warn(`[catalog] subject "${subject}" is not in SUBJECT_CLUSTER; filed under Cross-Stack`);
+  }
+  return "Cross-Stack";
+}
 
 export const SORTS: { key: SortKey; label: string }[] = [
   { key: "recommended", label: "Recommended" },
-  { key: "recent", label: "Recently Updated" },
-  { key: "shortest", label: "Shortest first" },
-  { key: "longest", label: "Longest first" },
   { key: "title", label: "Title A–Z" },
+  { key: "shortest", label: "Shortest" },
+  { key: "longest", label: "Longest" },
 ];
 
-export const PRICE_OPTIONS: { key: "all" | "free" | "paid"; label: string }[] = [
-  { key: "all", label: "All" },
-  { key: "free", label: "Free" },
-  { key: "paid", label: "Paid" },
-];
+export const AUTHOR_VOICES: AuthorVoice[] = ["gil", "mach"];
 
 export const DEFAULT_FILTERS = {
-  persona: null,
-  schools: [] as string[],
-  price: "all" as const,
-  duration: "any" as const,
-  certOnly: false,
+  levels: [] as Level[],
+  subjects: [] as string[],
+  author: null,
+  narrated: false,
   q: "",
   sort: "recommended" as const,
+  persona: null,
 };
 
-export function formatPrice(priceUSD: number): string {
-  return priceUSD === 0 ? "Free" : `$${priceUSD.toFixed(2)}`;
+/** Level order for the Recommended sort: the onramp first, the capstone last. */
+export const LEVEL_ORDER: Record<Level, number> = {
+  "101": 0, "201": 1, "301": 2, "401": 3, "X": 4, "Capstone": 5,
+};
+
+export function formatReadingMinutes(minutes: number): string {
+  return `${minutes} min read`;
 }
 
-export function formatDuration(minutes: number): string {
-  if (minutes < 60) return `${minutes} min`;
-  const h = Math.floor(minutes / 60);
-  const m = minutes % 60;
-  return m === 0 ? `${h} hr` : `${h} hr ${m} min`;
+/** Only ever called once beta.free is false. */
+export function formatPrice(priceUSD: number): string {
+  return Number.isInteger(priceUSD) ? `$${priceUSD}` : `$${priceUSD.toFixed(2)}`;
 }
+
+export const BETA_PRICE_LABEL = "Free during beta";

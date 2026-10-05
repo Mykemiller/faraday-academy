@@ -1,65 +1,74 @@
-// Data contract for the Faraday Academy lobby (spec §5.1).
+// Data contract for the Faraday Academy lobby.
+//
+// Every field here is sourced from the academy-public edge function's /catalog
+// response. Nothing is invented: no ratings, no durations the catalog does not
+// publish, no certification flags, no program taxonomy. The `code` the catalog
+// carries is deliberately absent — it is opaque and never rendered.
 
 export type Persona =
   | "Executive" | "Engineer" | "Investor" | "Operator" | "Policy" | "Consultant";
 
 export type Level = "101" | "201" | "301" | "401" | "X" | "Capstone";
 
-export type ProgramType =
-  | "Primer" | "Course" | "Track" | "Masterclass"
-  | "Certification" | "Know the Players" | "Case Study" | "Workshop";
+export type AuthorVoice = "gil" | "mach";
+
+export interface Author {
+  voice: AuthorVoice;
+  name: string;
+}
 
 export type Cluster =
   | "Physical Stack" | "Commercial & Capital"
   | "Market & Policy" | "Operations & Resilience" | "Cross-Stack";
 
-export interface School {
-  id: string; // "D2"
-  name: string; // "Power Architecture"
-  cluster: Cluster;
-}
-
-export interface Course {
-  id: string; // stable course code, e.g. "FA-D2-201"
-  title: string;
+/**
+ * One card in the lobby. `subject` is the catalog's plain `group` name; `cluster`
+ * is derived from it for grouping and iconography only.
+ */
+export interface LobbyCourse {
   slug: string;
-  description: string; // ≤160 chars, card copy
-  school: School;
+  title: string;
   level: Level;
-  programType: ProgramType;
-  personas: Persona[]; // ≥1
-  durationMinutes: number; // > 0
-  priceUSD: number; // 0 = free; else 4.99 | 9.99 | 99
-  isFree: boolean;
-  isCertification: boolean;
-  maturity: "Established" | "Developing" | "Candidate" | "Under Construction";
-  themes: string[]; // ["T-001"…]
-  rating: number | null; // 0–5, ONLY if real; else null
-  ratingCount: number | null;
-  thumbnailUrl: string | null;
-  url: string | null; // CTA target; null → "Coming soon"
-  status: "Published";
-  updatedAt: string; // ISO-8601
+  author: Author | null;
+  /** The catalog's plain `group` name. null where the catalog publishes none. */
+  subject: string | null;
+  cluster: Cluster;
+  readingMinutes: number;
+  narrated: boolean;
+  playerUrl: string;
+  /** null while beta.free is true — no price is rendered during beta. */
+  priceUSD: number | null;
+  description?: string;
+  personas?: Persona[];
 }
 
-export type SortKey = "recommended" | "recent" | "shortest" | "longest" | "title";
+export interface Beta {
+  free: boolean;
+}
 
-export type PriceFilterValue = "all" | "free" | "paid";
-export type DurationFilterValue = "any" | "lt60" | "60to180" | "gt180";
+export interface LobbyCatalog {
+  courses: LobbyCourse[];
+  beta: Beta;
+  generatedAt: string;
+  source: "live" | "snapshot";
+}
+
+export type SortKey = "recommended" | "title" | "shortest" | "longest";
 
 export interface FilterState {
-  persona: Persona | null;
-  schools: string[]; // school ids
-  price: PriceFilterValue;
-  duration: DurationFilterValue;
-  certOnly: boolean;
+  levels: Level[];
+  subjects: string[];
+  author: AuthorVoice | null;
+  narrated: boolean;
   q: string;
   sort: SortKey;
+  /** Reorders the grid; never hides a course. */
+  persona: Persona | null;
 }
 
 export interface Chip {
-  key: string; // unique key for React + removal target
+  key: string;
   label: string;
-  kind: "persona" | "school" | "price" | "duration" | "cert" | "q";
-  value?: string; // e.g. school id, for removal
+  kind: "level" | "subject" | "author" | "narrated" | "q" | "persona";
+  value?: string;
 }
