@@ -1,111 +1,104 @@
-// Data access layer (spec §6). Loads the entire published catalog once, server-side.
-// Source resolution (ACADEMY_CATALOG_SOURCE, default auto):
-//   "airtable" → live Faraday Academy base (read-only). Default when AIRTABLE_API_KEY is set.
-//   "seed"     → seed/courses.json. Default otherwise; also the fallback if Airtable errors.
-// Wrapped in unstable_cache so the build step + ISR window share one fetch (review #6).
-import { unstable_cache } from "next/cache";
-import type {
-  Course, Cluster, Level, Persona, ProgramType,
-} from "./types";
-import seed from "@/seed/courses.json";
+// The lobby's single data access point.
+//
+// Source order: live edge function → committed snapshot (warn) → empty, which
+// the grid renders as the offline state. There is no Airtable path and no
+// legacy seed: the published catalog has exactly one authority.
 
-export const CATALOG_REVALIDATE_SECONDS = 3600;
+import type { LobbyCatalog, LobbyCourse, Persona } from "./types";
+import { clusterForSubject } from "./constants";
+import { playerBaseUrl, playerUrlForSlug } from "./player";
+import {
+  ACADEMY_REVALIDATE_SECONDS,
+  ACADEMY_TAG,
+  fetchCatalog,
+  validateCatalog,
+  type RawCatalog,
+  type RawCourse,
+} from "./academy-public";
+import snapshotJson from "@/seed/academy-catalog.snapshot.json";
 
-const AIRTABLE_BASE_ID = process.env.AIRTABLE_BASE_ID ?? "appzhpKGOI248bCDQ";
-const AIRTABLE_COURSES_TABLE = process.env.AIRTABLE_COURSES_TABLE ?? "Courses";
+export { ACADEMY_REVALIDATE_SECONDS, ACADEMY_TAG };
 
-function resolveSource(): "airtable" | "seed" {
-  const explicit = process.env.ACADEMY_CATALOG_SOURCE;
-  if (explicit === "airtable" || explicit === "seed") return explicit;
-  return process.env.AIRTABLE_API_KEY ? "airtable" : "seed";
+/**
+ * Wire row → card. Prices are withheld entirely while beta.free is true, so a
+ * price can never leak through a rendering path that forgot to check the flag.
+ */
+export function toLobbyCourse(
+  raw: RawCourse,
+  betaFree: boolean,
+  base: string = playerBaseUrl(),
+): LobbyCourse {
+  const subject = raw.group ?? null;
+  const course: LobbyCourse = {
+    slug: raw.slug,
+    title: raw.title,
+    level: raw.level,
+    author: raw.author,
+    subject,
+    cluster: subject === null ? "Cross-Stack" : clusterForSubject(subject),
+    readingMinutes: raw.reading_minutes,
+    narrated: raw.narrated,
+    playerUrl: playerUrlForSlug(raw.slug, base),
+    priceUSD: betaFree ? null : (raw.price_usd ?? null),
+  };
+  if (raw.summary) course.description = raw.summary;
+  if (raw.personas && raw.personas.length > 0) {
+    course.personas = raw.personas as Persona[];
+  }
+  return course;
 }
 
-type AirtableRecord = { id: string; fields: Record<string, unknown> };
-
-function toCourse(f: Record<string, unknown>): Course | null {
-  const id = f["Course Code"] as string | undefined;
-  const title = f["Title"] as string | undefined;
-  if (!id || !title) return null;
-  const priceUSD = Number(f["Price USD"] ?? 0);
-  const programType = (f["Program Type"] as ProgramType) ?? "Course";
+export function toLobbyCatalog(
+  raw: RawCatalog,
+  source: "live" | "snapshot",
+  base: string = playerBaseUrl(),
+): LobbyCatalog {
   return {
-    id,
-    title,
-    slug: (f["Slug"] as string) ?? id.toLowerCase(),
-    description: (f["Description"] as string) ?? "",
-    school: {
-      id: (f["School ID"] as string) ?? "",
-      name: (f["School Name"] as string) ?? "",
-      cluster: (f["Cluster"] as Cluster) ?? "Cross-Stack",
-    },
-    level: (f["Level"] as Level) ?? "101",
-    programType,
-    personas: ((f["Personas"] as Persona[]) ?? []).filter(Boolean),
-    durationMinutes: Number(f["Duration Minutes"] ?? 0),
-    priceUSD,
-    isFree: priceUSD === 0, // denormalized invariant
-    isCertification: programType === "Certification",
-    maturity: (f["Maturity"] as Course["maturity"]) ?? "Developing",
-    themes: ((f["Themes"] as string[]) ?? []).filter(Boolean),
-    rating: typeof f["Rating"] === "number" ? (f["Rating"] as number) : null,
-    ratingCount: typeof f["Rating Count"] === "number" ? (f["Rating Count"] as number) : null,
-    thumbnailUrl: (f["Thumbnail URL"] as string) ?? null,
-    url: (f["URL"] as string) ?? null,
-    status: "Published",
-    updatedAt: (f["Updated At"] as string) ?? new Date(0).toISOString(),
+    courses: raw.courses.map((c) => toLobbyCourse(c, raw.beta.free, base)),
+    beta: { free: raw.beta.free },
+    generatedAt: raw.generated_at,
+    source,
   };
 }
 
-async function fetchFromAirtable(): Promise<Course[]> {
-  const key = process.env.AIRTABLE_API_KEY;
-  if (!key) throw new Error("AIRTABLE_API_KEY not set");
-  const base = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${encodeURIComponent(AIRTABLE_COURSES_TABLE)}`;
-  const records: AirtableRecord[] = [];
-  let offset: string | undefined;
-  do {
-    const url = new URL(base);
-    url.searchParams.set("pageSize", "100");
-    if (offset) url.searchParams.set("offset", offset);
-    const res = await fetch(url, {
-      headers: { Authorization: `Bearer ${key}` },
-      // ISR: revalidate on the page; this fetch is memoized by unstable_cache.
-      next: { revalidate: CATALOG_REVALIDATE_SECONDS },
-    });
-    if (!res.ok) throw new Error(`Airtable ${res.status}: ${await res.text()}`);
-    const json = (await res.json()) as { records: AirtableRecord[]; offset?: string };
-    records.push(...json.records);
-    offset = json.offset;
-  } while (offset);
+let warnedSnapshot = false;
 
-  return records
-    .map((r) => toCourse(r.fields))
-    .filter((c): c is Course => c !== null && c.status === "Published");
+/** The committed snapshot, re-validated so a stale file cannot break the build. */
+export function snapshotCatalog(): RawCatalog | null {
+  return validateCatalog(snapshotJson);
 }
 
-let warnedFallback = false;
+export async function getCatalog(): Promise<LobbyCatalog> {
+  const base = playerBaseUrl();
 
-const loadCatalog = unstable_cache(
-  async (): Promise<Course[]> => {
-    if (resolveSource() === "airtable") {
-      try {
-        const courses = await fetchFromAirtable();
-        if (courses.length > 0) return courses;
-        throw new Error("Airtable returned 0 published courses");
-      } catch (err) {
-        if (!warnedFallback) {
-          console.warn(
-            `[catalog] Airtable source failed, falling back to seed: ${(err as Error).message}`,
-          );
-          warnedFallback = true;
-        }
-      }
+  const live = await fetchCatalog();
+  if (live && live.courses.length > 0) return toLobbyCatalog(live, "live", base);
+
+  const snapshot = snapshotCatalog();
+  if (snapshot && snapshot.courses.length > 0) {
+    if (!warnedSnapshot) {
+      warnedSnapshot = true;
+      console.warn(
+        "[catalog] live catalog unavailable or empty; serving the committed snapshot",
+      );
     }
-    return seed as Course[];
-  },
-  ["academy-catalog"],
-  { revalidate: CATALOG_REVALIDATE_SECONDS, tags: ["academy-catalog"] },
-);
+    return toLobbyCatalog(snapshot, "snapshot", base);
+  }
 
-export async function getCatalog(): Promise<Course[]> {
-  return loadCatalog();
+  console.error("[catalog] no live catalog and no usable snapshot; rendering the offline state");
+  return {
+    courses: [],
+    beta: { free: snapshot?.beta.free ?? true },
+    generatedAt: new Date(0).toISOString(),
+    source: "snapshot",
+  };
+}
+
+/** Distinct subjects present in the catalog, in cluster order then alphabetical. */
+export function subjectsInCatalog(courses: LobbyCourse[]): string[] {
+  const seen = new Map<string, LobbyCourse["cluster"]>();
+  for (const c of courses) {
+    if (c.subject !== null && !seen.has(c.subject)) seen.set(c.subject, c.cluster);
+  }
+  return [...seen.keys()].sort((a, b) => a.localeCompare(b));
 }

@@ -1,0 +1,47 @@
+{
+  "generated_at": "2026-10-05T20:10:57.167Z",
+  "beta": {
+    "free": true
+  },
+  "courses": [
+    {
+      "code": "FA-X-ALL-401",
+      "slug": "from-megawatts-to-money-the-capstone",
+      "title": "From Megawatts to Money: The Capstone",
+      "level": "Capstone",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Capstone",
+      "reading_minutes": 27,
+      "narrated": true
+    },
+    {
+      "code": "FA-X-SE-301",
+      "slug": "the-threat-surface",
+      "title": "The Threat Surface",
+      "level": "X",
+      "author": {
+        "voice": "mach",
+        "name": "Mach Eigen"
+      },
+      "group": "Cyber & Physical Security and Resilience",
+      "reading_minutes": 28,
+      "narrated": true
+    },
+    {
+      "code": "FA-D2-101",
+      "slug": "data-center-power-foundations",
+      "title": "Data Center Power Foundations",
+      "level": "101",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Power Architecture",
+      "reading_minutes": 26,
+      "narrated": true
+    }
+  ]
+}

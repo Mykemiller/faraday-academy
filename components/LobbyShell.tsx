@@ -1,12 +1,11 @@
 "use client";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import type {
-  Course, FilterState, Persona, Chip, PriceFilterValue, DurationFilterValue,
-} from "@/lib/types";
-import { applyFilters, applySort, activeChips } from "@/lib/filters";
+import type { AuthorVoice, Chip, FilterState, Level, LobbyCatalog } from "@/lib/types";
+import { applyFilters, applySort } from "@/lib/filters";
+import { activeChips } from "@/lib/filters";
 import { parseFilters, serializeFilters } from "@/lib/url";
-import { SCHOOLS, DEFAULT_FILTERS } from "@/lib/constants";
+import { DEFAULT_FILTERS } from "@/lib/constants";
+import { facetsFor } from "@/lib/facets";
 import type { FilterHandlers } from "./FilterControls";
 import FilterRail from "./FilterRail";
 import FilterDrawer from "./FilterDrawer";
@@ -14,93 +13,78 @@ import PersonaSwitcher from "./PersonaSwitcher";
 import Toolbar from "./Toolbar";
 import CourseGrid from "./CourseGrid";
 
-const PERSONA_STORAGE_KEY = "faraday-academy-persona";
-const schoolName = (id: string) => SCHOOLS.find((s) => s.id === id)?.name ?? id;
+/**
+ * Deliberately does NOT call useSearchParams.
+ *
+ * On a prerendered route that hook forces the client tree up to the nearest
+ * Suspense boundary to be client-side rendered, which is exactly what produced
+ * a lobby whose HTML was skeletons and whose 99 player links existed only after
+ * hydration — invisible to a crawler and to a reader on a slow connection.
+ *
+ * Instead the server renders the unfiltered grid, the shell hydrates with the
+ * same default state (so the markup matches), and the URL is read once on mount
+ * and on popstate. Writes go through window.history.replaceState, which Next
+ * integrates with its router without a navigation round trip.
+ */
+export default function LobbyShell({ catalog }: { catalog: LobbyCatalog }) {
+  const facets = useMemo(() => facetsFor(catalog.courses), [catalog.courses]);
 
-// Compute closest matches by relaxing the most-restrictive single filter (review #7).
-function computeSuggestions(
-  catalog: Course[],
-  f: FilterState,
-): { list: Course[]; label?: string } {
-  const relaxations: { next: FilterState; label: string }[] = [];
-  if (f.duration !== "any") relaxations.push({ next: { ...f, duration: "any" }, label: "with any duration" });
-  if (f.certOnly) relaxations.push({ next: { ...f, certOnly: false }, label: "beyond certifications" });
-  if (f.price !== "all") relaxations.push({ next: { ...f, price: "all" }, label: "at any price" });
-  if (f.schools.length) relaxations.push({ next: { ...f, schools: [] }, label: "across all schools" });
-  if (f.persona) relaxations.push({ next: { ...f, persona: null }, label: "for any persona" });
-
-  for (const r of relaxations) {
-    const matches = applySort(applyFilters(catalog, r.next), "recommended", f.persona);
-    if (matches.length > 0) {
-      return { list: matches.slice(0, 3), label: `Closest matches — ${r.label}` };
-    }
-  }
-  return { list: [] };
-}
-
-export default function LobbyShell({ catalog }: { catalog: Course[] }) {
-  const router = useRouter();
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-
-  const [filters, setFilters] = useState<FilterState>(() =>
-    parseFilters(new URLSearchParams(searchParams.toString())),
-  );
+  const [filters, setFilters] = useState<FilterState>(DEFAULT_FILTERS);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const drawerTriggerRef = useRef<HTMLButtonElement>(null);
-  const hydratedPersona = useRef(false);
+  const readUrl = useRef(false);
 
-  // One-time: if the URL carried no persona, hydrate from localStorage (review #5).
+  const subjects = facets.subjects;
+
+  // Read the URL after hydration, and again on back/forward.
   useEffect(() => {
-    if (hydratedPersona.current) return;
-    hydratedPersona.current = true;
-    if (filters.persona == null && !searchParams.get("persona")) {
-      const stored = localStorage.getItem(PERSONA_STORAGE_KEY) as Persona | null;
-      if (stored) setFilters((f) => ({ ...f, persona: stored }));
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    const fromUrl = () =>
+      setFilters(parseFilters(new URLSearchParams(window.location.search), subjects));
+    fromUrl();
+    readUrl.current = true;
+    window.addEventListener("popstate", fromUrl);
+    return () => window.removeEventListener("popstate", fromUrl);
+  }, [subjects]);
 
-  // Persist persona + mirror filter state to the URL (shareable, back/forward safe — spec §7.3).
+  // Mirror filter state back to the URL so a view is shareable.
+  const serialized = useMemo(() => serializeFilters(filters).toString(), [filters]);
   useEffect(() => {
-    if (filters.persona) localStorage.setItem(PERSONA_STORAGE_KEY, filters.persona);
-    else localStorage.removeItem(PERSONA_STORAGE_KEY);
-
-    const next = serializeFilters(filters).toString();
-    const current = serializeFilters(
-      parseFilters(new URLSearchParams(searchParams.toString())),
-    ).toString();
-    if (next !== current) {
-      router.replace(`${pathname}${next ? `?${next}` : ""}`, { scroll: false });
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [filters]);
+    if (!readUrl.current) return;
+    const current = window.location.search.replace(/^\?/, "");
+    if (serialized === current) return;
+    window.history.replaceState(
+      null,
+      "",
+      `${window.location.pathname}${serialized ? `?${serialized}` : ""}`,
+    );
+  }, [serialized]);
 
   const results = useMemo(
-    () => applySort(applyFilters(catalog, filters), filters.sort, filters.persona),
-    [catalog, filters],
+    () => applySort(applyFilters(catalog.courses, filters), filters.sort, filters.persona),
+    [catalog.courses, filters],
   );
 
-  const suggestions = useMemo(
-    () => (results.length === 0 ? computeSuggestions(catalog, filters) : { list: [] }),
-    [catalog, filters, results.length],
-  );
-
-  const chips = useMemo(() => activeChips(filters, schoolName), [filters]);
+  const chips = useMemo(() => activeChips(filters), [filters]);
 
   const handlers: FilterHandlers = useMemo(
     () => ({
       setPersona: (persona) => setFilters((f) => ({ ...f, persona })),
-      toggleSchool: (id) =>
+      toggleLevel: (level: Level) =>
         setFilters((f) => ({
           ...f,
-          schools: f.schools.includes(id)
-            ? f.schools.filter((s) => s !== id)
-            : [...f.schools, id],
+          levels: f.levels.includes(level)
+            ? f.levels.filter((l) => l !== level)
+            : [...f.levels, level],
         })),
-      setPrice: (price: PriceFilterValue) => setFilters((f) => ({ ...f, price })),
-      setDuration: (duration: DurationFilterValue) => setFilters((f) => ({ ...f, duration })),
-      setCertOnly: (certOnly) => setFilters((f) => ({ ...f, certOnly })),
+      toggleSubject: (subject: string) =>
+        setFilters((f) => ({
+          ...f,
+          subjects: f.subjects.includes(subject)
+            ? f.subjects.filter((s) => s !== subject)
+            : [...f.subjects, subject],
+        })),
+      setAuthor: (author: AuthorVoice | null) => setFilters((f) => ({ ...f, author })),
+      setNarrated: (narrated: boolean) => setFilters((f) => ({ ...f, narrated })),
       clearAll: () => setFilters((f) => ({ ...DEFAULT_FILTERS, sort: f.sort })),
     }),
     [],
@@ -110,10 +94,10 @@ export default function LobbyShell({ catalog }: { catalog: Course[] }) {
     setFilters((f) => {
       switch (chip.kind) {
         case "persona": return { ...f, persona: null };
-        case "school": return { ...f, schools: f.schools.filter((s) => s !== chip.value) };
-        case "price": return { ...f, price: "all" };
-        case "duration": return { ...f, duration: "any" };
-        case "cert": return { ...f, certOnly: false };
+        case "level": return { ...f, levels: f.levels.filter((l) => l !== chip.value) };
+        case "subject": return { ...f, subjects: f.subjects.filter((s) => s !== chip.value) };
+        case "author": return { ...f, author: null };
+        case "narrated": return { ...f, narrated: false };
         case "q": return { ...f, q: "" };
         default: return f;
       }
@@ -122,7 +106,6 @@ export default function LobbyShell({ catalog }: { catalog: Course[] }) {
 
   return (
     <div className="min-h-full">
-      {/* Header */}
       <header className="border-b border-sage-20 bg-warm-white">
         <div className="mx-auto max-w-[1400px] px-4 py-6 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
@@ -132,28 +115,35 @@ export default function LobbyShell({ catalog }: { catalog: Course[] }) {
                 Short, sharp courses on the forces shaping the AI data center economy —
                 power, cooling, capital, grid policy, and sovereign compute.
               </p>
-            </div>
-            <div className="hidden lg:block">
-              <p className="mb-2 font-mono text-xs uppercase tracking-wider text-forest-70">
-                I&apos;m a…
+              <p className="mt-2 max-w-xl text-sm text-forest-90">
+                Every lesson is open to read. Free during beta.
               </p>
-              <PersonaSwitcher value={filters.persona} onChange={handlers.setPersona} />
             </div>
+            {facets.anyPersonas && (
+              <div className="hidden lg:block">
+                <p className="mb-2 font-mono text-xs uppercase tracking-wider text-forest-70">
+                  I&apos;m a…
+                </p>
+                <PersonaSwitcher value={filters.persona} onChange={handlers.setPersona} />
+              </div>
+            )}
           </div>
         </div>
       </header>
 
       <main className="mx-auto max-w-[1400px] px-4 py-6 sm:px-6 lg:px-8">
         <div className="flex gap-8">
-          <FilterRail filters={filters} handlers={handlers} />
+          <FilterRail filters={filters} facets={facets} handlers={handlers} />
 
           <div className="min-w-0 flex-1 space-y-5">
+            {/* The grid needs a level-2 heading of its own: on a phone the filter
+                rail is display:none, so without this the document jumps h1 → h3. */}
+            <h2 className="sr-only">Courses</h2>
             <Toolbar
               q={filters.q}
               onQChange={(q) => setFilters((f) => ({ ...f, q }))}
               sort={filters.sort}
               onSortChange={(sort) => setFilters((f) => ({ ...f, sort }))}
-              resultCount={results.length}
               chips={chips}
               onRemoveChip={removeChip}
               onClearAll={handlers.clearAll}
@@ -161,15 +151,12 @@ export default function LobbyShell({ catalog }: { catalog: Course[] }) {
               drawerTriggerRef={drawerTriggerRef}
             />
 
-            <div key={results.length} className="animate-fade-in">
-              <CourseGrid
-                results={results}
-                catalogEmpty={catalog.length === 0}
-                suggestions={suggestions.list}
-                suggestionLabel={suggestions.label}
-                onClearAll={handlers.clearAll}
-              />
-            </div>
+            <CourseGrid
+              results={results}
+              betaFree={catalog.beta.free}
+              offline={catalog.courses.length === 0}
+              onClearAll={handlers.clearAll}
+            />
           </div>
         </div>
       </main>
@@ -178,8 +165,8 @@ export default function LobbyShell({ catalog }: { catalog: Course[] }) {
         open={drawerOpen}
         onClose={() => setDrawerOpen(false)}
         filters={filters}
+        facets={facets}
         handlers={handlers}
-        resultCount={results.length}
         triggerRef={drawerTriggerRef}
       />
     </div>

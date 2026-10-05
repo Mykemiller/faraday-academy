@@ -1,0 +1,1196 @@
+{
+  "generated_at": "2026-10-05T20:17:29.088Z",
+  "beta": {
+    "free": true
+  },
+  "courses": [
+    {
+      "slug": "advanced-packaging-and-substrate-capacity",
+      "title": "Advanced Packaging & Substrate Capacity",
+      "level": "301",
+      "author": {
+        "voice": "mach",
+        "name": "Mach Eigen"
+      },
+      "group": "Chips & Density",
+      "reading_minutes": 28,
+      "narrated": true
+    },
+    {
+      "slug": "ai-back-end-fabric-and-optical-interconnect",
+      "title": "AI Back-End Fabric & Optical Interconnect",
+      "level": "301",
+      "author": {
+        "voice": "mach",
+        "name": "Mach Eigen"
+      },
+      "group": "Networking & Interconnect",
+      "reading_minutes": 28,
+      "narrated": true
+    },
+    {
+      "slug": "ai-chips-and-compute-density-foundations",
+      "title": "AI Chips and Compute Density Foundations",
+      "level": "101",
+      "author": {
+        "voice": "mach",
+        "name": "Mach Eigen"
+      },
+      "group": "Chips & Density",
+      "reading_minutes": 27,
+      "narrated": true
+    },
+    {
+      "slug": "ai-factory-architecture",
+      "title": "AI Factory Architecture",
+      "level": "X",
+      "author": {
+        "voice": "mach",
+        "name": "Mach Eigen"
+      },
+      "group": "Chips & Density",
+      "reading_minutes": 28,
+      "narrated": true
+    },
+    {
+      "slug": "ai-factory-operations-and-control-foundations",
+      "title": "AI Factory Operations and Control Foundations",
+      "level": "101",
+      "author": {
+        "voice": "mach",
+        "name": "Mach Eigen"
+      },
+      "group": "Orchestration Intelligence & Control Plane",
+      "reading_minutes": 28,
+      "narrated": true
+    },
+    {
+      "slug": "ai-labs-as-infrastructure-buyers",
+      "title": "AI Labs as Infrastructure Buyers",
+      "level": "201",
+      "author": {
+        "voice": "mach",
+        "name": "Mach Eigen"
+      },
+      "group": "New Entrants",
+      "reading_minutes": 26,
+      "narrated": true
+    },
+    {
+      "slug": "analyst-intelligence-reading-gartner-idc-and-the-trade-press",
+      "title": "Analyst Intelligence: Reading Gartner, IDC & the Trade Press",
+      "level": "201",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Industry Media & Analyst Coverage",
+      "reading_minutes": 26,
+      "narrated": true
+    },
+    {
+      "slug": "behind-the-fence-gas-and-fuel-cells",
+      "title": "Behind-the-Fence Gas & Fuel Cells",
+      "level": "301",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Power Architecture",
+      "reading_minutes": 30,
+      "narrated": true
+    },
+    {
+      "slug": "behind-the-meter-strategy",
+      "title": "Behind-the-Meter Strategy",
+      "level": "X",
+      "author": {
+        "voice": "mach",
+        "name": "Mach Eigen"
+      },
+      "group": "Power Architecture",
+      "reading_minutes": 27,
+      "narrated": true
+    },
+    {
+      "slug": "build-vs-lease-and-capacity-geography",
+      "title": "Build-vs-Lease & Capacity Geography",
+      "level": "201",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Hyperscaler Activity",
+      "reading_minutes": 25,
+      "narrated": true
+    },
+    {
+      "slug": "building-management-systems-and-hvac-control",
+      "title": "Building Management Systems & HVAC Control",
+      "level": "201",
+      "author": {
+        "voice": "mach",
+        "name": "Mach Eigen"
+      },
+      "group": "Facility IT & Operational Technology",
+      "reading_minutes": 30,
+      "narrated": true
+    },
+    {
+      "slug": "business-continuity-and-disaster-recovery-practice",
+      "title": "Business Continuity & Disaster Recovery Practice",
+      "level": "401",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Outage Intelligence & Emergency Response",
+      "reading_minutes": 27,
+      "narrated": true
+    },
+    {
+      "slug": "campus-portfolio-strategy-and-site-selection-mastery",
+      "title": "Campus Portfolio Strategy & Site-Selection Mastery",
+      "level": "401",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Real Estate & Site Selection",
+      "reading_minutes": 26,
+      "narrated": true
+    },
+    {
+      "slug": "chip-export-controls-and-outbound-dual-use",
+      "title": "Chip Export Controls & Outbound Dual-Use",
+      "level": "201",
+      "author": {
+        "voice": "mach",
+        "name": "Mach Eigen"
+      },
+      "group": "Sovereign AI & Geopolitics",
+      "reading_minutes": 29,
+      "narrated": true
+    },
+    {
+      "slug": "clean-energy-procurement-ppa-rec-and-24-7-cfe",
+      "title": "Clean Energy Procurement (PPA, REC & 24/7 CFE)",
+      "level": "201",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Sustainability",
+      "reading_minutes": 30,
+      "narrated": true
+    },
+    {
+      "slug": "climate-and-parametric-risk-products",
+      "title": "Climate & Parametric Risk Products",
+      "level": "301",
+      "author": {
+        "voice": "mach",
+        "name": "Mach Eigen"
+      },
+      "group": "Insurance & Risk Markets",
+      "reading_minutes": 26,
+      "narrated": true
+    },
+    {
+      "slug": "community-benefits-and-host-agreements",
+      "title": "Community Benefits & Host Agreements",
+      "level": "201",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Community Relations",
+      "reading_minutes": 27,
+      "narrated": true
+    },
+    {
+      "slug": "community-relations-foundations",
+      "title": "Community Relations Foundations",
+      "level": "101",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Community Relations",
+      "reading_minutes": 30,
+      "narrated": true
+    },
+    {
+      "slug": "community-strategy-master-class",
+      "title": "Community Strategy Master Class",
+      "level": "401",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Community Relations",
+      "reading_minutes": 28,
+      "narrated": true
+    },
+    {
+      "slug": "construction-and-skilled-trades-labor",
+      "title": "Construction & Skilled Trades Labor",
+      "level": "201",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Workforce & Labor Markets",
+      "reading_minutes": 26,
+      "narrated": true
+    },
+    {
+      "slug": "construction-foundations-for-ai-infrastructure",
+      "title": "Construction Foundations for AI Infrastructure",
+      "level": "101",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Construction",
+      "reading_minutes": 30,
+      "narrated": true
+    },
+    {
+      "slug": "cooling-and-water-foundations-for-ai-infrastructure",
+      "title": "Cooling and Water Foundations for AI Infrastructure",
+      "level": "101",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Cooling & Water Technology",
+      "reading_minutes": 28,
+      "narrated": true
+    },
+    {
+      "slug": "cyber-incidents-targeting-dc-infrastructure",
+      "title": "Cyber Incidents Targeting DC Infrastructure",
+      "level": "301",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Outage Intelligence & Emergency Response",
+      "reading_minutes": 28,
+      "narrated": true
+    },
+    {
+      "slug": "cyber-insurance-and-state-actor-exclusions",
+      "title": "Cyber Insurance & State-Actor Exclusions",
+      "level": "201",
+      "author": {
+        "voice": "mach",
+        "name": "Mach Eigen"
+      },
+      "group": "Insurance & Risk Markets",
+      "reading_minutes": 28,
+      "narrated": true
+    },
+    {
+      "slug": "data-center-capital-markets-foundations",
+      "title": "Data Center Capital Markets Foundations",
+      "level": "101",
+      "author": {
+        "voice": "mach",
+        "name": "Mach Eigen"
+      },
+      "group": "M&A & Capital Markets",
+      "reading_minutes": 29,
+      "narrated": true
+    },
+    {
+      "slug": "data-center-power-foundations",
+      "title": "Data Center Power Foundations",
+      "level": "101",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Power Architecture",
+      "reading_minutes": 26,
+      "narrated": true
+    },
+    {
+      "slug": "data-sovereignty-and-cross-border-data-flows",
+      "title": "Data Sovereignty & Cross-Border Data Flows",
+      "level": "301",
+      "author": {
+        "voice": "mach",
+        "name": "Mach Eigen"
+      },
+      "group": "Sovereign AI & Geopolitics",
+      "reading_minutes": 29,
+      "narrated": true
+    },
+    {
+      "slug": "earnings-call-and-investor-day-signal-extraction",
+      "title": "Earnings-Call & Investor-Day Signal Extraction",
+      "level": "301",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "People & Signals",
+      "reading_minutes": 28,
+      "narrated": true
+    },
+    {
+      "slug": "executive-signals-before-the-deal",
+      "title": "Executive Signals Before the Deal",
+      "level": "X",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "People & Signals",
+      "reading_minutes": 27,
+      "narrated": true
+    },
+    {
+      "slug": "facility-dcim-and-digital-twin",
+      "title": "Facility DCIM & Digital Twin",
+      "level": "301",
+      "author": {
+        "voice": "mach",
+        "name": "Mach Eigen"
+      },
+      "group": "Facility IT & Operational Technology",
+      "reading_minutes": 26,
+      "narrated": true
+    },
+    {
+      "slug": "facility-it-and-operational-technology-foundations",
+      "title": "Facility IT & Operational Technology Foundations",
+      "level": "101",
+      "author": {
+        "voice": "mach",
+        "name": "Mach Eigen"
+      },
+      "group": "Facility IT & Operational Technology",
+      "reading_minutes": 31,
+      "narrated": true
+    },
+    {
+      "slug": "federal-tax-policy-ira-chips-and-section-174",
+      "title": "Federal Tax Policy — IRA, CHIPS, and Section 174",
+      "level": "201",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Tax, Incentives & Fiscal Policy",
+      "reading_minutes": 29,
+      "narrated": true
+    },
+    {
+      "slug": "from-grid-to-rack",
+      "title": "From Grid to Rack",
+      "level": "X",
+      "author": {
+        "voice": "mach",
+        "name": "Mach Eigen"
+      },
+      "group": "Power Architecture",
+      "reading_minutes": 27,
+      "narrated": true
+    },
+    {
+      "slug": "from-megawatts-to-money-the-capstone",
+      "title": "From Megawatts to Money: The Capstone",
+      "level": "Capstone",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Capstone",
+      "reading_minutes": 27,
+      "narrated": true
+    },
+    {
+      "slug": "from-silicon-to-system",
+      "title": "From Silicon to System",
+      "level": "X",
+      "author": {
+        "voice": "mach",
+        "name": "Mach Eigen"
+      },
+      "group": "Chips & Density",
+      "reading_minutes": 27,
+      "narrated": true
+    },
+    {
+      "slug": "gpu-backed-and-neocloud-financing",
+      "title": "GPU-Backed & Neocloud Financing",
+      "level": "301",
+      "author": {
+        "voice": "mach",
+        "name": "Mach Eigen"
+      },
+      "group": "M&A & Capital Markets",
+      "reading_minutes": 29,
+      "narrated": true
+    },
+    {
+      "slug": "grid-access-and-regulation-foundations",
+      "title": "Grid Access and Regulation Foundations",
+      "level": "101",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Grid & Regulatory",
+      "reading_minutes": 26,
+      "narrated": true
+    },
+    {
+      "slug": "grid-events-and-physical-disaster-response",
+      "title": "Grid Events & Physical Disaster Response",
+      "level": "201",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Outage Intelligence & Emergency Response",
+      "reading_minutes": 28,
+      "narrated": true
+    },
+    {
+      "slug": "grid-interactive-load-microgrids-and-advanced-power-conversion",
+      "title": "Grid-Interactive Load, Microgrids & Advanced Power Conversion",
+      "level": "401",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Power Architecture",
+      "reading_minutes": 32,
+      "narrated": true
+    },
+    {
+      "slug": "how-hyperscalers-reshape-m-and-a",
+      "title": "How Hyperscalers Reshape M&A",
+      "level": "X",
+      "author": {
+        "voice": "mach",
+        "name": "Mach Eigen"
+      },
+      "group": "M&A & Capital Markets",
+      "reading_minutes": 27,
+      "narrated": true
+    },
+    {
+      "slug": "hyperscaler-infrastructure-foundations",
+      "title": "Hyperscaler Infrastructure Foundations",
+      "level": "101",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Hyperscaler Activity",
+      "reading_minutes": 27,
+      "narrated": true
+    },
+    {
+      "slug": "inference-serving-and-model-routing-infrastructure",
+      "title": "Inference Serving & Model-Routing Infrastructure",
+      "level": "201",
+      "author": {
+        "voice": "mach",
+        "name": "Mach Eigen"
+      },
+      "group": "Orchestration Intelligence & Control Plane",
+      "reading_minutes": 26,
+      "narrated": true
+    },
+    {
+      "slug": "insurability-as-the-next-siting-constraint",
+      "title": "Insurability as the Next Siting Constraint",
+      "level": "X",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Insurance & Risk Markets",
+      "reading_minutes": 27,
+      "narrated": true
+    },
+    {
+      "slug": "insurance-foundations-for-ai-infrastructure",
+      "title": "Insurance Foundations for AI Infrastructure",
+      "level": "101",
+      "author": {
+        "voice": "mach",
+        "name": "Mach Eigen"
+      },
+      "group": "Insurance & Risk Markets",
+      "reading_minutes": 26,
+      "narrated": true
+    },
+    {
+      "slug": "interconnect-strategy-and-investment",
+      "title": "Interconnect Strategy & Investment",
+      "level": "401",
+      "author": {
+        "voice": "mach",
+        "name": "Mach Eigen"
+      },
+      "group": "Networking & Interconnect",
+      "reading_minutes": 29,
+      "narrated": true
+    },
+    {
+      "slug": "international-markets-and-site-certification",
+      "title": "International Markets & Site Certification",
+      "level": "301",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Real Estate & Site Selection",
+      "reading_minutes": 26,
+      "narrated": true
+    },
+    {
+      "slug": "international-tax-and-oecd-pillar-two",
+      "title": "International Tax & OECD Pillar Two",
+      "level": "301",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Tax, Incentives & Fiscal Policy",
+      "reading_minutes": 29,
+      "narrated": true
+    },
+    {
+      "slug": "land-pricing-and-acquisition-of-powered-land",
+      "title": "Land Pricing & Acquisition of Powered Land",
+      "level": "301",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Real Estate & Site Selection",
+      "reading_minutes": 30,
+      "narrated": true
+    },
+    {
+      "slug": "large-load-tariffs-and-co-location-rules",
+      "title": "Large-Load Tariffs & Co-Location Rules",
+      "level": "301",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Grid & Regulatory",
+      "reading_minutes": 24,
+      "narrated": true
+    },
+    {
+      "slug": "lender-insurance-requirements-and-risk-transfer",
+      "title": "Lender Insurance Requirements & Risk Transfer",
+      "level": "401",
+      "author": {
+        "voice": "mach",
+        "name": "Mach Eigen"
+      },
+      "group": "Insurance & Risk Markets",
+      "reading_minutes": 26,
+      "narrated": true
+    },
+    {
+      "slug": "long-haul-dark-fiber-and-subsea-systems",
+      "title": "Long-Haul, Dark Fiber & Subsea Systems",
+      "level": "201",
+      "author": {
+        "voice": "mach",
+        "name": "Mach Eigen"
+      },
+      "group": "Networking & Interconnect",
+      "reading_minutes": 31,
+      "narrated": true
+    },
+    {
+      "slug": "long-lead-equipment-modular-delivery-and-schedule-intelligence",
+      "title": "Long-Lead Equipment, Modular Delivery & Schedule Intelligence",
+      "level": "301",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Construction",
+      "reading_minutes": 30,
+      "narrated": true
+    },
+    {
+      "slug": "major-outage-postmortems-and-pattern-recognition",
+      "title": "Major Outage Postmortems & Pattern Recognition",
+      "level": "201",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Outage Intelligence & Emergency Response",
+      "reading_minutes": 31,
+      "narrated": true
+    },
+    {
+      "slug": "memory-systems-hbm-and-the-bandwidth-wall",
+      "title": "Memory Systems: HBM and the Bandwidth Wall",
+      "level": "201",
+      "author": {
+        "voice": "mach",
+        "name": "Mach Eigen"
+      },
+      "group": "Chips & Density",
+      "reading_minutes": 28,
+      "narrated": true
+    },
+    {
+      "slug": "national-compute-strategies-and-sovereign-programs",
+      "title": "National Compute Strategies & Sovereign Programs",
+      "level": "301",
+      "author": {
+        "voice": "mach",
+        "name": "Mach Eigen"
+      },
+      "group": "Sovereign AI & Geopolitics",
+      "reading_minutes": 28,
+      "narrated": true
+    },
+    {
+      "slug": "neocloud-and-new-operator-foundations",
+      "title": "Neocloud and New Operator Foundations",
+      "level": "101",
+      "author": {
+        "voice": "mach",
+        "name": "Mach Eigen"
+      },
+      "group": "New Entrants",
+      "reading_minutes": 25,
+      "narrated": true
+    },
+    {
+      "slug": "networking-and-interconnect-foundations",
+      "title": "Networking & Interconnect Foundations",
+      "level": "101",
+      "author": {
+        "voice": "mach",
+        "name": "Mach Eigen"
+      },
+      "group": "Networking & Interconnect",
+      "reading_minutes": 25,
+      "narrated": true
+    },
+    {
+      "slug": "nuclear-and-smr-offtake-for-data-centers",
+      "title": "Nuclear & SMR Offtake for Data Centers",
+      "level": "201",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Power Architecture",
+      "reading_minutes": 27,
+      "narrated": true
+    },
+    {
+      "slug": "operations-workforce-immigration-and-regional-competition",
+      "title": "Operations Workforce, Immigration & Regional Competition",
+      "level": "301",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Workforce & Labor Markets",
+      "reading_minutes": 29,
+      "narrated": true
+    },
+    {
+      "slug": "opposition-movements-and-public-engagement-practice",
+      "title": "Opposition Movements & Public Engagement Practice",
+      "level": "301",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Community Relations",
+      "reading_minutes": 29,
+      "narrated": true
+    },
+    {
+      "slug": "opposition-playbook-master-class",
+      "title": "Opposition Playbook Master Class",
+      "level": "401",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Community Opposition & Regulatory Risk",
+      "reading_minutes": 28,
+      "narrated": true
+    },
+    {
+      "slug": "ot-ics-scada-cybersecurity",
+      "title": "OT / ICS / SCADA Cybersecurity",
+      "level": "201",
+      "author": {
+        "voice": "mach",
+        "name": "Mach Eigen"
+      },
+      "group": "Cyber & Physical Security and Resilience",
+      "reading_minutes": 27,
+      "narrated": true
+    },
+    {
+      "slug": "outage-intelligence-and-emergency-response-foundations",
+      "title": "Outage Intelligence & Emergency Response Foundations",
+      "level": "101",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Outage Intelligence & Emergency Response",
+      "reading_minutes": 30,
+      "narrated": true
+    },
+    {
+      "slug": "people-and-market-signals-foundations",
+      "title": "People and Market Signals Foundations",
+      "level": "101",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "People & Signals",
+      "reading_minutes": 27,
+      "narrated": true
+    },
+    {
+      "slug": "physical-security-and-access-control",
+      "title": "Physical Security & Access Control",
+      "level": "201",
+      "author": {
+        "voice": "mach",
+        "name": "Mach Eigen"
+      },
+      "group": "Cyber & Physical Security and Resilience",
+      "reading_minutes": 26,
+      "narrated": true
+    },
+    {
+      "slug": "power-aware-and-grid-responsive-orchestration",
+      "title": "Power-Aware & Grid-Responsive Orchestration",
+      "level": "301",
+      "author": {
+        "voice": "mach",
+        "name": "Mach Eigen"
+      },
+      "group": "Orchestration Intelligence & Control Plane",
+      "reading_minutes": 27,
+      "narrated": true
+    },
+    {
+      "slug": "primary-and-emerging-data-center-markets",
+      "title": "Primary & Emerging Data-Center Markets",
+      "level": "201",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Real Estate & Site Selection",
+      "reading_minutes": 29,
+      "narrated": true
+    },
+    {
+      "slug": "private-credit-and-data-center-debt-financing",
+      "title": "Private Credit & Data-Center Debt Financing",
+      "level": "201",
+      "author": {
+        "voice": "mach",
+        "name": "Mach Eigen"
+      },
+      "group": "M&A & Capital Markets",
+      "reading_minutes": 26,
+      "narrated": true
+    },
+    {
+      "slug": "property-and-casualty-business-interruption-for-data-centers",
+      "title": "Property & Casualty + Business Interruption for Data Centers",
+      "level": "201",
+      "author": {
+        "voice": "mach",
+        "name": "Mach Eigen"
+      },
+      "group": "Insurance & Risk Markets",
+      "reading_minutes": 25,
+      "narrated": true
+    },
+    {
+      "slug": "reading-the-industry",
+      "title": "Reading the Industry",
+      "level": "X",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Industry Media & Analyst Coverage",
+      "reading_minutes": 28,
+      "narrated": true
+    },
+    {
+      "slug": "reading-the-industry-media-and-analyst-foundations",
+      "title": "Reading the Industry: Media & Analyst Foundations",
+      "level": "101",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Industry Media & Analyst Coverage",
+      "reading_minutes": 30,
+      "narrated": true
+    },
+    {
+      "slug": "reading-the-outage",
+      "title": "Reading the Outage",
+      "level": "X",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Outage Intelligence & Emergency Response",
+      "reading_minutes": 30,
+      "narrated": true
+    },
+    {
+      "slug": "reputational-and-political-risk",
+      "title": "Reputational & Political Risk",
+      "level": "301",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Community Opposition & Regulatory Risk",
+      "reading_minutes": 24,
+      "narrated": true
+    },
+    {
+      "slug": "security-foundations-for-ai-infrastructure",
+      "title": "Security Foundations for AI Infrastructure",
+      "level": "101",
+      "author": {
+        "voice": "mach",
+        "name": "Mach Eigen"
+      },
+      "group": "Cyber & Physical Security and Resilience",
+      "reading_minutes": 28,
+      "narrated": true
+    },
+    {
+      "slug": "security-operations-and-incident-response",
+      "title": "Security Operations & Incident Response",
+      "level": "401",
+      "author": {
+        "voice": "mach",
+        "name": "Mach Eigen"
+      },
+      "group": "Cyber & Physical Security and Resilience",
+      "reading_minutes": 26,
+      "narrated": true
+    },
+    {
+      "slug": "site-selection-foundations",
+      "title": "Site Selection Foundations",
+      "level": "101",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Real Estate & Site Selection",
+      "reading_minutes": 28,
+      "narrated": true
+    },
+    {
+      "slug": "sovereign-ai-and-geopolitics-foundations",
+      "title": "Sovereign AI & Geopolitics Foundations",
+      "level": "101",
+      "author": {
+        "voice": "mach",
+        "name": "Mach Eigen"
+      },
+      "group": "Sovereign AI & Geopolitics",
+      "reading_minutes": 27,
+      "narrated": true
+    },
+    {
+      "slug": "sovereign-ai-and-the-grid",
+      "title": "Sovereign AI and the Grid",
+      "level": "X",
+      "author": {
+        "voice": "mach",
+        "name": "Mach Eigen"
+      },
+      "group": "Sovereign AI & Geopolitics",
+      "reading_minutes": 24,
+      "narrated": true
+    },
+    {
+      "slug": "spotting-the-next-neocloud",
+      "title": "Spotting the Next Neocloud",
+      "level": "X",
+      "author": {
+        "voice": "mach",
+        "name": "Mach Eigen"
+      },
+      "group": "New Entrants",
+      "reading_minutes": 28,
+      "narrated": true
+    },
+    {
+      "slug": "state-and-local-tax-incentives",
+      "title": "State & Local Tax Incentives",
+      "level": "201",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Tax, Incentives & Fiscal Policy",
+      "reading_minutes": 29,
+      "narrated": true
+    },
+    {
+      "slug": "state-sponsored-threats-and-supply-chain-risk",
+      "title": "State-Sponsored Threats & Supply-Chain Risk",
+      "level": "301",
+      "author": {
+        "voice": "mach",
+        "name": "Mach Eigen"
+      },
+      "group": "Cyber & Physical Security and Resilience",
+      "reading_minutes": 23,
+      "narrated": true
+    },
+    {
+      "slug": "strategic-minerals-ai-diplomacy-and-investment-screening",
+      "title": "Strategic Minerals, AI Diplomacy & Investment Screening",
+      "level": "401",
+      "author": {
+        "voice": "mach",
+        "name": "Mach Eigen"
+      },
+      "group": "Sovereign AI & Geopolitics",
+      "reading_minutes": 28,
+      "narrated": true
+    },
+    {
+      "slug": "sustainability-foundations-for-ai-infrastructure",
+      "title": "Sustainability Foundations for AI Infrastructure",
+      "level": "101",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Sustainability",
+      "reading_minutes": 32,
+      "narrated": true
+    },
+    {
+      "slug": "sustainability-regulation-heat-recovery-and-embodied-carbon",
+      "title": "Sustainability Regulation, Heat Recovery & Embodied Carbon",
+      "level": "401",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Sustainability",
+      "reading_minutes": 29,
+      "narrated": true
+    },
+    {
+      "slug": "talent-flows-and-network-mapping",
+      "title": "Talent Flows & Network Mapping",
+      "level": "201",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "People & Signals",
+      "reading_minutes": 26,
+      "narrated": true
+    },
+    {
+      "slug": "tax-and-fiscal-policy-foundations-for-ai-infrastructure",
+      "title": "Tax & Fiscal Policy Foundations for AI Infrastructure",
+      "level": "101",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Tax, Incentives & Fiscal Policy",
+      "reading_minutes": 26,
+      "narrated": true
+    },
+    {
+      "slug": "tax-driven-deal-structuring",
+      "title": "Tax-Driven Deal Structuring",
+      "level": "401",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Tax, Incentives & Fiscal Policy",
+      "reading_minutes": 31,
+      "narrated": true
+    },
+    {
+      "slug": "tax-incentive-backlash-and-the-clawback-landscape",
+      "title": "Tax Incentive Backlash & the Clawback Landscape",
+      "level": "301",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Tax, Incentives & Fiscal Policy",
+      "reading_minutes": 26,
+      "narrated": true
+    },
+    {
+      "slug": "the-factory-floor",
+      "title": "The Factory Floor",
+      "level": "X",
+      "author": {
+        "voice": "mach",
+        "name": "Mach Eigen"
+      },
+      "group": "Construction",
+      "reading_minutes": 28,
+      "narrated": true
+    },
+    {
+      "slug": "the-fiscal-grid",
+      "title": "The Fiscal Grid",
+      "level": "X",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Tax, Incentives & Fiscal Policy",
+      "reading_minutes": 28,
+      "narrated": true
+    },
+    {
+      "slug": "the-opposition-register",
+      "title": "The Opposition Register",
+      "level": "201",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Community Opposition & Regulatory Risk",
+      "reading_minutes": 25,
+      "narrated": true
+    },
+    {
+      "slug": "the-takeout-premium",
+      "title": "The Takeout Premium",
+      "level": "X",
+      "author": {
+        "voice": "mach",
+        "name": "Mach Eigen"
+      },
+      "group": "M&A & Capital Markets",
+      "reading_minutes": 26,
+      "narrated": true
+    },
+    {
+      "slug": "the-thermal-power-convergence",
+      "title": "The Thermal-Power Convergence",
+      "level": "X",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Power Architecture",
+      "reading_minutes": 29,
+      "narrated": true
+    },
+    {
+      "slug": "the-threat-surface",
+      "title": "The Threat Surface",
+      "level": "X",
+      "author": {
+        "voice": "mach",
+        "name": "Mach Eigen"
+      },
+      "group": "Cyber & Physical Security and Resilience",
+      "reading_minutes": 28,
+      "narrated": true
+    },
+    {
+      "slug": "thermal-components-and-coolant-supply-chain",
+      "title": "Thermal Components & Coolant Supply Chain",
+      "level": "201",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Cooling & Water Technology",
+      "reading_minutes": 25,
+      "narrated": true
+    },
+    {
+      "slug": "transmission-buildout-and-ferc-policy",
+      "title": "Transmission Buildout & FERC Policy",
+      "level": "201",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Grid & Regulatory",
+      "reading_minutes": 27,
+      "narrated": true
+    },
+    {
+      "slug": "water-and-watts",
+      "title": "Water and Watts",
+      "level": "X",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Cooling & Water Technology",
+      "reading_minutes": 30,
+      "narrated": true
+    },
+    {
+      "slug": "water-stewardship-and-carbon-accounting",
+      "title": "Water Stewardship & Carbon Accounting",
+      "level": "301",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Sustainability",
+      "reading_minutes": 26,
+      "narrated": true
+    },
+    {
+      "slug": "workforce-foundations-for-ai-infrastructure",
+      "title": "Workforce Foundations for AI Infrastructure",
+      "level": "101",
+      "author": {
+        "voice": "gil",
+        "name": "Gilbert Faraday"
+      },
+      "group": "Workforce & Labor Markets",
+      "reading_minutes": 27,
+      "narrated": true
+    }
+  ]
+}

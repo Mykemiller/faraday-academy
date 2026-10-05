@@ -9,7 +9,8 @@
     "lint": "eslint",
     "test": "vitest run",
     "test:watch": "vitest",
-    "catalog:generate": "node scripts/generate-catalog.mjs"
+    "catalog:generate": "node scripts/generate-catalog.mjs",
+    "check:links": "node scripts/check-player-links.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.21.0",

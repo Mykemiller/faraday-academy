@@ -1,16 +1,17 @@
 "use client";
 import { Search, SlidersHorizontal } from "lucide-react";
-import type { Chip, FilterState, SortKey } from "@/lib/types";
+import type { Chip, SortKey } from "@/lib/types";
 import { SORTS } from "@/lib/constants";
 import ActiveChips from "./ActiveChips";
 
-// Search + live result count (aria-live) + chips + sort (spec §4).
+// Search + sort + active chips. No result count is rendered: a number here is a
+// count of published courses, and the lobby stays count-agnostic. The change is
+// announced to assistive tech instead.
 export default function Toolbar({
   q,
   onQChange,
   sort,
   onSortChange,
-  resultCount,
   chips,
   onRemoveChip,
   onClearAll,
@@ -21,7 +22,6 @@ export default function Toolbar({
   onQChange: (v: string) => void;
   sort: SortKey;
   onSortChange: (v: SortKey) => void;
-  resultCount: number;
   chips: Chip[];
   onRemoveChip: (chip: Chip) => void;
   onClearAll: () => void;
@@ -31,7 +31,6 @@ export default function Toolbar({
   return (
     <div className="space-y-3">
       <div className="flex flex-wrap items-center gap-3">
-        {/* Mobile filters trigger */}
         <button
           ref={drawerTriggerRef}
           type="button"
@@ -40,11 +39,6 @@ export default function Toolbar({
         >
           <SlidersHorizontal className="h-4 w-4" aria-hidden />
           Filters
-          {chips.length > 0 && (
-            <span className="rounded-full bg-forest px-1.5 font-mono text-[11px] text-warm-white">
-              {chips.length}
-            </span>
-          )}
         </button>
 
         <div className="relative min-w-[12rem] flex-1">
@@ -78,12 +72,13 @@ export default function Toolbar({
         </label>
       </div>
 
-      <div className="flex flex-wrap items-center justify-between gap-3">
-        <p aria-live="polite" className="font-mono text-sm text-forest-90">
-          {resultCount} {resultCount === 1 ? "course" : "courses"}
-        </p>
+      {chips.length > 0 && (
         <ActiveChips chips={chips} onRemove={onRemoveChip} onClearAll={onClearAll} />
-      </div>
+      )}
+
+      <p aria-live="polite" className="sr-only">
+        Results updated.
+      </p>
     </div>
   );
 }
