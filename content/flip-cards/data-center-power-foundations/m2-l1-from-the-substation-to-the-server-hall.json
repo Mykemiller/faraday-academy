@@ -1,0 +1,77 @@
+[
+  {
+    "course_slug": "data-center-power-foundations",
+    "lesson_slug": "from-the-substation-to-the-server-hall",
+    "lesson_id": "a5a9237e-c12c-4f29-9520-0f1a46ce7510",
+    "module_position": 2,
+    "lesson_position": 1,
+    "card_index": 1,
+    "question": "Why do long-distance transmission lines run at tens or hundreds of thousands of volts?",
+    "options": {
+      "A": "Such voltages let a campus substation skip transformers entirely.",
+      "B": "It raises the current, so each cable can deliver more power.",
+      "C": "The same power then needs less current, which cuts heat losses.",
+      "D": "It keeps electrical faults from ever reaching building switchgear."
+    },
+    "correct_key": "C",
+    "rationales": {
+      "A": "The lesson says the on-site substation is built around large transformers that step transmission voltage down, so transformers are still required.",
+      "B": "Higher voltage carries the same power with less current. Raising current would increase heat loss in the wires.",
+      "C": "The lesson explains that higher voltage moves the same power with less current, and less current means less energy lost as heat in the wires.",
+      "D": "Fault isolation is the job of switchgear and protective devices. The lesson ties high voltage to lower current and lower losses."
+    },
+    "wrong_choice_note": "B is the most tempting because more power sounds like more current. The lesson's point is the reverse: higher voltage lets the same power travel on less current.",
+    "source_excerpt": "Higher voltage lets the same amount of power travel with less current, and less current means less energy lost as heat in the wires.",
+    "status": "draft"
+  },
+  {
+    "course_slug": "data-center-power-foundations",
+    "lesson_slug": "from-the-substation-to-the-server-hall",
+    "lesson_id": "a5a9237e-c12c-4f29-9520-0f1a46ce7510",
+    "module_position": 2,
+    "lesson_position": 1,
+    "card_index": 2,
+    "question": "Which job in the power chain belongs to the uninterruptible power supply (UPS)?",
+    "options": {
+      "A": "Stepping medium voltage down to 480 volts for large equipment.",
+      "B": "Choosing whether the utility or the generators feed each load.",
+      "C": "Converting AC into the low-voltage DC that processors run on.",
+      "D": "Covering the gap until generators start, and smoothing disturbances."
+    },
+    "correct_key": "D",
+    "rationales": {
+      "A": "Stepping down to 480 volts is done by the transformers inside or beside each building, before power reaches the switchgear.",
+      "B": "The lesson assigns source selection to switchgear, which routes electricity and decides which source feeds which load.",
+      "C": "Power supply units inside the rack make the final conversion to the low-voltage DC that chips use.",
+      "D": "The lesson says the UPS bridges the gap between a utility failure and generator takeover, and cleans up disturbances in the incoming power."
+    },
+    "wrong_choice_note": "B is the most tempting because the UPS and switchgear both deal with utility failures. Switchgear picks the source; the UPS carries the load through the seconds before generators are ready.",
+    "source_excerpt": "Its job is to bridge the gap between a utility failure and the moment generators take over, and to clean up disturbances in the incoming power.",
+    "status": "draft"
+  },
+  {
+    "course_slug": "data-center-power-foundations",
+    "lesson_slug": "from-the-substation-to-the-server-hall",
+    "lesson_id": "a5a9237e-c12c-4f29-9520-0f1a46ce7510",
+    "module_position": 2,
+    "lesson_position": 1,
+    "card_index": 3,
+    "question": "How can a building full of idle servers still post a fine power usage effectiveness (PUE) number?",
+    "options": {
+      "A": "PUE only tracks overhead relative to IT energy, ignoring useful work.",
+      "B": "Servers that sit unused draw no power, so the ratio falls to 1.0.",
+      "C": "The Green Grid excludes unused equipment from the PUE formula.",
+      "D": "Operators report PUE as a summer peak, which masks the unused load."
+    },
+    "correct_key": "A",
+    "rationales": {
+      "A": "PUE is total facility energy divided by computing energy, so it measures overhead and says nothing about whether the computing is useful.",
+      "B": "PUE is total facility energy divided by computing energy, and cooling and conversion losses keep running in an idle building. That overhead remains, so the ratio cannot reach 1.0, which the lesson defines as no overhead at all.",
+      "C": "The lesson defines PUE as total facility energy over computing energy with no exclusion for unused equipment.",
+      "D": "The lesson says PUE is often reported as an annual average that hides seasonal swings, which is a separate caution."
+    },
+    "wrong_choice_note": "D is the most tempting because the lesson does warn about how PUE is reported. That caution concerns seasonal averaging; the idle-server problem comes from PUE measuring overhead alone.",
+    "source_excerpt": "It measures overhead, not usefulness, so a building full of idle servers can post a fine number.",
+    "status": "draft"
+  }
+]
