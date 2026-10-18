@@ -6,6 +6,7 @@
 // renders it.
 
 import {
+  type CheckRow,
   type CourseBundle,
   type CourseRow,
   type GlossaryRow,
@@ -191,7 +192,22 @@ export function buildCatalogEntry(
   return entry;
 }
 
-function buildLesson(l: LessonRow, narration: NarrationMap) {
+/**
+ * One flip card. source_excerpt and status stay server-side: the excerpt is
+ * authoring evidence for answerability, and only servable rows get this far.
+ */
+function buildCheck(c: CheckRow) {
+  return {
+    card_index: c.card_index,
+    question: c.question,
+    options: c.options,
+    correct_key: c.correct_key,
+    rationales: c.rationales,
+    wrong_choice_note: c.wrong_choice_note,
+  };
+}
+
+function buildLesson(l: LessonRow, narration: NarrationMap, checks: CheckRow[]) {
   const words = l.word_count ?? 0;
   const n = narration.get(l.id) ?? null;
   return {
@@ -203,10 +219,20 @@ function buildLesson(l: LessonRow, narration: NarrationMap) {
     reading_minutes: readingMinutes(words),
     // Per lesson, so a partially narrated course shows audio only where it exists.
     narration: n ? { url: n.url, duration_seconds: n.duration_seconds } : null,
+    // Flip-card checks for this lesson, in card order. Empty when none are servable.
+    checks: checks
+      .filter((c) => c.lesson_id === l.id)
+      .sort((a, c) => a.card_index - c.card_index)
+      .map(buildCheck),
   };
 }
 
-function buildModule(m: ModuleRow, lessons: LessonRow[], narration: NarrationMap) {
+function buildModule(
+  m: ModuleRow,
+  lessons: LessonRow[],
+  narration: NarrationMap,
+  checks: CheckRow[],
+) {
   return {
     position: m.position,
     title: m.title,
@@ -218,7 +244,7 @@ function buildModule(m: ModuleRow, lessons: LessonRow[], narration: NarrationMap
     lessons: lessons
       .slice()
       .sort((a, c) => a.position - c.position)
-      .map((l) => buildLesson(l, narration)),
+      .map((l) => buildLesson(l, narration, checks)),
   };
 }
 
@@ -260,7 +286,7 @@ export function buildCourse(
     modules: b.modules
       .slice()
       .sort((a, c) => a.position - c.position)
-      .map((m) => buildModule(m, lessonsByModule.get(m.id) ?? [], narration)),
+      .map((m) => buildModule(m, lessonsByModule.get(m.id) ?? [], narration, b.checks)),
     quiz: b.quiz
       .slice()
       .sort((a, c) => a.position - c.position)

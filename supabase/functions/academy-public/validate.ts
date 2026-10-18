@@ -111,12 +111,24 @@ export type GlossaryRow = {
   definition: string | null;
 };
 
+export type CheckRow = {
+  lesson_id: string;
+  card_index: number;
+  question: string | null;
+  options: unknown;
+  correct_key: string | null;
+  rationales: unknown;
+  wrong_choice_note: string | null;
+  status: string;
+};
+
 export type CourseBundle = {
   course: CourseRow;
   modules: ModuleRow[];
   lessons: LessonRow[]; // across all modules of this course
   quiz: QuizRow[];
   glossary: GlossaryRow[];
+  checks: CheckRow[]; // servable flip-card checks across this course's lessons
 };
 
 export type Exclusion = { code: string; slug: string | null; reasons: string[] };
@@ -187,5 +199,39 @@ export function validateCourse(b: CourseBundle): string[] {
     if (hit) reasons.push(`taxonomy code "${hit}" in ${where}`);
   }
 
+  return reasons;
+}
+
+const CHECK_KEYS = ["A", "B", "C", "D"] as const;
+
+function isKeyedAtoD(v: unknown): v is Record<string, string> {
+  if (typeof v !== "object" || v === null || Array.isArray(v)) return false;
+  const keys = Object.keys(v).sort();
+  return keys.length === 4 && keys.every((k, i) => k === CHECK_KEYS[i]) &&
+    Object.values(v).every((x) => typeof x === "string" && x.trim().length > 0);
+}
+
+/**
+ * Returns [] when a flip-card check may be served, else the reasons it may not.
+ * A failing check is dropped on its own; it never holds back the course. The
+ * table enforces most of this already; this guards the wire shape and keeps
+ * taxonomy codes away from learners, same as every other course text.
+ */
+export function validateCheck(c: CheckRow): string[] {
+  const reasons: string[] = [];
+  if (!(SERVABLE_STATUSES as readonly string[]).includes(c.status)) reasons.push(`status ${c.status}`);
+  if (!c.question || !c.question.trim()) reasons.push("empty question");
+  if (!isKeyedAtoD(c.options)) reasons.push("options are not exactly A-D");
+  if (!isKeyedAtoD(c.rationales)) reasons.push("rationales are not exactly A-D");
+  if (!c.correct_key || !(CHECK_KEYS as readonly string[]).includes(c.correct_key)) {
+    reasons.push("correct_key is not A-D");
+  }
+  const texts = [c.question, c.wrong_choice_note,
+    ...(isKeyedAtoD(c.options) ? Object.values(c.options) : []),
+    ...(isKeyedAtoD(c.rationales) ? Object.values(c.rationales) : [])];
+  for (const t of texts) {
+    const hit = findCode(t);
+    if (hit) reasons.push(`taxonomy code "${hit}"`);
+  }
   return reasons;
 }

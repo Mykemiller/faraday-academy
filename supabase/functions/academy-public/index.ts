@@ -4,7 +4,8 @@ import { createClient, type SupabaseClient } from "https://esm.sh/@supabase/supa
 // Faraday Academy — public read path.
 //
 //   GET /academy-public/catalog        every servable course, grouped by domain name
-//   GET /academy-public/course/:slug   one course, whole
+//   GET /academy-public/course/:slug   one course, whole (lessons carry their
+//                                      approved/published flip-card checks)
 //   GET /academy-public/sitemap        slug + updated_at per servable course
 //   GET /academy-public/validate       exclusion list (header secret required)
 //
@@ -14,6 +15,7 @@ import { createClient, type SupabaseClient } from "https://esm.sh/@supabase/supa
 // rather than through a public view.
 
 import {
+  type CheckRow,
   type CourseBundle,
   type CourseRow,
   type GlossaryRow,
@@ -22,6 +24,7 @@ import {
   type QuizRow,
   type Exclusion,
   SERVABLE_STATUSES,
+  validateCheck,
   validateCourse,
 } from "./validate.ts";
 import {
@@ -83,6 +86,8 @@ const MODULE_COLS =
 const LESSON_COLS = "id, module_id, position, title, body, word_count";
 const QUIZ_COLS = "id, course_id, position, question, options, correct_answer, explanation";
 const GLOSSARY_COLS = "id, course_id, term, definition";
+const CHECK_COLS =
+  "lesson_id, card_index, question, options, correct_key, rationales, wrong_choice_note, status";
 
 type Rules = {
   beta_mode: boolean;
@@ -135,6 +140,38 @@ async function loadNarration(db: SupabaseClient): Promise<NarrationMap> {
   return m;
 }
 
+/**
+ * Servable flip-card checks (FDY-189). Drafts never leave the database: the
+ * status filter runs in the query, not after it. Fails soft — if lesson_checks
+ * is unreadable the course is served without checks rather than as a 500.
+ */
+async function fetchChecks(db: SupabaseClient): Promise<CheckRow[]> {
+  const out: CheckRow[] = [];
+  try {
+    for (let from = 0; ; from += PAGE) {
+      const { data, error } = await db
+        .from("lesson_checks")
+        .select(CHECK_COLS)
+        .in("status", SERVABLE_STATUSES as unknown as string[])
+        .not("lesson_id", "is", null)
+        .order("lesson_id")
+        .order("card_index")
+        .range(from, from + PAGE - 1);
+      if (error) throw new Error(error.message);
+      const rows = (data ?? []) as CheckRow[];
+      out.push(...rows);
+      if (rows.length < PAGE) return out;
+    }
+  } catch (err) {
+    console.warn(
+      `academy-public: lesson_checks unavailable, serving without checks (${
+        err instanceof Error ? err.message : err
+      })`,
+    );
+    return [];
+  }
+}
+
 async function fetchCourses(db: SupabaseClient): Promise<CourseRow[]> {
   try {
     return await fetchAll<CourseRow>(db, "academy_courses", COURSE_COLS);
@@ -157,11 +194,12 @@ async function loadBundles(
   );
   const servableIds = new Set(courses.map((c) => c.id));
 
-  const [modules, lessonsAll, quiz, glossary] = await Promise.all([
+  const [modules, lessonsAll, quiz, glossary, checksAll] = await Promise.all([
     fetchAll<ModuleRow>(db, "academy_course_modules", MODULE_COLS),
     fetchAll<LessonRow>(db, "academy_course_lessons", LESSON_COLS),
     fetchAll<QuizRow>(db, "academy_course_quiz_bank", QUIZ_COLS),
     fetchAll<GlossaryRow>(db, "academy_course_glossary", GLOSSARY_COLS),
+    fetchChecks(db),
   ]);
 
   const modulesByCourse = new Map<string, ModuleRow[]>();
@@ -176,12 +214,30 @@ async function loadBundles(
 
   // Lessons are keyed by module, so they reach a course only through its modules.
   const lessonsByCourse = new Map<string, LessonRow[]>();
+  const lessonToCourse = new Map<string, string>();
   for (const l of lessonsAll) {
     const courseId = moduleToCourse.get(l.module_id);
     if (!courseId) continue;
+    lessonToCourse.set(l.id, courseId);
     const arr = lessonsByCourse.get(courseId) ?? [];
     arr.push(l);
     lessonsByCourse.set(courseId, arr);
+  }
+
+  // Checks reach a course only through its lessons. A malformed check is
+  // dropped on its own and logged; it never holds back the course.
+  const checksByCourse = new Map<string, CheckRow[]>();
+  for (const c of checksAll) {
+    const courseId = lessonToCourse.get(c.lesson_id);
+    if (!courseId) continue;
+    const reasons = validateCheck(c);
+    if (reasons.length > 0) {
+      console.warn(`academy-public: dropping check ${c.lesson_id}#${c.card_index}: ${reasons.join("; ")}`);
+      continue;
+    }
+    const arr = checksByCourse.get(courseId) ?? [];
+    arr.push(c);
+    checksByCourse.set(courseId, arr);
   }
 
   const byCourse = <T extends { course_id: string }>(rows: T[]) => {
@@ -206,6 +262,7 @@ async function loadBundles(
       lessons: lessonsByCourse.get(course.id) ?? [],
       quiz: quizByCourse.get(course.id) ?? [],
       glossary: glossaryByCourse.get(course.id) ?? [],
+      checks: checksByCourse.get(course.id) ?? [],
     };
     const reasons = validateCourse(bundle);
     if (reasons.length > 0) {
