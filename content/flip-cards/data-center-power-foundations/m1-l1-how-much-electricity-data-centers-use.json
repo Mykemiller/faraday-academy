@@ -1,0 +1,77 @@
+[
+  {
+    "course_slug": "data-center-power-foundations",
+    "lesson_slug": "how-much-electricity-data-centers-use",
+    "lesson_id": "690b8998-0f36-4e24-86d9-ced1099eed6d",
+    "module_position": 1,
+    "lesson_position": 1,
+    "card_index": 1,
+    "question": "The Berkeley report projected 2028 U.S. data center use at anywhere from about 325 to 580 terawatt-hours. Why is that range so wide?",
+    "options": {
+      "A": "Its scenarios rest on factors nobody can observe yet, such as server shipments and how hard they run.",
+      "B": "Its authors disagreed with each other and published both of their separate estimates side by side.",
+      "C": "Its 2023 baseline measurement was poor, so the error carried forward into every later year.",
+      "D": "Its upper bound counts data centers worldwide while its lower bound counts the United States alone."
+    },
+    "correct_key": "A",
+    "rationales": {
+      "A": "Correct. The laboratory built scenarios around unknowns like how many accelerated servers ship, how hard they are run and how efficiently they are cooled, so the spread reflects honest uncertainty.",
+      "B": "The lesson describes one laboratory building scenarios. It says nothing about a split between authors.",
+      "C": "The lesson gives a firm 2023 estimate of about 176 terawatt-hours. The width comes from assumptions about the future.",
+      "D": "Both ends of the range describe United States consumption. The global figures come from a separate IEA report."
+    },
+    "wrong_choice_note": "B is the most tempting, since a wide range can look like sloppiness or disagreement. The lesson's point is that a wide range in a young market is a sign of honesty about what cannot yet be known.",
+    "source_excerpt": "The laboratory built scenarios around things nobody can yet observe: how many accelerated servers will ship, how hard they will be run, and how efficiently the buildings around them will be cooled.",
+    "status": "draft"
+  },
+  {
+    "course_slug": "data-center-power-foundations",
+    "lesson_slug": "how-much-electricity-data-centers-use",
+    "lesson_id": "690b8998-0f36-4e24-86d9-ced1099eed6d",
+    "module_position": 1,
+    "lesson_position": 1,
+    "card_index": 2,
+    "question": "U.S. data center consumption grew about 7 percent a year from 2014 to 2018, then about 18 percent a year through 2023. What does the Berkeley report credit for much of that jump?",
+    "options": {
+      "A": "A wave of new storage arrays replacing older tape libraries in enterprise facilities",
+      "B": "Accelerated servers built around GPUs that train and run artificial intelligence models",
+      "C": "A slowdown in cooling improvements that had previously offset most new computing load",
+      "D": "Cryptocurrency mining rigs that moved into colocation buildings during those five years"
+    },
+    "correct_key": "B",
+    "rationales": {
+      "A": "Storage is named only as one of the areas where efficiency gains absorbed growth in the earlier period. It is never cited as the cause of the acceleration.",
+      "B": "Correct. The laboratory attributes much of the change to accelerated servers built around GPUs, which draw far more power and tend to run hard for long stretches.",
+      "C": "The lesson credits efficiency gains in cooling with holding growth down before 2018. It does not blame a cooling slowdown for the later rise.",
+      "D": "The lesson does not mention cryptocurrency mining. The driver it names is AI hardware."
+    },
+    "wrong_choice_note": "C is the most tempting, because the lesson does say efficiency gains absorbed growth earlier. The teaching point is that the new growth came from a new kind of machine with much higher power draw.",
+    "source_excerpt": "Growth then accelerated to about 18 percent a year between 2018 and 2023, and the laboratory attributes much of the change to accelerated servers, the machines built around graphics processing units, or GPUs, that train and run the models behind artificial intelligence, or AI.",
+    "status": "draft"
+  },
+  {
+    "course_slug": "data-center-power-foundations",
+    "lesson_slug": "how-much-electricity-data-centers-use",
+    "lesson_id": "690b8998-0f36-4e24-86d9-ced1099eed6d",
+    "module_position": 1,
+    "lesson_position": 1,
+    "card_index": 3,
+    "question": "A utility is sizing the substation and connection for a new campus. Which quantity, as the lesson defines it, drives that sizing?",
+    "options": {
+      "A": "Annual energy in terawatt-hours, the total the campus consumes across a full year",
+      "B": "Average monthly usage in kilowatt-hours, the figure that appears on the campus bill",
+      "C": "Peak power in megawatts, the rate at which the campus draws electricity at one moment",
+      "D": "Share of national consumption, the percent of U.S. electricity that the campus uses"
+    },
+    "correct_key": "C",
+    "rationales": {
+      "A": "Energy over a year is a total over time. The lesson says it drives the electricity bill, while equipment is sized for the rate of draw.",
+      "B": "Kilowatt-hours measure energy and drive the bill. Averages understate what the equipment must handle, since utilities build for peak.",
+      "C": "Correct. Power is the rate of consumption at a given moment, it drives the size of the equipment and the connection, and utilities must build for peak power.",
+      "D": "A national share describes totals spread across the country. The lesson stresses that electricity is delivered through particular local wires and substations."
+    },
+    "wrong_choice_note": "A is the most tempting, because headline figures in the reports are all in terawatt-hours. The teaching point is that energy sets the bill while peak power sets the size of the wires, substations and connection.",
+    "source_excerpt": "Power, measured in kilowatts or megawatts, is the rate of consumption at a given moment; it drives the size of the equipment and the connection.",
+    "status": "draft"
+  }
+]

@@ -1,0 +1,77 @@
+[
+  {
+    "course_slug": "data-center-power-foundations",
+    "lesson_slug": "why-a-megawatt-is-harder-to-find-than-a-chip",
+    "lesson_id": "bf13778d-5736-4230-ae53-0a3a3ecc842e",
+    "module_position": 1,
+    "lesson_position": 2,
+    "card_index": 1,
+    "question": "Under the July 2025 Ohio order, large new data center customers agree to pay for most of their reserved capacity even if they leave it unused. Which utility risk is that requirement meant to manage?",
+    "options": {
+      "A": "That substations and transmission lines cannot be built fast enough",
+      "B": "That wholesale power prices spike during summer peak demand periods",
+      "C": "That a data center draws far more power than it originally reserved",
+      "D": "That a customer changes plans and others pay for unneeded equipment"
+    },
+    "correct_key": "D",
+    "rationales": {
+      "A": "Speed is the first risk the lesson names, and a payment commitment does nothing to make equipment arrive sooner.",
+      "B": "The lesson does not tie the minimum-demand requirement to seasonal price spikes; it targets the cost of equipment built for a forecast.",
+      "C": "Overuse is the opposite concern; the requirement covers capacity a customer reserves and then fails to use.",
+      "D": "Correct. The lesson says the requirement is aimed at the second risk: the utility builds, the customer changes its plans, and everyone else is left paying for equipment nobody needs."
+    },
+    "wrong_choice_note": "A is the most tempting because speed is the risk builders feel most. The tariff addresses the other risk, which is who carries the cost when a load forecast turns out wrong.",
+    "source_excerpt": "The second is that it builds, the customer changes its plans, and everyone else on the system is left paying for equipment nobody needs. The Ohio minimum-demand requirement is aimed squarely at the second risk.",
+    "status": "draft"
+  },
+  {
+    "course_slug": "data-center-power-foundations",
+    "lesson_slug": "why-a-megawatt-is-harder-to-find-than-a-chip",
+    "lesson_id": "bf13778d-5736-4230-ae53-0a3a3ecc842e",
+    "module_position": 1,
+    "lesson_position": 2,
+    "card_index": 2,
+    "question": "Because of the time-to-power constraint, what does the lesson say mostly determines the value of a prospective data center site to an investor?",
+    "options": {
+      "A": "A credible committed energization date and the payment terms behind it",
+      "B": "The total acreage available for building shells and later expansion",
+      "C": "How quickly a developer can finish putting up a building shell there",
+      "D": "How close the parcel sits to an established data center hub market"
+    },
+    "correct_key": "A",
+    "rationales": {
+      "A": "Correct. The lesson says site value depends on the date a credible party has committed to energize it and what the customer agreed to pay for that commitment.",
+      "B": "The lesson explicitly says value depends less on acreage than on the energization date.",
+      "C": "A shell can go up within a year or two, but it simply waits if the substation is years away, so shell speed does not set the value.",
+      "D": "Hub proximity can matter for other reasons, yet the lesson ties site value to the date a credible party has committed to energize the site and what the customer agreed to pay for it."
+    },
+    "wrong_choice_note": "B is the most tempting because land is the familiar measure of real estate value. The lesson's point is that a site is only as useful as the date power actually arrives.",
+    "source_excerpt": "For an investor, the value of a site therefore depends less on its acreage than on the date a credible party has committed to energize it, and on what the customer has agreed to pay for that commitment.",
+    "status": "draft"
+  },
+  {
+    "course_slug": "data-center-power-foundations",
+    "lesson_slug": "why-a-megawatt-is-harder-to-find-than-a-chip",
+    "lesson_id": "bf13778d-5736-4230-ae53-0a3a3ecc842e",
+    "module_position": 1,
+    "lesson_position": 2,
+    "card_index": 3,
+    "question": "A developer claims its project has power. Which piece of evidence does the lesson say actually carries real weight?",
+    "options": {
+      "A": "An application filed with the utility asking for service at the site",
+      "B": "A signed deal that commits both sides to a schedule and set payments",
+      "C": "A study result describing what must be built and roughly by when",
+      "D": "A grid operator's confirmation that the site lies in its footprint"
+    },
+    "correct_key": "B",
+    "rationales": {
+      "A": "An application is only a request; the lesson says requests are often blurred with commitments and are worth little on their own.",
+      "B": "Correct. The lesson says only the signed agreement, which binds both sides to a schedule and payments, is worth much, and even its schedule depends on equipment and construction.",
+      "C": "A study result tells you what must be built and roughly when, but it commits nobody to deliver it.",
+      "D": "Sitting inside a grid operator's region says nothing about whether capacity has been studied or committed for the site."
+    },
+    "wrong_choice_note": "C is the most tempting because a study sounds technical and authoritative. The lesson teaches that only a signed commitment with a schedule and payments makes a power claim credible.",
+    "source_excerpt": "And there is a signed agreement, which commits both sides to a schedule and a set of payments. Only the last of these is worth much, and even then the schedule depends on equipment arriving and construction going to plan.",
+    "status": "draft"
+  }
+]

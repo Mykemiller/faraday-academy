@@ -1,0 +1,77 @@
+[
+  {
+    "course_slug": "data-center-power-foundations",
+    "lesson_slug": "grid-power-tariffs-and-contracts",
+    "lesson_id": "6ab91de6-a5ef-4a96-9f08-6477197f3964",
+    "module_position": 3,
+    "lesson_position": 1,
+    "card_index": 1,
+    "question": "A company signs a virtual PPA with a wind farm hundreds of miles away. How does the deal work in practice?",
+    "options": {
+      "A": "The farm sells into the wholesale market, and the two sides settle the gap between market and contract price.",
+      "B": "The farm's output is wheeled over transmission lines and delivered straight to the company's own buildings.",
+      "C": "The company stops paying its local utility and takes all of its supply from the farm at the contract price.",
+      "D": "The utility buys the farm's output and passes the contract price on to the company as a new tariff rate."
+    },
+    "correct_key": "A",
+    "rationales": {
+      "A": "Correct. In a virtual or financial PPA the generator sells into the wholesale market and the parties settle the difference between market and contract price, while the buyer keeps buying from its utility.",
+      "B": "Physical delivery describes a physical PPA, where the buyer takes the power in the same market where it operates. A virtual PPA involves no delivery to the buyer.",
+      "C": "The lesson says the buyer keeps buying from its local utility as before. The virtual PPA sits alongside that supply as a financial settlement.",
+      "D": "Tariffs are rate schedules approved by a state regulator. A virtual PPA is a contract between the buyer and the generator, settled financially between them."
+    },
+    "wrong_choice_note": "B is the most tempting, because PPAs sound like supply contracts. The teaching point is that a virtual PPA moves money, and the electrons still come from the local grid.",
+    "source_excerpt": "In a virtual or financial PPA, the generator sells its power into the wholesale market and the two parties settle the difference between the market price and the contract price; the buyer keeps buying from its local utility as before.",
+    "status": "draft"
+  },
+  {
+    "course_slug": "data-center-power-foundations",
+    "lesson_slug": "grid-power-tariffs-and-contracts",
+    "lesson_id": "6ab91de6-a5ef-4a96-9f08-6477197f3964",
+    "module_position": 3,
+    "lesson_position": 1,
+    "card_index": 2,
+    "question": "What makes the Microsoft and Constellation deal for the Crane Clean Energy Center stand out among corporate power contracts?",
+    "options": {
+      "A": "It is the first power contract in the US to run for a full twenty years at a fixed price.",
+      "B": "It returns a shut reactor to operation, so it adds supply instead of relabeling existing output.",
+      "C": "It delivers the reactor's electricity physically to Microsoft data centers in other states.",
+      "D": "It lets Microsoft skip its local utility tariffs because the reactor sits on its own site."
+    },
+    "correct_key": "B",
+    "rationales": {
+      "A": "Twenty-year terms are common. The lesson cites Meta's twenty-year Clinton deal as another example, so length is what these deals share.",
+      "B": "Correct. The lesson says the restart brings a reactor back into operation rather than relabeling output that would have been produced anyway, which adds supply to the grid.",
+      "C": "The lesson never describes how Crane's power reaches Microsoft, and it notes that a virtual PPA with a plant in one state delivers nothing physically to a data center in another. What it singles out about Crane is that the restart adds supply to the grid.",
+      "D": "Nothing in the lesson places the reactor on Microsoft's site. Its data centers still depend on local grids and utilities for supply."
+    },
+    "wrong_choice_note": "A is tempting because the twenty-year term is the headline number. The teaching point is that what sets this deal apart is additionality: new supply on the grid.",
+    "source_excerpt": "That last point is where the Crane restart is distinctive: it brings a reactor back into operation rather than relabeling output that would have been produced anyway.",
+    "status": "draft"
+  },
+  {
+    "course_slug": "data-center-power-foundations",
+    "lesson_slug": "grid-power-tariffs-and-contracts",
+    "lesson_id": "6ab91de6-a5ef-4a96-9f08-6477197f3964",
+    "module_position": 3,
+    "lesson_position": 1,
+    "card_index": 3,
+    "question": "Why do regulators scrutinize a contract that dedicates an existing nuclear plant's output to a single tech company?",
+    "options": {
+      "A": "Such contracts may push the plant to run harder than its license allows, raising its safety risk.",
+      "B": "Such contracts may bar the plant from selling into the wholesale market during peak hours.",
+      "C": "Such contracts may cut other customers off from that supply and shift costs onto them.",
+      "D": "Such contracts may make the buyer an owner of the plant, which could break utility ownership rules."
+    },
+    "correct_key": "C",
+    "rationales": {
+      "A": "The lesson raises no safety or licensing concern about these contracts. The issue it describes is who gets the supply and who pays.",
+      "B": "The lesson says nothing about peak-hour sales limits. Its concern is that other customers may lose access to the plant's output.",
+      "C": "Correct. When a plant already serving the grid dedicates its output to one customer, others may lose access, and regulators must decide whether costs shift onto them.",
+      "D": "A PPA is a contract to buy power or its value. The lesson describes no ownership transfer to the buyer."
+    },
+    "wrong_choice_note": "B is tempting because it sounds like a market rule. The teaching point is fairness: existing plants already serve everyone, so claiming them for one buyer can push costs onto others, a problem restarts and new plants partly avoid.",
+    "source_excerpt": "When an existing plant that already serves the grid signs a contract dedicating its output to one customer, other customers may lose access to that supply, at least on paper, and regulators have to decide whether the arrangement shifts costs onto them.",
+    "status": "draft"
+  }
+]

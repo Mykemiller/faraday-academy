@@ -1,0 +1,52 @@
+[
+  {
+    "course_slug": "data-center-power-foundations",
+    "lesson_slug": "how-to-judge-a-power-strategy",
+    "lesson_id": "4252f721-b198-4628-921b-4a595e0023cf",
+    "module_position": 4,
+    "lesson_position": 2,
+    "card_index": 1,
+    "question": "According to the lesson, which single variable matters most in almost every data center power strategy?",
+    "options": {
+      "A": "The energy price per megawatt-hour in the contract",
+      "B": "The date on which electricity actually starts to flow",
+      "C": "The redundancy tier certified by the Uptime Institute",
+      "D": "The share of supply that comes from new generation"
+    },
+    "correct_key": "B",
+    "rationales": {
+      "A": "Energy price is one of four cost forms the lesson lists. A cheap price paired with a long connection wait can be worth less than a higher price available sooner.",
+      "B": "The lesson names the date electricity actually flows as the most important variable, and says institutions and equipment set that date. Announcements do not.",
+      "C": "Redundancy design matters, and the lesson says it should match the workload. It is one factor among many and is never called the most important.",
+      "D": "Whether a power purchase agreement adds new generation is a supply question to check. The lesson does not rank it above the connection date."
+    },
+    "wrong_choice_note": "A is the most tempting because price feels like the headline number. The lesson teaches that timing of actual power delivery outweighs it.",
+    "source_excerpt": "The most important variable in almost every power strategy is the date on which electricity actually flows, and that date is set by institutions and equipment, not by announcements.",
+    "status": "draft"
+  },
+  {
+    "course_slug": "data-center-power-foundations",
+    "lesson_slug": "how-to-judge-a-power-strategy",
+    "lesson_id": "4252f721-b198-4628-921b-4a595e0023cf",
+    "module_position": 4,
+    "lesson_position": 2,
+    "card_index": 2,
+    "question": "A developer has cut back on electrical redundancy to lower costs. In which case does the lesson say that choice may be sensible?",
+    "options": {
+      "A": "When the facility reports a low power usage effectiveness",
+      "B": "When the site keeps on-site turbines available as backup",
+      "C": "When it hosts training jobs that checkpoint progress often",
+      "D": "When it serves applications that must never stop running"
+    },
+    "correct_key": "C",
+    "rationales": {
+      "A": "Power usage effectiveness measures efficiency, and the lesson treats it as a separate design question. It does not justify thinner redundancy.",
+      "B": "On-site generation raises its own questions about fuel, permits, spare units and maintenance. The lesson does not tie it to accepting less redundancy.",
+      "C": "The lesson says shaved redundancy may be sensible for training workloads that save their progress often, since an interruption costs them little.",
+      "D": "The lesson calls reduced redundancy imprudent for services that must never stop. This is the case where cutting it is a mistake."
+    },
+    "wrong_choice_note": "D is the most tempting because it sounds like a demanding workload that a strong design would handle. The lesson teaches that redundancy should match the workload, and uninterruptible services need more of it.",
+    "source_excerpt": "A project that has shaved redundancy to save money may be sensible for training workloads that save their progress often, and imprudent for services that must never stop.",
+    "status": "draft"
+  }
+]

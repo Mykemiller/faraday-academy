@@ -1,0 +1,77 @@
+[
+  {
+    "course_slug": "data-center-power-foundations",
+    "lesson_slug": "why-800-volts-direct-current",
+    "lesson_id": "1a351d28-f109-43df-8826-f2e0e325c537",
+    "module_position": 4,
+    "lesson_position": 1,
+    "card_index": 1,
+    "question": "Moving rack power distribution from about 54 volts to 800 volts saves copper and cuts heat loss mainly because of what change?",
+    "options": {
+      "A": "Copper resists electricity far less at higher voltage",
+      "B": "Direct current produces no heat in a conductor",
+      "C": "Equal power flows with about one fifteenth the current",
+      "D": "Each rack draws much less total power than before"
+    },
+    "correct_key": "C",
+    "rationales": {
+      "A": "The lesson ties the savings to lower current. A conductor's resistance does not drop because the voltage is higher.",
+      "B": "Heat loss in any conductor rises with the square of the current, so direct current still loses heat.",
+      "C": "Power equals voltage times current, so at 800 volts the same power needs roughly a fifteenth of the current, which allows thinner conductors and much lower losses since loss scales with current squared.",
+      "D": "Racks are drawing more power, up to one megawatt. The voltage change delivers that same power with less current."
+    },
+    "wrong_choice_note": "A is most tempting because it sounds like a property of high voltage. The real lever is current: less current means thinner copper and losses that fall with the square of the current.",
+    "source_excerpt": "Raising the voltage lets the same power flow with a fraction of the current. Moving from about 54 volts to 800 volts cuts the current for a given power by roughly a factor of fifteen.",
+    "status": "draft"
+  },
+  {
+    "course_slug": "data-center-power-foundations",
+    "lesson_slug": "why-800-volts-direct-current",
+    "lesson_id": "1a351d28-f109-43df-8826-f2e0e325c537",
+    "module_position": 4,
+    "lesson_position": 1,
+    "card_index": 2,
+    "question": "Under the Mount Diablo specification from Google, Meta and Microsoft, where does power conversion equipment go for racks drawing 100 kilowatts to one megawatt?",
+    "options": {
+      "A": "Inside each server, as in older AC designs",
+      "B": "Out at the utility substation beyond the site",
+      "C": "Into battery cabinets mounted under the floor",
+      "D": "Into a separate sidecar rack beside the compute"
+    },
+    "correct_key": "D",
+    "rationales": {
+      "A": "Conversion inside each server is the older approach that worked for low-power racks. Mount Diablo moves it out because at these power levels it crowds out computing equipment.",
+      "B": "The utility substation is far upstream. Mount Diablo places conversion right next to the computing rack.",
+      "C": "The lesson does not describe batteries as part of Mount Diablo. Conversion goes into a dedicated power rack.",
+      "D": "Mount Diablo disaggregates the rack: a sidecar power rack does the conversion and feeds the computing rack at high-voltage DC, freeing space for more accelerators."
+    },
+    "wrong_choice_note": "A is most tempting because it describes how racks were powered for most of the industry's history. The lesson's point is that at 100 kilowatts and above, that in-rack power gear takes space the accelerators need.",
+    "source_excerpt": "Power conversion moves out of the server rack into a separate sidecar power rack, which feeds the computing rack at high voltage direct current, either plus or minus 400 volts or 800 volts.",
+    "status": "draft"
+  },
+  {
+    "course_slug": "data-center-power-foundations",
+    "lesson_slug": "why-800-volts-direct-current",
+    "lesson_id": "1a351d28-f109-43df-8826-f2e0e325c537",
+    "module_position": 4,
+    "lesson_position": 1,
+    "card_index": 3,
+    "question": "Why is it harder to interrupt a fault on an 800-volt DC circuit than on an AC circuit?",
+    "options": {
+      "A": "It lacks the zero crossing that helps breakers quench an arc",
+      "B": "It always carries far more current at the same voltage level",
+      "C": "Its breakers must wait for the utility to cut medium voltage",
+      "D": "Its arcs can only form inside the solid-state transformers"
+    },
+    "correct_key": "A",
+    "rationales": {
+      "A": "AC passes through zero volts many times a second, which helps a breaker extinguish the arc when a circuit opens. DC stays at full voltage, so breaking a DC fault needs different equipment.",
+      "B": "At the same voltage and power, current is the same for AC and DC. The difficulty comes from the missing zero crossing.",
+      "C": "The difficulty sits at the breaker itself: with no zero crossing, a DC arc gets no natural help to go out, so the circuit needs different protective equipment. Nothing upstream at the utility is involved.",
+      "D": "An arc forms wherever a circuit opens under load. The lesson does not limit DC arcs to solid-state transformers."
+    },
+    "wrong_choice_note": "B is most tempting because the lesson links high current to problems elsewhere. The safety issue for DC is specific: with no zero crossing, the arc does not get the natural help AC gives a breaker.",
+    "source_excerpt": "Alternating current, or AC, passes through zero volts many times a second, which helps circuit breakers extinguish the arc that forms when a circuit opens; direct current, or DC, does not, so breaking a DC fault is harder and needs different equipment.",
+    "status": "draft"
+  }
+]

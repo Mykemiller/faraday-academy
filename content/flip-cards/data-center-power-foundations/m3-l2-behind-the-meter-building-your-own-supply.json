@@ -1,0 +1,77 @@
+[
+  {
+    "course_slug": "data-center-power-foundations",
+    "lesson_slug": "behind-the-meter-building-your-own-supply",
+    "lesson_id": "95cebc71-fd25-4054-96c5-c16d4c57ddd8",
+    "module_position": 3,
+    "lesson_position": 2,
+    "card_index": 1,
+    "question": "Once the restated Talen and Amazon deal moved to its new structure in April 2026, how did Susquehanna's power reach Amazon's facilities?",
+    "options": {
+      "A": "Over a private line from the plant that bypasses the grid, capped at 480 megawatts",
+      "B": "From gas turbines installed on the campus while the plant's output was sold elsewhere",
+      "C": "Through an Amazon-owned plant that sells its surplus output into the regional market",
+      "D": "Through the PJM grid, with PPL delivering it and Talen acting as the retail supplier"
+    },
+    "correct_key": "D",
+    "rationales": {
+      "A": "A direct 480 megawatt delivery was the amended agreement FERC rejected in November 2024. The restated deal moved away from that behind-the-meter setup.",
+      "B": "On-site gas turbines describe the xAI Colossus case in Memphis. The Susquehanna deal relies on the nuclear plant's output.",
+      "C": "The lesson describes Talen as the plant owner and supplier. Amazon buys the power and does not own the plant.",
+      "D": "Correct. Under the front-of-the-meter structure, the output flows into the PJM grid, the local utility PPL delivers it, and the data center pays for grid service like other customers."
+    },
+    "wrong_choice_note": "A is most tempting because the case starts with a direct delivery to an adjacent campus. The point is that the parties kept the same destination and changed the structure so Amazon pays for grid service.",
+    "source_excerpt": "Under that structure the plant's output flows into the PJM grid, and the local utility, PPL Electric Utilities, delivers power to Amazon's facilities, with Talen acting as the retail supplier. The data center pays for grid service like other customers.",
+    "status": "draft"
+  },
+  {
+    "course_slug": "data-center-power-foundations",
+    "lesson_slug": "behind-the-meter-building-your-own-supply",
+    "lesson_id": "95cebc71-fd25-4054-96c5-c16d4c57ddd8",
+    "module_position": 3,
+    "lesson_position": 2,
+    "card_index": 2,
+    "question": "Why did utilities and other customers object to a data center taking a power plant's output behind the meter?",
+    "options": {
+      "A": "The co-located load still leans on the grid for backup and stability yet may avoid paying for it",
+      "B": "Power taken directly from a plant is priced higher per kilowatt-hour than power bought from the utility",
+      "C": "Plants that sell directly to one customer are barred from adding generating capacity in the future",
+      "D": "Direct supply requires new long-distance transmission lines that other customers must finance"
+    },
+    "correct_key": "A",
+    "rationales": {
+      "A": "Correct. The lesson says objectors argued a co-located load still relies on the grid for backup and stability, and should pay its share of the grid's costs.",
+      "B": "The lesson does not make a price-per-kilowatt-hour argument. The dispute centers on who pays for the grid.",
+      "C": "Nothing in the lesson links direct sales to limits on new generation. The objection is that a co-located load uses the grid's backup and stability without paying its share.",
+      "D": "Avoiding years of waiting for new transmission is part of the appeal of behind-the-meter supply. The objection concerns grid costs the load would skip."
+    },
+    "wrong_choice_note": "D is most tempting because transmission is central to the story. The lesson presents avoiding new transmission as the draw of behind-the-meter power, while the objection is that the load still uses the grid it would not pay for.",
+    "source_excerpt": "Utilities and other customers argued that a co-located load still relies on the grid for backup and stability, and should pay its share of the grid's costs.",
+    "status": "draft"
+  },
+  {
+    "course_slug": "data-center-power-foundations",
+    "lesson_slug": "behind-the-meter-building-your-own-supply",
+    "lesson_id": "95cebc71-fd25-4054-96c5-c16d4c57ddd8",
+    "module_position": 3,
+    "lesson_position": 2,
+    "card_index": 3,
+    "question": "Of the four costs the lesson says to weigh in any power choice, which one is described as often ignored?",
+    "options": {
+      "A": "Energy, meaning the price paid for each kilowatt-hour consumed",
+      "B": "Time, meaning the value of electricity that arrives years sooner",
+      "C": "Capacity, meaning enough generation on hand at peak demand",
+      "D": "Delivery, meaning the cost of the wires that carry the power"
+    },
+    "correct_key": "B",
+    "rationales": {
+      "A": "Energy is the first cost listed and is driven by fuel or capital recovery. The lesson does not call it overlooked.",
+      "B": "Correct. The lesson names time as the fourth cost, often ignored, meaning the value of electricity that arrives two years earlier, and it is where on-site gas can win.",
+      "C": "Capacity is the second cost in the list. The lesson treats it as a standard part of the comparison.",
+      "D": "Delivery is the third cost, the cost of the wires. The lesson does not flag it as overlooked."
+    },
+    "wrong_choice_note": "D is most tempting because behind-the-meter debates focus on wires charges. The lesson's point is that speed to power has real economic value and is the cost buyers tend to leave out.",
+    "source_excerpt": "The fourth, often ignored, is time: the value of electricity that arrives two years earlier.",
+    "status": "draft"
+  }
+]
