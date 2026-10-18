@@ -27,7 +27,12 @@ function load(paths) {
   return paths.flatMap((p) => JSON.parse(readFileSync(p, "utf8")));
 }
 
-const args = process.argv.slice(2);
+let args = process.argv.slice(2);
+// --remote-only: emit only the checks that need the served lesson text, with a
+// payload trimmed to the fields they read. Pair it with validate-local.mjs,
+// which runs every other check without a network.
+const remoteOnly = args[0] === "--remote-only";
+if (remoteOnly) args = args.slice(1);
 let files = args;
 if (args[0] === "--batch") {
   files = readdirSync(args[1]).filter((f) => f.endsWith(".json")).sort().map((f) => join(args[1], f));
@@ -39,23 +44,22 @@ if (files.length === 0) {
 const cards = load(files);
 const courses = [...new Set(cards.map((c) => c.course_slug))];
 if (courses.length !== 1) throw new Error(`expected one course, got ${courses.join(", ")}`);
-const json = JSON.stringify(cards);
+const json = JSON.stringify(remoteOnly
+  ? cards.map(({ lesson_slug, card_index, lesson_id, source_excerpt }) =>
+      ({ lesson_slug, card_index, lesson_id, source_excerpt }))
+  : cards);
 if (json.includes("$cards$")) throw new Error("card text contains the SQL quote tag");
 
-const sql = `
-with cards as (
-  select c as card, c->>'lesson_slug' slug, (c->>'card_index') idx
-  from jsonb_array_elements($cards$${json}$cards$::jsonb) c
-),
-course as (
-  select content::jsonb j from extensions.http_get('${COURSE_BASE}${courses[0]}')
-),
-bodies as (
-  select l->>'id' lesson_id,
-         btrim(regexp_replace(array_to_string(array(select jsonb_array_elements_text(l->'paragraphs')), ' '), '\\s+', ' ', 'g')) body
-  from course, jsonb_array_elements(j->'modules') m, jsonb_array_elements(m->'lessons') l
-),
-f as (
+const REMOTE_CHECKS = `
+  select c.slug, c.idx, 'lesson_id not found in served course' finding from cards c
+   where not exists (select 1 from bodies b where b.lesson_id = c.card->>'lesson_id')
+  union all
+  select c.slug, c.idx, 'source_excerpt is not an exact substring of the lesson body' from cards c
+   join bodies b on b.lesson_id = c.card->>'lesson_id'
+   where btrim(regexp_replace(coalesce(c.card->>'source_excerpt',''), '\\s+', ' ', 'g')) = ''
+      or strpos(b.body, btrim(regexp_replace(c.card->>'source_excerpt', '\\s+', ' ', 'g'))) = 0`;
+
+const LOCAL_CHECKS = `
   select slug, idx, 'options must be exactly A,B,C,D' finding from cards
    where jsonb_typeof(card->'options') is distinct from 'object'
       or (select string_agg(k, ',' order by k) from jsonb_object_keys(card->'options') k) is distinct from 'A,B,C,D'
@@ -78,14 +82,6 @@ f as (
   select slug, idx, 'wrong_choice_note is empty' from cards where btrim(coalesce(card->>'wrong_choice_note','')) = ''
   union all
   select slug, idx, 'status must be draft' from cards where card->>'status' is distinct from 'draft'
-  union all
-  select c.slug, c.idx, 'lesson_id not found in served course' from cards c
-   where not exists (select 1 from bodies b where b.lesson_id = c.card->>'lesson_id')
-  union all
-  select c.slug, c.idx, 'source_excerpt is not an exact substring of the lesson body' from cards c
-   join bodies b on b.lesson_id = c.card->>'lesson_id'
-   where btrim(regexp_replace(coalesce(c.card->>'source_excerpt',''), '\\s+', ' ', 'g')) = ''
-      or strpos(b.body, btrim(regexp_replace(c.card->>'source_excerpt', '\\s+', ' ', 'g'))) = 0
   union all
   select slug, idx, 'option '||k||' is a substring of the question' from cards, jsonb_each_text(card->'options') o(k,v)
    where jsonb_typeof(card->'options') = 'object' and btrim(v) <> ''
@@ -118,7 +114,23 @@ f as (
   union all
   select slug, null, 'card_index must run 1..'||count(*)||' with no gaps'
    from cards group by slug
-   having array_agg(idx::int order by idx::int) <> array(select generate_series(1, count(*)::int))
+   having array_agg(idx::int order by idx::int) <> array(select generate_series(1, count(*)::int))`;
+
+const sql = `
+with cards as (
+  select c as card, c->>'lesson_slug' slug, (c->>'card_index') idx
+  from jsonb_array_elements($cards$${json}$cards$::jsonb) c
+),
+course as (
+  select content::jsonb j from extensions.http_get('${COURSE_BASE}${courses[0]}')
+),
+bodies as (
+  select l->>'id' lesson_id,
+         btrim(regexp_replace(array_to_string(array(select jsonb_array_elements_text(l->'paragraphs')), ' '), '\\s+', ' ', 'g')) body
+  from course, jsonb_array_elements(j->'modules') m, jsonb_array_elements(m->'lessons') l
+),
+f as (
+${remoteOnly ? REMOTE_CHECKS : REMOTE_CHECKS + "\n  union all\n" + LOCAL_CHECKS}
 )
 select slug as lesson_slug, idx as card_index, finding from f order by 1 nulls first, 2, 3;
 `;
