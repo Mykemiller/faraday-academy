@@ -7,10 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "vitest run",
+    "test": "npm run check:masthead && vitest run",
     "test:watch": "vitest",
     "catalog:generate": "node scripts/generate-catalog.mjs",
-    "check:links": "node scripts/check-player-links.mjs"
+    "check:links": "node scripts/check-player-links.mjs",
+    "check:masthead": "node lib/faraday-masthead/check-drift.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.21.0",
