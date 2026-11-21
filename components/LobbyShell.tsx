@@ -106,7 +106,7 @@ export default function LobbyShell({ catalog }: { catalog: LobbyCatalog }) {
 
   return (
     <div className="min-h-full">
-      <header className="border-b border-sage-20 bg-warm-white">
+      <div className="border-b border-sage-20 bg-warm-white">
         <div className="mx-auto max-w-[1400px] px-4 py-6 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
             <div>
@@ -129,9 +129,9 @@ export default function LobbyShell({ catalog }: { catalog: LobbyCatalog }) {
             )}
           </div>
         </div>
-      </header>
+      </div>
 
-      <main className="mx-auto max-w-[1400px] px-4 py-6 sm:px-6 lg:px-8">
+      <main id="main" className="mx-auto max-w-[1400px] px-4 py-6 sm:px-6 lg:px-8">
         <div className="flex gap-8">
           <FilterRail filters={filters} facets={facets} handlers={handlers} />
 

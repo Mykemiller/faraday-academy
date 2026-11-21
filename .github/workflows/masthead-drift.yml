@@ -1,0 +1,17 @@
+# FDY-450 · CC-BRAND-MASTHEAD-1.0: fail when the vendored Faraday masthead differs from its manifest.
+# lib/faraday-masthead/ is a vendored copy of Mykemiller/Faraday-Workbench packages/faraday-masthead;
+# never edit it here — change the canonical copy, bump VERSION, re-vendor.
+name: masthead-drift
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  drift:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node lib/faraday-masthead/check-drift.mjs
