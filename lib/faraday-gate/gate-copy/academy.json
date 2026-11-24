@@ -1,0 +1,12 @@
+{
+  "access_key": "academy",
+  "status": "approved",
+  "app_name": "Faraday Academy",
+  "story": "The Academy teaches AI data center economics on the framework Faraday's analysts use, grounded in registry data, so a learner can read a Faraday brief, a Jurisdiction Watch score or a forecast on its own terms.",
+  "what_you_get": [
+    "AI data center economics on Faraday's framework",
+    "Grounded in registry data",
+    "Read a brief, a score or a forecast on its own terms"
+  ],
+  "source": "FDY-414 approved inventory description, edited for length"
+}
