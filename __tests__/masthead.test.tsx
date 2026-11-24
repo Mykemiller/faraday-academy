@@ -1,9 +1,9 @@
-// FDY-450 · CC-BRAND-MASTHEAD-1.0: the /academy layout renders the shared, vendored Faraday masthead
+// FDY-450 · CC-BRAND-MASTHEAD-1.0: the /academy frame (rendered by the gated layout, FDY-418) renders the shared, vendored Faraday masthead
 // above the lobby, with the Academy nav in the AppBar and the skip link landing on the lobby's <main>.
 import { describe, it, expect } from "vitest";
 import { render, screen, within } from "@testing-library/react";
 import { axe } from "jest-axe";
-import AcademyLayout from "@/app/academy/layout";
+import AcademyFrame from "@/components/AcademyFrame";
 import LobbyShell from "@/components/LobbyShell";
 import { MASTHEAD_VERSION } from "@/lib/faraday-masthead/core.ts";
 import { toLobbyCatalog } from "@/lib/catalog";
@@ -18,9 +18,9 @@ const catalog = toLobbyCatalog(
 
 function setup() {
   return render(
-    <AcademyLayout>
+    <AcademyFrame>
       <LobbyShell catalog={catalog} />
-    </AcademyLayout>,
+    </AcademyFrame>,
   );
 }
 
